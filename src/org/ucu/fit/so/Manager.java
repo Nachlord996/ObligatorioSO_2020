@@ -7,64 +7,59 @@ public class Manager {
 
     private TimeCounter timeCounter;
     private HashMap<String, Gate> gates;
-    private Semaphore semaphore = new Semaphore(0,true);
-    private boolean islastThread;
+    private int threadSignals;
 
+    /**
+     * The Manager is the connection between time counter and the Gates threads
+     * @param tc Time counter instance
+     * @param tollGates Hash Map with all the Gates from the Toll
+     */
     public Manager(TimeCounter tc, HashMap<String, Gate> tollGates) {
         this.timeCounter = tc;
         this.gates = tollGates;
+        this.threadSignals = 0;
     }
 
+    /**
+     * Starts the time Counter
+     * Starts all threads
+     */
     public void begin(){
+        //Starts time counter Thread
         Thread timerCounter = new Thread(timeCounter);
         timerCounter.start();
 
+        //Starts the gates Threads
         for (Thread thread : gates.values()){
             thread.start();
         }
     }
 
-    public void takeTurn(String uuid){
-        try {
-            Gate gate = gates.get(uuid);
-            if (gate != null){
-                while (gate.hasWorked){
-                }
-                semaphore.acquire();
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    /**
+     * When all threads have finished their work
+     * We tell the timerCounter to increase time
+     */
+    public synchronized void signal(){
+        threadSignals++;
+        if (threadSignals == this.gates.size()){
+            timeCounter.release();
+            threadSignals = 0;
+        }
+
+    }
+
+    /**
+     * Tells all threads to start executing
+     */
+    public void releaseGates(){
+        for (Gate gate : gates.values()){
+            gate.turnOnGate();
         }
     }
 
-    public void reportFinish(String uuid){
-        Gate gate = gates.get(uuid);
-        if (gate != null){
-            semaphore.release();
-            gate.setHasWorked(true);
-        }
-    }
 
-    public synchronized void signal() throws InterruptedException {
-        if (timeCounter.semaphore.availablePermits() == -1) {
-            islastThread = true;
-            timeCounter.semaphore.release();
-        }
-        timeCounter.semaphore.release();
-        while (islastThread){ }
-    }
 
-    public void clockTick(){
-        for (String key : gates.keySet()){
-            gates.get(key).setHasWorked(false);
-        }
-        System.out.println("Los permits del semaforo son: "  +semaphore.availablePermits());
-        islastThread = false;
-    }
 
-    public void startTicking(){
-        semaphore.release();
-    }
 
 
 }

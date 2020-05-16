@@ -4,48 +4,44 @@ import java.util.concurrent.Semaphore;
 
 public class TimeCounter implements Runnable{
 
-    public Semaphore semaphore;
+    //Controls that all gates have executed
+    private Semaphore timerSemaphore;
+
     private int timeCounter;
     private int THREADS_NUMBER;
 
-    public TimeCounter(int threadsNumber){
-        if (threadsNumber < 0){
-            throw new IllegalArgumentException("Number of threads can't be negative");
-        }
+    public TimeCounter(){
+        timerSemaphore = new Semaphore(1);
         timeCounter = 0;
-        restore(0);
-        THREADS_NUMBER = threadsNumber;
     }
 
-    public void restore(){
-        semaphore = new Semaphore((-1)*THREADS_NUMBER, true);
-    }
-
-    private void restore(int permits){
-        semaphore = new Semaphore(permits, true);
+    /**
+     * Allows the timeCounter to enter the critical section
+     */
+    public void release(){
+        this.timerSemaphore.release();
     }
 
     @Override
     public void run() {
         System.out.println("El reloj ha sido iniciado");
-        while(true){
+        while(true){ //Mientras hayan autos en la cola
             try {
+                //If threads have stopped working
+                this.timerSemaphore.acquire();
+
+                //Critical section
                 System.out.println("t = " + timeCounter);
-                restore();
-                if (timeCounter == 0) {
-                    Program.PROCESS_MANAGER.startTicking();
-                }
-                semaphore.acquire();
                 timeCounter++;
 
-                if (timeCounter > 0){
-                    Program.PROCESS_MANAGER.clockTick();
-                }
+                //Turns on all the unicity Semaphores from the Threads
+                Program.PROCESS_MANAGER.releaseGates();
 
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
         }
     }
 }

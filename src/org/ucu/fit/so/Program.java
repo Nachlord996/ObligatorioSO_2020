@@ -49,7 +49,7 @@ public class Program {
 
     private static void start(){
         try {
-            TIMER = new TimeCounter(THREADS_NUMBER);
+            TIMER = new TimeCounter();
             PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES);
             PROCESS_MANAGER.begin();
 
