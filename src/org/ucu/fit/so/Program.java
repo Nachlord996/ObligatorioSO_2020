@@ -12,7 +12,9 @@ public class Program {
     private static HashMap<String,Gate> TOLL_GATES;
     public static TimeCounter TIMER;
     public static Manager PROCESS_MANAGER;
-
+    private static Planner planner;
+    private static HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
+    private static HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
 
     public static void main(String[] args){
         try {
@@ -40,19 +42,39 @@ public class Program {
             throw new InitialConfigurationException("Incorrect value type for lanes of tollgate");
         }
         TOLL_GATES = new HashMap<>();
-        Gate gate = null;
         for (int i = 0; i < THREADS_NUMBER; i++){
-            gate = new TollGate(i);
+            Gate gate = new TollGate(i);
             TOLL_GATES.put(gate.uuid, gate);
+        }
+        HashMap<String,Object> vehiclesPriorities = builder.buildDictionary("src/config/vehiclePriorities.csv");
+        for(String key:vehiclesPriorities.keySet()){
+            vehiclesPrioritiesParsed.put(key,Integer.parseInt(vehiclesPriorities.get(key).toString()));
+        }
+        for(String line:Reader.read("src/data/vehicles.csv")){
+            String[] array = line.split(",");
+            int amountVehicles;
+            try{
+                amountVehicles = Integer.parseInt(array[2]);
+            }catch (Exception e){
+                continue;
+            }
+            int amountTime = Integer.parseInt(array[0]);
+            if(!vehiclesForTime.containsValue(amountTime)){
+                vehiclesForTime.put(amountTime,new LinkedList<>());
+            }
+            for(int i =0 ; i<amountVehicles; i++) {
+                Vehicle vehicle = new Vehicle(array[1]);
+                vehiclesForTime.get(amountTime).add(vehicle);
+            }
         }
     }
 
     private static void start(){
         try {
             TIMER = new TimeCounter();
-            PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES);
+            planner = new Planner(vehiclesPrioritiesParsed,vehiclesForTime,TIMER);
+            PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES,planner);
             PROCESS_MANAGER.begin();
-
         } catch (Exception e){
             e.printStackTrace();
         }

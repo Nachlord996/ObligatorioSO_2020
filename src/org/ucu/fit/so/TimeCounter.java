@@ -15,6 +15,10 @@ public class TimeCounter implements Runnable{
         timeCounter = 0;
     }
 
+    public int getTimeCounter() {
+        return timeCounter;
+    }
+
     /**
      * Allows the timeCounter to enter the critical section
      */
@@ -34,8 +38,8 @@ public class TimeCounter implements Runnable{
                 System.out.println("t = " + timeCounter);
                 timeCounter++;
 
-                //Turns on all the unicity Semaphores from the Threads
-                Program.PROCESS_MANAGER.releaseGates();
+                //Turns on all the unity Semaphores from the Threads
+                Program.PROCESS_MANAGER.notifyManager();
 
 
             } catch (InterruptedException e) {

@@ -20,13 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fcdd77-7939-4294-ab70-cf920c116420" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/vehiclePriorities.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/vehicles.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Reader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/IDictionaryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/IDictionaryBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TxtDictionaryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TxtDictionaryBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +61,11 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\Desktop\UCU TOMÁS\Ing de Soft\ObligatorioSO_2020\src\config" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -97,34 +107,43 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1589589652184">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="446" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589675776306">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="446" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1589675776306" />
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1589684809347">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589589652184" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1589658265453">
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1589684809347" />
+    <state x="444" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589675702203">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="444" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1589675702203" />
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1589683470828">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="214" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589594520390" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589658265453" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1589658265453">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589683470828" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1589683470828">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="214" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589594520390" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589658265453" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1589658265452">
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589683470828" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1589683470827">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="214" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589594520390" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589658265452" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1589658265453">
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589683470827" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1589683470828">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="214" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589594520390" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589658265453" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1589658104179">
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589683470828" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1589671154806">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589658104179" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589671154806" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1589570924274">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
