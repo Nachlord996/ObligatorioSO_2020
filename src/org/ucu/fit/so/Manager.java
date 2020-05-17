@@ -1,13 +1,15 @@
 package org.ucu.fit.so;
 
 import java.util.HashMap;
-import java.util.concurrent.Semaphore;
+import java.util.logging.Logger;
 
 public class Manager {
 
     private TimeCounter timeCounter;
     private HashMap<String, Gate> gates;
     private int threadSignals;
+    private LogArchive archive;
+    private LogHandler logger;
 
     /**
      * The Manager is the connection between time counter and the Gates threads
@@ -18,6 +20,8 @@ public class Manager {
         this.timeCounter = tc;
         this.gates = tollGates;
         this.threadSignals = 0;
+        this.archive = new LogArchive();
+        this.logger = new LogHandler(archive);
     }
 
     /**
@@ -45,7 +49,6 @@ public class Manager {
             timeCounter.release();
             threadSignals = 0;
         }
-
     }
 
     /**
@@ -57,9 +60,11 @@ public class Manager {
         }
     }
 
-
-
-
-
-
+    public synchronized void reportTask(TaskReport report){
+        report.setInstant(timeCounter.getActualTime());
+        String logLine = report.getReportMessage();
+        if (logLine != null){
+            logger.log(logLine);
+        }
+    }
 }

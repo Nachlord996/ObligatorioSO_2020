@@ -21,7 +21,10 @@ public abstract class Gate extends Thread {
                 //If timer allows
                 uniquenessSemaphore.acquire();
 
-                this.consume();
+                TaskReport report = this.consume();
+
+                //Report done task
+                Program.PROCESS_MANAGER.reportTask(report);
 
                 //Tells the manager that ended
                 Program.PROCESS_MANAGER.signal();
@@ -41,5 +44,5 @@ public abstract class Gate extends Thread {
         uniquenessSemaphore.release();
     }
 
-    abstract void consume();
+    abstract TaskReport consume();
 }

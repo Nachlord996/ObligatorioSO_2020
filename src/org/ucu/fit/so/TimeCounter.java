@@ -8,11 +8,14 @@ public class TimeCounter implements Runnable{
     private Semaphore timerSemaphore;
 
     private int timeCounter;
-    private int THREADS_NUMBER;
 
     public TimeCounter(){
         timerSemaphore = new Semaphore(1);
         timeCounter = 0;
+    }
+
+    public int getActualTime(){
+        return timeCounter - 1;
     }
 
     /**

@@ -1,2 +1,2 @@
 // Cantidad de carriles del peaje
-TOLL_LANES_NUMBER,2
+TOLL_LANES_NUMBER,5
