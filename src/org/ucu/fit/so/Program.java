@@ -9,7 +9,7 @@ public class Program {
     private static HashMap<String, Object> CONFIG;
     private static String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
     private static int THREADS_NUMBER;
-    private static HashMap<String,Gate> TOLL_GATES;
+    private static HashMap<String,TollGate> TOLL_GATES;
     public static TimeCounter TIMER;
     public static Manager PROCESS_MANAGER;
     private static Planner planner;
@@ -43,9 +43,11 @@ public class Program {
 
         TOLL_GATES = new HashMap<>();
         int chargeTime = 2;
-        int roadSize = 5;
+        int roadSize = 3;
+
+
         for (int i = 0; i < THREADS_NUMBER; i++){
-            Gate gate = new TollGate(i,roadSize,chargeTime);
+            TollGate gate = new TollGate(i,roadSize,chargeTime);
             TOLL_GATES.put(gate.uuid, gate);
         }
 
@@ -57,18 +59,22 @@ public class Program {
         HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
         for(String line : Reader.read("src/data/vehicles.csv")){
             String[] array = line.split(",");
+
             int amountVehicles;
+
             try{
                 amountVehicles = Integer.parseInt(array[2]);
             }catch (Exception e){
                 continue;
             }
             int amountTime = Integer.parseInt(array[0]);
-            if(!vehiclesForTime.containsValue(amountTime)){
+            String carType = array[1];
+
+            if(!vehiclesForTime.containsKey(amountTime)){
                 vehiclesForTime.put(amountTime,new LinkedList<>());
             }
-            for(int i =0 ; i<amountVehicles; i++) {
-                Vehicle vehicle = new Vehicle(array[1],vehiclesPrioritiesParsed.get(array[1]));
+            for(int i =0 ; i < amountVehicles; i++) {
+                Vehicle vehicle = new Vehicle(carType,vehiclesPrioritiesParsed.get(carType));
                 vehiclesForTime.get(amountTime).add(vehicle);
             }
         }

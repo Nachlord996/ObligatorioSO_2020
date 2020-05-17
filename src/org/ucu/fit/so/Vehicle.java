@@ -7,7 +7,7 @@ public class Vehicle {
     private int age;
     private int priority;
 
-    public Vehicle(String typeOfVehicle) {
+    public Vehicle(String typeOfVehicle, int priority) {
         this.typeOfVehicle = typeOfVehicle;
         this.uuid = "V" + getNumOfCars();
         this.age = 0;

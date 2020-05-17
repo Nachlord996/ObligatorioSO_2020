@@ -11,11 +11,11 @@ public class TimeCounter implements Runnable{
 
     public TimeCounter(){
         timerSemaphore = new Semaphore(1);
-        timeCounter = 0;
+        timeCounter = -1;
     }
 
     public int getActualTime(){
-        return timeCounter - 1;
+        return timeCounter;
     }
 
     /**
@@ -30,15 +30,17 @@ public class TimeCounter implements Runnable{
         System.out.println("El reloj ha sido iniciado");
         while(true){ //Mientras hayan autos en la cola
             try {
+
                 //If threads have stopped working
                 this.timerSemaphore.acquire();
 
-                //Critical section
-                System.out.println("t = " + timeCounter);
                 timeCounter++;
+                System.out.println("t = " + timeCounter);
 
                 //Turns on all the unity Semaphores from the Threads
                 Program.PROCESS_MANAGER.notifyManager();
+
+
 
             } catch (InterruptedException e) {
                 e.printStackTrace();

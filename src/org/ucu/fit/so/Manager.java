@@ -91,7 +91,10 @@ public class Manager {
         LinkedList<TollGate> availableGates = getAvailableGates();
         if (availableGates != null){
             for (TollGate tollGate : availableGates){
-                tollGate.addVehicleToRoad(prospectsToEnter.pop());
+                if (!prospectsToEnter.isEmpty()){
+                    tollGate.addVehicleToRoad(prospectsToEnter.pop());
+                }
+
             }
         }
     }

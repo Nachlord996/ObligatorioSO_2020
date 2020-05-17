@@ -15,22 +15,26 @@ public class TollGate extends Gate {
 
     @Override
     TaskReport consume() {
-        if (road[0] != null){
+
+        if (road[0] != null) {
             this.timeLeftToCharge--;
             road[0].increaseAge();
-            if (timeLeftToCharge == 0){
+            if (timeLeftToCharge == 0) {
                 road[0] = null;
                 //Hacer log
                 timeLeftToCharge = timeToCharge;
             }
-            for (int position = 1; position < road.length ; position++) {
-                if (road[position - 1] == null){
+        }
+
+        for (int position = 1; position < road.length ; position++) {
+
+            if (road[position - 1] == null){
                     road[position - 1] = road[position];
                     road[position] = null;
                     //Generar Log
                 }
             }
-        }
+
         System.out.println(this.uuid);
         return new TaskReport();
     }
@@ -50,7 +54,7 @@ public class TollGate extends Gate {
      * @return True if a vehicle can be added
      */
     public boolean roadIsFull(){
-        return this.road[road.length - 1] == null;
+        return this.road[road.length - 1] != null;
     }
 
 }
