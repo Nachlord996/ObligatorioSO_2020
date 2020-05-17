@@ -32,7 +32,7 @@ public class TollGate extends Gate {
             }
         }
         System.out.println(this.uuid);
-        return new TaskReport(this.uuid,"autoID",0,0,"action");
+        return new TaskReport();
     }
 
     /**

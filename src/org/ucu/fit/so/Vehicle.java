@@ -7,13 +7,13 @@ public class Vehicle {
     private int age;
     private int priority;
 
-
-    public Vehicle(String typeOfVehicle, int priority) {
+    public Vehicle(String typeOfVehicle) {
         this.typeOfVehicle = typeOfVehicle;
         this.uuid = "V" + getNumOfCars();
         this.age = 0;
         this.priority = priority;
     }
+
     private int getNumOfCars(){
         numOfCars++;
         return numOfCars;

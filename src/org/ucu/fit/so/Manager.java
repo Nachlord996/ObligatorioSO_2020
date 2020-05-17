@@ -121,8 +121,8 @@ public class Manager {
 
     public synchronized void reportTask(TaskReport report){
         report.setInstant(timeCounter.getActualTime());
-        String logLine = report.getReportMessage();
-        if (logLine != null){
+        LinkedList<String> lines = report.getReportLines();
+        for(String logLine : lines){
             logger.log(logLine);
         }
     }
