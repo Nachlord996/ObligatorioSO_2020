@@ -13,8 +13,6 @@ public class Program {
     public static TimeCounter TIMER;
     public static Manager PROCESS_MANAGER;
     private static Planner planner;
-    private static HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
-    private static HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
 
     public static void main(String[] args){
         try {
@@ -46,10 +44,13 @@ public class Program {
             Gate gate = new TollGate(i);
             TOLL_GATES.put(gate.uuid, gate);
         }
+
+        HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
         HashMap<String,Object> vehiclesPriorities = builder.buildDictionary("src/config/vehiclePriorities.csv");
         for(String key:vehiclesPriorities.keySet()){
             vehiclesPrioritiesParsed.put(key,Integer.parseInt(vehiclesPriorities.get(key).toString()));
         }
+        HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
         for(String line:Reader.read("src/data/vehicles.csv")){
             String[] array = line.split(",");
             int amountVehicles;
@@ -66,13 +67,13 @@ public class Program {
                 Vehicle vehicle = new Vehicle(array[1]);
                 vehiclesForTime.get(amountTime).add(vehicle);
             }
+            planner = new Planner(vehiclesPrioritiesParsed,vehiclesForTime);
         }
     }
 
     private static void start(){
         try {
             TIMER = new TimeCounter();
-            planner = new Planner(vehiclesPrioritiesParsed,vehiclesForTime,TIMER);
             PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES,planner);
             PROCESS_MANAGER.begin();
         } catch (Exception e){

@@ -20,18 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fcdd77-7939-4294-ab70-cf920c116420" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/config/vehiclePriorities.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/vehicles.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/IDictionaryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/IDictionaryBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TxtDictionaryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TxtDictionaryBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
