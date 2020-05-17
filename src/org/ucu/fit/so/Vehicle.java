@@ -4,6 +4,15 @@ public class Vehicle {
     private String typeOfVehicle;
     private String uuid;
     private static int numOfCars;
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
     private int age;
     private int priority;
 

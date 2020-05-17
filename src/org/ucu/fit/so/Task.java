@@ -7,13 +7,15 @@ public class Task {
     private int priority;
     private String action;
     private int instant;
+    private int position;
 
-    public Task(String gateID, String vehicleID, int timeWaiting, int priority, String action) {
+    public Task(String gateID, int position, String vehicleID, int timeWaiting, int priority, String action) {
         this.gateID = gateID;
         this.vehicleID = vehicleID;
         this.timeWaiting = timeWaiting;
         this.priority = priority;
         this.action = action;
+        this.position = position;
         instant = -1;
     }
 
@@ -32,6 +34,7 @@ public class Task {
         StringBuilder builder = new StringBuilder();
         builder.append(instant);
         builder.append("," + gateID);
+        builder.append("," + position);
         builder.append("," + vehicleID);
         builder.append("," + priority);
         builder.append("," + timeWaiting);

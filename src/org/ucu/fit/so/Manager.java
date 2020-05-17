@@ -10,8 +10,6 @@ public class Manager {
     private Planner planner;
 
     private int threadSignals;
-
-    private LogArchive archive;
     private LogHandler logger;
 
     private LinkedList<Vehicle> prospectsToEnter;
@@ -21,11 +19,10 @@ public class Manager {
      * @param tc Time counter instance
      * @param tollGates Hash Map with all the Gates from the Toll
      */
-    public Manager(TimeCounter tc, HashMap<String, TollGate> tollGates, Planner planner) {
+    public Manager(TimeCounter tc, HashMap<String, TollGate> tollGates, Planner planner, LogArchive archive) {
         this.timeCounter = tc;
         this.gates = tollGates;
         this.threadSignals = 0;
-        this.archive = new LogArchive();
         this.logger = new LogHandler(archive);
         this.planner = planner;
         this.prospectsToEnter = new LinkedList<Vehicle>();
@@ -107,7 +104,9 @@ public class Manager {
     private LinkedList<TollGate> getAvailableGates(){
         LinkedList<TollGate> availableGates = new LinkedList<>();
         for (TollGate gate : gates.values()){
-            availableGates.add(gate);
+            if(!gate.roadIsFull()) {
+                availableGates.add(gate);
+            }
         }
         return availableGates;
     }
@@ -128,5 +127,22 @@ public class Manager {
         for(String logLine : lines){
             logger.log(logLine);
         }
+    }
+
+    public boolean hasEnded(){
+        boolean endIsHere = planner.isEmpty();
+        if (endIsHere){
+            for (TollGate gate : gates.values()){
+                if (!gate.roadIsEmpty()){
+                    endIsHere = false;
+                    break;
+                }
+            }
+        }
+        return endIsHere;
+    }
+
+    public void exportData(){
+
     }
 }

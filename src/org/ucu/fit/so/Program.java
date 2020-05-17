@@ -13,7 +13,8 @@ public class Program {
     public static TimeCounter TIMER;
     public static Manager PROCESS_MANAGER;
     private static Planner planner;
-
+    private static LogArchive LOG_ARCHIVE;
+    private static String OUTPUT_TEXT_PATH;
 
     public static void main(String[] args){
         try {
@@ -40,6 +41,7 @@ public class Program {
         } catch (Exception e) {
             throw new InitialConfigurationException("Incorrect value type for lanes of tollgate");
         }
+        OUTPUT_TEXT_PATH = String.valueOf(CONFIG.get("OUTPUT_PATH"));
 
         TOLL_GATES = new HashMap<>();
         int chargeTime = 2;
@@ -50,6 +52,8 @@ public class Program {
             TollGate gate = new TollGate(i,roadSize,chargeTime);
             TOLL_GATES.put(gate.uuid, gate);
         }
+
+        LOG_ARCHIVE = new LogArchive();
 
         HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
         HashMap<String,Object> vehiclesPriorities = builder.buildDictionary("src/config/vehiclePriorities.csv");
@@ -84,8 +88,13 @@ public class Program {
     private static void start(){
         try {
             TIMER = new TimeCounter();
-            PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES, planner);
+            PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES, planner, LOG_ARCHIVE);
             PROCESS_MANAGER.begin();
+
+            while(!PROCESS_MANAGER.hasEnded()) { }
+
+            Writer.write(OUTPUT_TEXT_PATH,LOG_ARCHIVE.getLogMessage());
+
         } catch (Exception e){
             e.printStackTrace();
         }

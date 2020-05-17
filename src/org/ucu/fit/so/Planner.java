@@ -51,7 +51,11 @@ public class Planner {
      * @return Linked list with vehicles
      */
     public LinkedList<Vehicle> getVehicleArrivedAtTime(int time){
-        return vehicles.get(time);
+        LinkedList<Vehicle> list = vehicles.remove(time);
+        return list;
+    }
 
+    public boolean isEmpty(){
+        return vehicles.isEmpty();
     }
 }

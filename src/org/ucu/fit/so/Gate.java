@@ -15,11 +15,14 @@ public abstract class Gate extends Thread {
 
     @Override
     public void run(){
-        int i = 20;
-        while(i > 0){
+        while(true){
             try {
                 //If timer allows
                 uniquenessSemaphore.acquire();
+
+                if(Program.PROCESS_MANAGER.hasEnded()){
+                    break;
+                }
 
                 TaskReport report = this.consume();
 
@@ -32,7 +35,6 @@ public abstract class Gate extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            i--;
         }
     }
 

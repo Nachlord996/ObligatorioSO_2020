@@ -5,38 +5,48 @@ public class TollGate extends Gate {
     private Vehicle[] road;
     private final int timeToCharge;
     private int timeLeftToCharge;
+    private int usedCapacity;
 
     TollGate(int gateNumber, int roadSize, int timeToPay) {
         super(gateNumber);
         this.road = new Vehicle[roadSize];
         this.timeToCharge = timeToPay;
         this.timeLeftToCharge = timeToPay;
+        this.usedCapacity = 0;
     }
 
     @Override
     TaskReport consume() {
-
+        TaskReport report = new TaskReport();
+        Task task = null;
         if (road[0] != null) {
+            task = new Task(this.uuid, 0, road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Pasó un instante en la caja");
+            report.addTask(task);
             this.timeLeftToCharge--;
             road[0].increaseAge();
             if (timeLeftToCharge == 0) {
+                task = new Task(this.uuid, 0, road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se le cobró lo correspondiente");
+                report.addTask(task);
+                usedCapacity--;
                 road[0] = null;
-                //Hacer log
                 timeLeftToCharge = timeToCharge;
             }
         }
 
-        for (int position = 1; position < road.length ; position++) {
+        for (int position = 1; position < road.length; position++) {
+            if (road[position] != null) {
+                road[position].increaseAge();
 
-            if (road[position - 1] == null){
+                if (road[position - 1] == null) {
+                    task = new Task(this.uuid, position, road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1));
+                    report.addTask(task);
                     road[position - 1] = road[position];
                     road[position] = null;
-                    //Generar Log
                 }
             }
-
-        System.out.println(this.uuid);
-        return new TaskReport();
+        }
+       // System.out.println(this.uuid);
+        return report;
     }
 
     /**
@@ -45,6 +55,7 @@ public class TollGate extends Gate {
      */
     public void addVehicleToRoad(Vehicle vehicle){
         if (!roadIsFull()){
+            usedCapacity++;
             this.road[road.length - 1] = vehicle;
         }
     }
@@ -55,6 +66,10 @@ public class TollGate extends Gate {
      */
     public boolean roadIsFull(){
         return this.road[road.length - 1] != null;
+    }
+
+    public boolean roadIsEmpty(){
+        return usedCapacity == 0;
     }
 
 }
