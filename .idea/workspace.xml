@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fcdd77-7939-4294-ab70-cf920c116420" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,43 +89,62 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1589680225264">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589680225264" />
+    <state x="747" y="118" key="#xdebugger.evaluate" timestamp="1589742339577">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="747" y="118" key="#xdebugger.evaluate/0.0.1366.738@0.0.1366.738" timestamp="1589742339577" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1589677761216">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589677761216" />
-    <state width="1323" height="555" key="GridCell.Tab.0.bottom" timestamp="1589740310711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="125" key="GridCell.Tab.0.bottom" timestamp="1589743388878">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589658265453" />
-    <state width="1323" height="555" key="GridCell.Tab.0.center" timestamp="1589740310711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="125" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
+    <state width="1323" height="125" key="GridCell.Tab.0.center" timestamp="1589743388878">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589658265453" />
-    <state width="1323" height="555" key="GridCell.Tab.0.left" timestamp="1589740310711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="125" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
+    <state width="1323" height="125" key="GridCell.Tab.0.left" timestamp="1589743388878">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589658265452" />
-    <state width="1323" height="555" key="GridCell.Tab.0.right" timestamp="1589740310711">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="125" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
+    <state width="1323" height="125" key="GridCell.Tab.0.right" timestamp="1589743388878">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589658265453" />
+    <state width="1323" height="125" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
+    <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1589743329090">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
+    <state width="1323" height="227" key="GridCell.Tab.1.center" timestamp="1589743329090">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
+    <state width="1323" height="227" key="GridCell.Tab.1.left" timestamp="1589743329090">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
+    <state width="1323" height="227" key="GridCell.Tab.1.right" timestamp="1589743329090">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1589658104179">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -134,9 +153,23 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589570924274" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1589745612546">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1589745612546" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589592891540">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589592891540" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((HashMap.Node)vehicles.entrySet().toArray()[0]).getValue()" custom="java.util.HashMap.Node" />
+        <watch expression="vehicles.entrySet().toArray()[1]" />
+        <watch expression="vehicles.entrySet().toArray()[1]" language="JAVA" />
+        <watch expression="vehicles.entrySet().toArray()[1]" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

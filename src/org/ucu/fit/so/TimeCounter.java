@@ -43,7 +43,6 @@ public class TimeCounter implements Runnable{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
 }

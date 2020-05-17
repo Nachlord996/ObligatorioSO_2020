@@ -14,6 +14,7 @@ public class Program {
     public static Manager PROCESS_MANAGER;
     private static Planner planner;
 
+
     public static void main(String[] args){
         try {
             initialize();
@@ -39,9 +40,12 @@ public class Program {
         } catch (Exception e) {
             throw new InitialConfigurationException("Incorrect value type for lanes of tollgate");
         }
+
         TOLL_GATES = new HashMap<>();
+        int chargeTime = 2;
+        int roadSize = 5;
         for (int i = 0; i < THREADS_NUMBER; i++){
-            Gate gate = new TollGate(i);
+            Gate gate = new TollGate(i,roadSize,chargeTime);
             TOLL_GATES.put(gate.uuid, gate);
         }
 
@@ -51,7 +55,7 @@ public class Program {
             vehiclesPrioritiesParsed.put(key,Integer.parseInt(vehiclesPriorities.get(key).toString()));
         }
         HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
-        for(String line:Reader.read("src/data/vehicles.csv")){
+        for(String line : Reader.read("src/data/vehicles.csv")){
             String[] array = line.split(",");
             int amountVehicles;
             try{
@@ -64,11 +68,11 @@ public class Program {
                 vehiclesForTime.put(amountTime,new LinkedList<>());
             }
             for(int i =0 ; i<amountVehicles; i++) {
-                Vehicle vehicle = new Vehicle(array[1]);
+                Vehicle vehicle = new Vehicle(array[1],vehiclesPrioritiesParsed.get(array[1]));
                 vehiclesForTime.get(amountTime).add(vehicle);
             }
-            planner = new Planner(vehiclesPrioritiesParsed,vehiclesForTime);
         }
+        planner = new Planner(vehiclesPrioritiesParsed,vehiclesForTime);
     }
 
     private static void start(){
