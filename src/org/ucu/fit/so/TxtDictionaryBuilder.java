@@ -38,7 +38,6 @@ public class TxtDictionaryBuilder implements IDictionaryBuilder {
         }
         return dictionary;
     }
-
     private boolean fileExists() {
         boolean exists = false;
         if (dictionaryPath != null) {

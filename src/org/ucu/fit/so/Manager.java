@@ -1,12 +1,13 @@
 package org.ucu.fit.so;
 
 import java.util.HashMap;
-import java.util.logging.Logger;
+import java.util.LinkedList;
 
 public class Manager {
 
     private TimeCounter timeCounter;
     private HashMap<String, Gate> gates;
+    private Planner planner;
     private int threadSignals;
     private LogArchive archive;
     private LogHandler logger;
@@ -16,12 +17,13 @@ public class Manager {
      * @param tc Time counter instance
      * @param tollGates Hash Map with all the Gates from the Toll
      */
-    public Manager(TimeCounter tc, HashMap<String, Gate> tollGates) {
+    public Manager(TimeCounter tc, HashMap<String, Gate> tollGates, Planner planner) {
         this.timeCounter = tc;
         this.gates = tollGates;
         this.threadSignals = 0;
         this.archive = new LogArchive();
         this.logger = new LogHandler(archive);
+        this.planner = planner;
     }
 
     /**
@@ -51,6 +53,13 @@ public class Manager {
         }
     }
 
+    public void notifyManager(){
+        uploadVehiclesInGates();
+        releaseGates();
+    }
+    public void uploadVehiclesInGates(){
+        HashMap<Integer, LinkedList<Vehicle>> vehiclesForPriority = planner.getVehiclesForPriority(timeCounter.getActualTime());
+    }
     /**
      * Tells all threads to start executing
      */

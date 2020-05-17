@@ -1,0 +1,10 @@
+//Type of Vehicle, Priority
+Ambulance,1
+Police,1
+Fire Truck,1
+Car,2
+Van,2
+MotorCycle,2
+Commercial Truck,3
+Utility Truck,3
+Bus,3
