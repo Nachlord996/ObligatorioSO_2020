@@ -31,6 +31,7 @@ public class TimeCounter implements Runnable{
         System.out.println("El reloj ha sido iniciado");
         while(true){ //Mientras hayan autos en la cola
             try {
+
                 //If threads have stopped working
                 this.timerSemaphore.acquire();
 

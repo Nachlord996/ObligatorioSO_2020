@@ -91,7 +91,7 @@ public class Program {
             PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES, planner, LOG_ARCHIVE);
             PROCESS_MANAGER.begin();
 
-            while(!PROCESS_MANAGER.hasEnded()) { }
+            while(PROCESS_MANAGER.stillRunning()) { }
 
             Writer.write(OUTPUT_TEXT_PATH,LOG_ARCHIVE.getLogMessage());
 

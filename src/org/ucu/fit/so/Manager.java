@@ -11,6 +11,7 @@ public class Manager {
 
     private int threadSignals;
     private LogHandler logger;
+    private Thread timerCounter;
 
     private LinkedList<Vehicle> prospectsToEnter;
 
@@ -34,7 +35,7 @@ public class Manager {
      */
     public void begin(){
         //Starts time counter Thread
-        Thread timerCounter = new Thread(timeCounter);
+        timerCounter = new Thread(timeCounter);
         timerCounter.start();
 
         //Starts the gates Threads
@@ -142,7 +143,12 @@ public class Manager {
         return endIsHere;
     }
 
-    public void exportData(){
-
+    public boolean stillRunning(){
+        boolean stillRunning = false;
+        for (Gate gate : gates.values()){
+            stillRunning = stillRunning || gate.isAlive();
+        }
+        stillRunning = stillRunning || timerCounter.isAlive();
+        return stillRunning;
     }
 }

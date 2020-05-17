@@ -17,12 +17,11 @@ public abstract class Gate extends Thread {
     public void run(){
         while(true){
             try {
-                //If timer allows
-                uniquenessSemaphore.acquire();
-
                 if(Program.PROCESS_MANAGER.hasEnded()){
                     break;
                 }
+                //If timer allows
+                uniquenessSemaphore.acquire();
 
                 TaskReport report = this.consume();
 
