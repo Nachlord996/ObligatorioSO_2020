@@ -74,7 +74,7 @@ public class Program {
     private static void start(){
         try {
             TIMER = new TimeCounter();
-            PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES,planner);
+            PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES, planner);
             PROCESS_MANAGER.begin();
         } catch (Exception e){
             e.printStackTrace();

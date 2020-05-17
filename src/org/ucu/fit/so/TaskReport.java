@@ -1,43 +1,37 @@
 package org.ucu.fit.so;
 
+import java.util.LinkedList;
+
 public class TaskReport {
 
-    private String gateID;
-    private String vehicleID;
-    private int timeWaiting;
-    private int priority;
-    private String action;
-    private int instant;
+    private LinkedList<Task> completedTasks;
 
-    public TaskReport(String gateID, String vehicleID, int timeWaiting, int priority, String action) {
-        this.gateID = gateID;
-        this.vehicleID = vehicleID;
-        this.timeWaiting = timeWaiting;
-        this.priority = priority;
-        this.action = action;
-        instant = -1;
+    public TaskReport(){
+        completedTasks = new LinkedList();
     }
 
-    public void setInstant(int instant){
-        if (instant < 0){
-            throw new IllegalArgumentException("Time instant can't be negative");
+    public void setInstant(int time) throws IllegalArgumentException {
+        for(Task t : completedTasks){
+            t.setInstant(time);
         }
-        this.instant = instant;
     }
 
-    public String getReportMessage(){
-        return instant == -1 ? null : generateReport();
+    public void addTask(Task task){
+        completedTasks.add(task);
     }
 
-    private String generateReport() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(instant);
-        builder.append("," + gateID);
-        builder.append("," + vehicleID);
-        builder.append("," + priority);
-        builder.append("," + timeWaiting);
-        builder.append("," + action);
-        return new String(builder);
+    public void clearReport(){
+        completedTasks.clear();
     }
 
+    public LinkedList<String> getReportLines(){
+        LinkedList<String> report = new LinkedList<>();
+        for (Task task : completedTasks){
+            String message = task.getReportMessage();
+            if (message != null){
+                report.add(message);
+            }
+        }
+        return report;
+    }
 }

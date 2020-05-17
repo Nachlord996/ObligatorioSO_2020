@@ -9,7 +9,7 @@ public class TollGate extends Gate {
     @Override
     TaskReport consume() {
         System.out.println(this.uuid);
-        return new TaskReport(this.uuid,"autoID",0,0,"action");
+        return new TaskReport();
     }
 
 }
