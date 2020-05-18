@@ -1,23 +1,31 @@
 package org.ucu.fit.so;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
-
+import java.util.LinkedList;
 public class Writer {
 
     /**
      * Writes a line in a file
      * @param path path of the file
-     * @param text line to write
+     * @param listOfText list of text to append
      */
-    public static void write(String path, String text) {
+    public static void write(String path, LinkedList<String> listOfText) {
         FileWriter fr;
         BufferedWriter br;
+        File file = new File(path);
+        if (file.exists() && !file.isDirectory()){
+            file.delete();
+        }
         try {
             fr = new FileWriter(path);
             br = new BufferedWriter(fr);
 
-            br.write(text);
+            for(String line:listOfText){
+                br.write(line);
+                br.newLine();
+            }
             br.close();
             fr.close();
         }

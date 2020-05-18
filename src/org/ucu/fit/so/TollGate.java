@@ -5,20 +5,20 @@ public class TollGate extends Gate {
     private final Vehicle[] road;
     private final int timeToCharge;
     private int timeLeftToCharge;
-    private int usedCapacity;
+    private int usedCapacity = 0;
 
     /**
      * Class representing a tollGate
+     *
      * @param gateNumber Number of gate to generate unique id
-     * @param roadSize Size of the road of the gate
-     * @param timeToPay Time that a vehicle spends passing through the gate
+     * @param roadSize   Size of the road of the gate
+     * @param timeToPay  Time that a vehicle spends passing through the gate
      */
     TollGate(int gateNumber, int roadSize, int timeToPay) {
         super(gateNumber);
         this.road = new Vehicle[roadSize];
         this.timeToCharge = timeToPay;
         this.timeLeftToCharge = timeToPay;
-        this.usedCapacity = 0;
     }
 
     @Override
@@ -28,12 +28,15 @@ public class TollGate extends Gate {
 
         //Checks the last position of the road. If there is someone passing through the gate
         if (road[0] != null) {
-            task = new Task(this.uuid, 0, road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Pasó un instante en la caja");
-            report.addTask(task);
+
 
             //This controls the time a vehicle takes to pass through the gate
             this.timeLeftToCharge--;
 
+            if (timeLeftToCharge != 0) {
+                task = new Task(this.uuid, 0, road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Pasó un instante en la caja");
+                report.addTask(task);
+            }
             //Increases the age of the vehicle. This is to measure the spent time
             road[0].increaseAge();
 
@@ -57,7 +60,6 @@ public class TollGate extends Gate {
                     task = new Task(this.uuid, position, road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1));
                     report.addTask(task);
 
-
                     road[position - 1] = road[position]; //Moves vehicle
                     road[position] = null; //The previous position of the vehicle ends empty
                 }
@@ -68,10 +70,11 @@ public class TollGate extends Gate {
 
     /**
      * Adds a vehicle in the beginning of the road only if the road isn't full. road[road.size]
+     *
      * @param vehicle Vehicle that is going to be added to the road
      */
-    public void addVehicleToRoad(Vehicle vehicle){
-        if (roadIsNotFull()){
+    public void addVehicleToRoad(Vehicle vehicle) {
+        if (roadIsNotFull()) {
             usedCapacity++;
             this.road[road.length - 1] = vehicle;
         }
@@ -79,17 +82,19 @@ public class TollGate extends Gate {
 
     /**
      * Checks the first position of the road
+     *
      * @return True if a vehicle can be added
      */
-    public boolean roadIsNotFull(){
+    public boolean roadIsNotFull() {
         return this.road[road.length - 1] == null;
     }
 
     /**
      * Return true if there isn't a car in the gate´s road
+     *
      * @return true if road is empty
      */
-    public boolean roadIsEmpty(){
+    public boolean roadIsEmpty() {
         return usedCapacity == 0;
     }
 
