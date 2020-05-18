@@ -1,9 +1,10 @@
 package org.ucu.fit.so;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Manager {
+public class Manager<prospectsToEnter2> {
 
     /**
      * This class simulates time
@@ -34,6 +35,8 @@ public class Manager {
      */
     private final LinkedList<Vehicle> prospectsToEnter = new LinkedList<>();
 
+    private final LinkedList<Vehicle>[] prospectsToEnterWithPriority;
+
 
     /**
      * The Manager is the connection between time counter and the Gates threads
@@ -41,11 +44,12 @@ public class Manager {
      * @param planner The planer selects the cars that are able to enter toolGates
      * @param outputPath Path to write the logs
      */
-    public Manager(HashMap<String, TollGate> tollGates, Planner planner, String outputPath) {
+    public Manager(HashMap<String, TollGate> tollGates, Planner planner, String outputPath,int amountOfPriorities) {
         this.timeCounter = new TimeCounter(this);
         this.gates = tollGates;
         this.planner = planner;
         this.outputPath = outputPath;
+        this.prospectsToEnterWithPriority = new LinkedList[amountOfPriorities];
     }
 
     /**
@@ -80,7 +84,7 @@ public class Manager {
      * This method is executed when the timeCounter
      */
     public void notifyManager(){
-        uploadVehiclesInGates();
+        uploadVehiclesInGatesWithPriorities();
         releaseGates();
     }
 
@@ -119,6 +123,38 @@ public class Manager {
                 tollGate.addVehicleToRoad(prospectsToEnter.pop());
             }
 
+        }
+    }
+
+    public void uploadVehiclesInGatesWithPriorities(){
+        //Current time in simulation
+        int time = timeCounter.getActualTime();
+
+        //Gets HashMap with new vehicles.
+        HashMap<Integer,LinkedList<Vehicle>> newVehicles = planner.getVehiclesForPriority(time);
+
+
+        //Ads new vehicles to a linked list so they can wait.
+        if (newVehicles != null){
+            for(Integer key : newVehicles.keySet()){
+                for(Vehicle vehicle:newVehicles.get(key)){
+                    if(prospectsToEnterWithPriority[key-1] == null){
+                        prospectsToEnterWithPriority[key-1] = new LinkedList<>();
+                    }
+                    prospectsToEnterWithPriority[key-1].addLast(vehicle);
+                }
+            }
+        }
+
+        //Available gates are filled with cars
+        LinkedList<TollGate> availableGates = getAvailableGates();
+        for (TollGate tollGate : availableGates){
+            for (LinkedList<Vehicle> vehicles : prospectsToEnterWithPriority) {
+                if (vehicles != null && !vehicles.isEmpty()) {
+                    tollGate.addVehicleToRoad(vehicles.pop());
+                    break;
+                }
+            }
         }
     }
 

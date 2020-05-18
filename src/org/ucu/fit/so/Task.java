@@ -8,6 +8,7 @@ public class Task {
     private final String action;
     private int instant;
     private final int position;
+    private final String vehicleType;
 
     /**
      * A task is created to save information about the simulation.
@@ -18,13 +19,14 @@ public class Task {
      * @param priority The vehicle priority
      * @param action The action it has performed
      */
-    public Task(String gateID, int position, String vehicleID, int timeWaiting, int priority, String action) {
+    public Task(String gateID, int position,String vehicleType, String vehicleID, int timeWaiting, int priority, String action) {
         this.gateID = gateID;
         this.vehicleID = vehicleID;
         this.timeWaiting = timeWaiting;
         this.priority = priority;
         this.action = action;
         this.position = position;
+        this.vehicleType = vehicleType;
         instant = -1;
     }
 
@@ -52,6 +54,7 @@ public class Task {
         builder.append(instant);
         builder.append(",").append(gateID);
         builder.append(",").append(position);
+        builder.append(",").append(vehicleType);
         builder.append(",").append(vehicleID);
         builder.append(",").append(priority);
         builder.append(",").append(timeWaiting);

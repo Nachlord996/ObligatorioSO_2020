@@ -7,7 +7,7 @@ public class LogHandler {
     private final LinkedList<String> logfile = new LinkedList<>();
 
     public LogHandler() {
-        String header = "Instant, Gate ID, Position, Vehicle ID, Priority, Time Waiting, Action";
+        String header = "Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Action";
         log(header);
     }
 

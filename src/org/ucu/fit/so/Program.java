@@ -8,6 +8,7 @@ public class Program {
     private static final HashMap<String,TollGate> TOLL_GATES = new HashMap<>();
     private static Planner PLANNER;
     private static String OUTPUT_TEXT_PATH;
+    private static int AMOUNT_PRIORITIES;
 
     public static void main(String[] args){
         try {
@@ -25,7 +26,6 @@ public class Program {
         String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
         String CHARGE_TIME_KEY = "CHARGE_TIME";
         String ROAD_SIZE_KEY = "ROAD_SIZE";
-
         IDictionaryBuilder builder = new TxtDictionaryBuilder();
         HashMap<String, Object> CONFIG = builder.buildDictionary("src/config/INIT_CONFIG.txt");
         HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
@@ -74,9 +74,14 @@ public class Program {
             TollGate gate = new TollGate(i,roadSize,chargeTime);
             TOLL_GATES.put(gate.uuid, gate);
         }
+
         //Parse Value of vehiclesPriorities to Integer and put in vehiclesPrioritiesParsed
         for(String key:vehiclesPriorities.keySet()){
-            vehiclesPrioritiesParsed.put(key,Integer.parseInt(vehiclesPriorities.get(key).toString()));
+            int priority = Integer.parseInt(vehiclesPriorities.get(key).toString());
+            vehiclesPrioritiesParsed.put(key,priority);
+            if(AMOUNT_PRIORITIES<priority){
+                AMOUNT_PRIORITIES = priority;
+            }
         }
         //Read the vehicles file and put them in vehiclesForTime
         for(String line : Reader.read("src/data/vehicles.csv")){
@@ -101,11 +106,12 @@ public class Program {
             }
         }
         PLANNER = new Planner(vehiclesPrioritiesParsed,vehiclesForTime);
+
     }
 
     private static void start(){
         try {
-            Manager PROCESS_MANAGER = new Manager(TOLL_GATES, PLANNER, OUTPUT_TEXT_PATH);
+            Manager PROCESS_MANAGER = new Manager(TOLL_GATES, PLANNER, OUTPUT_TEXT_PATH, AMOUNT_PRIORITIES);
             PROCESS_MANAGER.begin();
         } catch (Exception e){
             e.printStackTrace();

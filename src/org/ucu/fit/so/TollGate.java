@@ -29,19 +29,18 @@ public class TollGate extends Gate {
         //Checks the last position of the road. If there is someone passing through the gate
         if (road[0] != null) {
 
-
             //This controls the time a vehicle takes to pass through the gate
             this.timeLeftToCharge--;
 
             if (timeLeftToCharge != 0) {
-                task = new Task(this.uuid, 0, road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Pasó un instante en la caja");
+                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(),road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Pasó un instante en la caja");
                 report.addTask(task);
             }
             //Increases the age of the vehicle. This is to measure the spent time
             road[0].increaseAge();
 
             if (timeLeftToCharge == 0) { //If the vehicle has passed
-                task = new Task(this.uuid, 0, road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se le cobró lo correspondiente");
+                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(), road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se le cobró lo correspondiente");
                 report.addTask(task);
 
                 usedCapacity--; //Reduces the vehicles on road
@@ -57,14 +56,14 @@ public class TollGate extends Gate {
 
                 if (road[position - 1] == null) { //If there is no one in front of him
                     //Report movement
-                    task = new Task(this.uuid, position, road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1));
+                    task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1));
                     report.addTask(task);
 
                     road[position - 1] = road[position]; //Moves vehicle
                     road[position] = null; //The previous position of the vehicle ends empty
                 }
                 else{
-                    task = new Task(this.uuid, position, road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Espera en posición: "+position);
+                    task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Espera en posición: "+position);
                     report.addTask(task);
                 }
             }

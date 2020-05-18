@@ -34,7 +34,7 @@ public class Planner {
     public HashMap<Integer, LinkedList<Vehicle>> getVehiclesForPriority(int time) {
         HashMap<Integer,LinkedList<Vehicle>> vehiclesForPriority = new HashMap<>();
         if (vehiclesForTime.containsKey(time)){
-            for(Vehicle vehicle: vehiclesForTime.get(time)){
+            for(Vehicle vehicle: getVehicleArrivedAtTime(time)){
                 int priority = vehiclesPriorities.get(vehicle.getTypeOfVehicle());
                 if(!vehiclesForPriority.containsKey(priority)){
                     vehiclesForPriority.put(priority,new LinkedList<>());
