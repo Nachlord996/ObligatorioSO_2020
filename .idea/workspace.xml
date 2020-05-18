@@ -20,13 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fcdd77-7939-4294-ab70-cf920c116420" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data/output.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/config/INIT_CONFIG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/config/INIT_CONFIG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/INIT_CONFIG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/INIT_CONFIG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/LogArchive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/LogArchive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/LogHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/LogHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TaskReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TaskReport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TimeCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TxtDictionaryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TxtDictionaryBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Writer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +55,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bvFVECOlCEH9plcKiGPR5OIgUt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -96,11 +115,15 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1589680225264">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1589813244577">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589680225264" />
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1589813244577" />
     <state x="747" y="118" key="#xdebugger.evaluate" timestamp="1589742339577">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -109,26 +132,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589677761216" />
-    <state width="1323" height="125" key="GridCell.Tab.0.bottom" timestamp="1589743388878">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1589813127222">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="125" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
-    <state width="1323" height="125" key="GridCell.Tab.0.center" timestamp="1589743388878">
+    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589813127222" />
+    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1589813127222">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="125" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
-    <state width="1323" height="125" key="GridCell.Tab.0.left" timestamp="1589743388878">
+    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589813127222" />
+    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1589813127221">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="125" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
-    <state width="1323" height="125" key="GridCell.Tab.0.right" timestamp="1589743388878">
+    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589813127221" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1589813127222">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="555" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589740310711" />
-    <state width="1323" height="125" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589743388878" />
+    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589813127222" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1589743329090">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -153,6 +176,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589570924274" />
+    <state x="387" y="260" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589766409773">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="387" y="260" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.738@0.0.1366.738" timestamp="1589766409773" />
+    <state x="322" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589767605744">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="322" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738@0.0.1366.738" timestamp="1589767605744" />
     <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1589745612546">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

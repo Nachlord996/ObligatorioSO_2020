@@ -1,13 +1,13 @@
 package org.ucu.fit.so;
 
 public class Task {
-    private String gateID;
-    private String vehicleID;
-    private int timeWaiting;
-    private int priority;
-    private String action;
+    private final String gateID;
+    private final String vehicleID;
+    private final int timeWaiting;
+    private final int priority;
+    private final String action;
     private int instant;
-    private int position;
+    private final int position;
 
     public Task(String gateID, int position, String vehicleID, int timeWaiting, int priority, String action) {
         this.gateID = gateID;
@@ -33,12 +33,12 @@ public class Task {
     private String generateReport() {
         StringBuilder builder = new StringBuilder();
         builder.append(instant);
-        builder.append("," + gateID);
-        builder.append("," + position);
-        builder.append("," + vehicleID);
-        builder.append("," + priority);
-        builder.append("," + timeWaiting);
-        builder.append("," + action);
+        builder.append(",").append(gateID);
+        builder.append(",").append(position);
+        builder.append(",").append(vehicleID);
+        builder.append(",").append(priority);
+        builder.append(",").append(timeWaiting);
+        builder.append(",").append(action);
         return new String(builder);
     }
 

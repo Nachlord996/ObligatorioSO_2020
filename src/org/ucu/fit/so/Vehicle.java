@@ -1,8 +1,8 @@
 package org.ucu.fit.so;
 
 public class Vehicle {
-    private String typeOfVehicle;
-    private String uuid;
+    private final String typeOfVehicle;
+    private final String uuid;
     private static int numOfCars;
 
     public int getAge() {
@@ -14,7 +14,7 @@ public class Vehicle {
     }
 
     private int age;
-    private int priority;
+    private final int priority;
 
     public Vehicle(String typeOfVehicle, int priority) {
         this.typeOfVehicle = typeOfVehicle;

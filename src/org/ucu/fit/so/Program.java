@@ -2,18 +2,12 @@ package org.ucu.fit.so;
 
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.concurrent.Semaphore;
 
 public class Program {
 
-    private static HashMap<String, Object> CONFIG;
-    private static String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
-    private static int THREADS_NUMBER;
-    private static HashMap<String,TollGate> TOLL_GATES;
-    public static TimeCounter TIMER;
-    public static Manager PROCESS_MANAGER;
+    private static final HashMap<String,TollGate> TOLL_GATES = new HashMap<>();
+    private static Manager PROCESS_MANAGER;
     private static Planner planner;
-    private static LogArchive LOG_ARCHIVE;
     private static String OUTPUT_TEXT_PATH;
 
     public static void main(String[] args){
@@ -30,20 +24,22 @@ public class Program {
 
     private static void initialize() throws InitialConfigurationException {
         IDictionaryBuilder builder = new TxtDictionaryBuilder();
-        CONFIG = builder.buildDictionary("src/config/INIT_CONFIG.txt");
+        HashMap<String, Object> CONFIG = builder.buildDictionary("src/config/INIT_CONFIG.txt");
         if (CONFIG == null) {
             throw new InitialConfigurationException("Config file not found or corrupted");
         }
+        String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
         if (!CONFIG.containsKey(THREADS_NUMBER_KEY)){
             throw new InitialConfigurationException("Missing parameter for lanes of tollgate");
-        } try {
+        }
+        int THREADS_NUMBER;
+        try {
             THREADS_NUMBER = Integer.parseInt(CONFIG.get(THREADS_NUMBER_KEY).toString());
         } catch (Exception e) {
             throw new InitialConfigurationException("Incorrect value type for lanes of tollgate");
         }
         OUTPUT_TEXT_PATH = String.valueOf(CONFIG.get("OUTPUT_PATH"));
 
-        TOLL_GATES = new HashMap<>();
         int chargeTime = 2;
         int roadSize = 3;
 
@@ -53,7 +49,6 @@ public class Program {
             TOLL_GATES.put(gate.uuid, gate);
         }
 
-        LOG_ARCHIVE = new LogArchive();
 
         HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
         HashMap<String,Object> vehiclesPriorities = builder.buildDictionary("src/config/vehiclePriorities.csv");
@@ -87,13 +82,8 @@ public class Program {
 
     private static void start(){
         try {
-            TIMER = new TimeCounter();
-            PROCESS_MANAGER = new Manager(TIMER, TOLL_GATES, planner, LOG_ARCHIVE);
+            PROCESS_MANAGER = new Manager(TOLL_GATES, planner,OUTPUT_TEXT_PATH);
             PROCESS_MANAGER.begin();
-
-            while(PROCESS_MANAGER.stillRunning()) { }
-
-            Writer.write(OUTPUT_TEXT_PATH,LOG_ARCHIVE.getLogMessage());
 
         } catch (Exception e){
             e.printStackTrace();

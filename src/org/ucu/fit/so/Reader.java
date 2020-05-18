@@ -7,9 +7,9 @@ import java.util.LinkedList;
 
 public class Reader {
         public static LinkedList<String> read(String path) {
-            File file = null;
+            File file;
             FileReader fr = null;
-            BufferedReader br = null;
+            BufferedReader br;
             LinkedList<String> listRead = new LinkedList<>();
             try {
                 file = new File (path);

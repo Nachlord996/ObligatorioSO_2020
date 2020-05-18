@@ -1,18 +1,18 @@
 package org.ucu.fit.so;
 
-import javax.print.attribute.standard.PrinterMessageFromOperator;
 import java.util.concurrent.Semaphore;
 
 public class TimeCounter implements Runnable{
 
     //Controls that all gates have executed
-    private Semaphore timerSemaphore;
-
+    private final Semaphore timerSemaphore;
+    private final Manager manager;
     private int timeCounter;
 
-    public TimeCounter(){
-        timerSemaphore = new Semaphore(1);
-        timeCounter = -1;
+    public TimeCounter(Manager manager){
+        this.timerSemaphore = new Semaphore(1);
+        this.timeCounter = -1;
+        this.manager = manager;
     }
 
     public int getActualTime(){
@@ -28,14 +28,14 @@ public class TimeCounter implements Runnable{
 
     @Override
     public void run() {
-        System.out.println("El reloj ha sido iniciado");
-        while(true){ //Mientras hayan autos en la cola
+        System.out.println("The clock has started");
+        while(true){
             try {
 
-                //If threads have stopped working
+                //If threads have stopped working the clock can run
                 this.timerSemaphore.acquire();
 
-                if(Program.PROCESS_MANAGER.hasEnded()) {
+                if(manager.hasEnded()) {
                     break;
                 }
 
@@ -43,13 +43,12 @@ public class TimeCounter implements Runnable{
                 System.out.println("t = " + timeCounter);
 
                 //Turns on all the unity Semaphores from the Threads
-                Program.PROCESS_MANAGER.notifyManager();
+                manager.notifyManager();
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        // Turn off all gates after timer finished
-        Program.PROCESS_MANAGER.releaseGates();
+        manager.makeLogReport();
     }
 }

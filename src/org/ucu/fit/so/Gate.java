@@ -1,23 +1,25 @@
 package org.ucu.fit.so;
 
-import javax.swing.*;
 import java.util.concurrent.Semaphore;
 
 public abstract class Gate extends Thread {
 
     protected String uuid;
     protected Semaphore uniquenessSemaphore;
+    protected Manager manager;
 
     Gate(int gateNumber){
         this.uuid = "G" + gateNumber;
         uniquenessSemaphore = new Semaphore(0);
     }
-
+    public void setManager(Manager manager) {
+        this.manager = manager;
+    }
     @Override
     public void run(){
         while(true){
             try {
-                if(Program.PROCESS_MANAGER.hasEnded()){
+                if(manager.hasEnded()){
                     break;
                 }
                 //If timer allows
@@ -26,10 +28,10 @@ public abstract class Gate extends Thread {
                 TaskReport report = this.consume();
 
                 //Report done task
-                Program.PROCESS_MANAGER.reportTask(report);
+                manager.reportTask(report);
 
                 //Tells the manager that ended
-                Program.PROCESS_MANAGER.signal();
+                manager.signal();
 
             } catch (InterruptedException e) {
                 e.printStackTrace();

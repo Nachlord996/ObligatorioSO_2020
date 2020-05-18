@@ -5,28 +5,24 @@ import java.util.LinkedList;
 
 public class Manager {
 
-    private TimeCounter timeCounter;
-    private HashMap<String, TollGate> gates;
-    private Planner planner;
-
-    private int threadSignals;
-    private LogHandler logger;
-    private Thread timerCounter;
-
-    private LinkedList<Vehicle> prospectsToEnter;
+    private final TimeCounter timeCounter;
+    private final HashMap<String, TollGate> gates;
+    private final Planner planner;
+    private final String outputPath;
+    private int threadSignals = 0;
+    private final LogHandler logger = new LogHandler();
+    private final LinkedList<Vehicle> prospectsToEnter = new LinkedList<>();
 
     /**
      * The Manager is the connection between time counter and the Gates threads
-     * @param tc Time counter instance
+     * @param outputPath Path to write the logs
      * @param tollGates Hash Map with all the Gates from the Toll
      */
-    public Manager(TimeCounter tc, HashMap<String, TollGate> tollGates, Planner planner, LogArchive archive) {
-        this.timeCounter = tc;
+    public Manager(HashMap<String, TollGate> tollGates, Planner planner, String outputPath) {
+        this.timeCounter = new TimeCounter(this);
         this.gates = tollGates;
-        this.threadSignals = 0;
-        this.logger = new LogHandler(archive);
         this.planner = planner;
-        this.prospectsToEnter = new LinkedList<Vehicle>();
+        this.outputPath = outputPath;
     }
 
     /**
@@ -35,13 +31,15 @@ public class Manager {
      */
     public void begin(){
         //Starts time counter Thread
-        timerCounter = new Thread(timeCounter);
+        Thread timerCounter = new Thread(timeCounter);
         timerCounter.start();
 
         //Starts the gates Threads
-        for (Thread thread : gates.values()){
-            thread.start();
+        for (Gate gate : gates.values()){
+            gate.setManager(this);
+            gate.start();
         }
+
     }
 
     /**
@@ -59,6 +57,10 @@ public class Manager {
     public void notifyManager(){
         uploadVehiclesInGates();
         releaseGates();
+    }
+
+    public void makeLogReport(){
+        Writer.write(outputPath, logger.getLogfile().getLogMessage());
     }
 
     /**
@@ -87,13 +89,11 @@ public class Manager {
 
         //Available gates are filled with cars
         LinkedList<TollGate> availableGates = getAvailableGates();
-        if (availableGates != null){
-            for (TollGate tollGate : availableGates){
-                if (!prospectsToEnter.isEmpty()){
-                    tollGate.addVehicleToRoad(prospectsToEnter.pop());
-                }
-
+        for (TollGate tollGate : availableGates){
+            if (!prospectsToEnter.isEmpty()){
+                tollGate.addVehicleToRoad(prospectsToEnter.pop());
             }
+
         }
     }
 
@@ -143,12 +143,12 @@ public class Manager {
         return endIsHere;
     }
 
-    public boolean stillRunning(){
+    /*public boolean stillRunning(){
         boolean stillRunning = false;
         for (Gate gate : gates.values()){
             stillRunning = stillRunning || gate.isAlive();
         }
         stillRunning = stillRunning || timerCounter.isAlive();
         return stillRunning;
-    }
+    }*/
 }

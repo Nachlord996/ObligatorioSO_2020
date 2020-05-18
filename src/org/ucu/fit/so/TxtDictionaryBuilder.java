@@ -57,8 +57,8 @@ public class TxtDictionaryBuilder implements IDictionaryBuilder {
         return false;
     }
 
-    private ArrayList openFile() {
-        ArrayList linesOfFile = new ArrayList();
+    private ArrayList<String> openFile() {
+        ArrayList<String> linesOfFile = new ArrayList<>();
         try{
             FileReader fr = new FileReader(dictionaryPath);
             BufferedReader br = new BufferedReader(fr);
@@ -81,8 +81,6 @@ public class TxtDictionaryBuilder implements IDictionaryBuilder {
             }
             br.close();
             fr.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

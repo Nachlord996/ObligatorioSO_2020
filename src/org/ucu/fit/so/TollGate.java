@@ -2,7 +2,7 @@ package org.ucu.fit.so;
 
 public class TollGate extends Gate {
 
-    private Vehicle[] road;
+    private final Vehicle[] road;
     private final int timeToCharge;
     private int timeLeftToCharge;
     private int usedCapacity;
@@ -18,7 +18,7 @@ public class TollGate extends Gate {
     @Override
     TaskReport consume() {
         TaskReport report = new TaskReport();
-        Task task = null;
+        Task task;
         if (road[0] != null) {
             task = new Task(this.uuid, 0, road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Pasó un instante en la caja");
             report.addTask(task);

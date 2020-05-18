@@ -8,13 +8,13 @@ public class Planner {
      * HashMap with type of vehicle on keys
      * The value is the priority number of the type of vehicle
      */
-    private HashMap<String,Integer> vehiclesPriorities;
+    private final HashMap<String,Integer> vehiclesPriorities;
 
     /**
      * This HashMap has the time the vehicle enters the toll as keys
      * The value is a linked list of vehicles that appear in the selected time
      */
-    private HashMap<Integer, LinkedList<Vehicle>> vehicles;
+    private final HashMap<Integer, LinkedList<Vehicle>> vehiclesForTime;
 
     /**
      * The planner manages the vehicles by time. Its work is to select vehicles to put in gates
@@ -23,18 +23,18 @@ public class Planner {
      */
     public Planner(HashMap<String, Integer> vehiclesPriorities, HashMap<Integer, LinkedList<Vehicle>> vehiclesForTime) {
         this.vehiclesPriorities = vehiclesPriorities;
-        this.vehicles = vehiclesForTime;
+        this.vehiclesForTime = vehiclesForTime;
     }
 
-    /**
-     * Returns a HashMap with: key = time to appear. value = linked list of vehicles that appear in that time
-     * @param time Time to get the vehicles
+    /*
+      Returns a HashMap with: key = time to appear. value = linked list of vehicles that appear in that time
+      @param time Time to get the vehicles
      * @return HashMap with: key = time to appear. value = linked list of vehicles that appear in that time
      */
-    public HashMap<Integer, LinkedList<Vehicle>> getVehiclesForPriority(int time) {
+    /*public HashMap<Integer, LinkedList<Vehicle>> getVehiclesForPriority(int time) {
         HashMap<Integer,LinkedList<Vehicle>> vehiclesForPriority = new HashMap<>();
-        if (vehicles.containsKey(time)){
-            for(Vehicle vehicle: vehicles.get(time)){
+        if (vehiclesForTime.containsKey(time)){
+            for(Vehicle vehicle: vehiclesForTime.get(time)){
                 int priority = vehiclesPriorities.get(vehicle.getTypeOfVehicle());
                 if(!vehiclesForPriority.containsKey(priority)){
                     vehiclesForPriority.put(priority,new LinkedList<>());
@@ -43,7 +43,7 @@ public class Planner {
             }
         }
         return vehiclesForPriority;
-    }
+    }*/
 
     /**
      * Returns a list with vehicles of a required time
@@ -52,13 +52,13 @@ public class Planner {
      */
     public LinkedList<Vehicle> getVehicleArrivedAtTime(int time){
         LinkedList<Vehicle> list = null;
-        if (vehicles != null) {
-            list = vehicles.remove(time);
+        if (vehiclesForTime != null) {
+            list = vehiclesForTime.remove(time);
         }
         return list;
     }
 
     public boolean isEmpty(){
-        return vehicles.isEmpty();
+        return vehiclesForTime.isEmpty();
     }
 }

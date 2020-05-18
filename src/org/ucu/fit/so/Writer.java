@@ -1,12 +1,12 @@
 package org.ucu.fit.so;
 
-import java.io.*;
-import java.util.LinkedList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class Writer {
     public static void write(String path, String text) {
-        FileWriter fr = null;
-        BufferedWriter br = null;
+        FileWriter fr;
+        BufferedWriter br;
         try {
             fr = new FileWriter(path);
             br = new BufferedWriter(fr);
