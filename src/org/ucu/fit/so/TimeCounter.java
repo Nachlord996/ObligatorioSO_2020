@@ -5,16 +5,27 @@ import java.util.concurrent.Semaphore;
 public class TimeCounter implements Runnable{
 
     //Controls that all gates have executed
+
     private final Semaphore timerSemaphore;
     private final Manager manager;
+    /**
+     * Int represents the moment of time of the simulation
+     */
     private int timeCounter;
-
+    /**
+     * Class that simulates time
+     */
     public TimeCounter(Manager manager){
         this.timerSemaphore = new Semaphore(1);
         this.timeCounter = -1;
         this.manager = manager;
+
     }
 
+    /**
+     * Returns the moment of time during the simulation
+     * @return int, time moment
+     */
     public int getActualTime(){
         return timeCounter;
     }

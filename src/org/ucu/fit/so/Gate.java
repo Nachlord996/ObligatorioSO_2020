@@ -4,10 +4,23 @@ import java.util.concurrent.Semaphore;
 
 public abstract class Gate extends Thread {
 
+    /**
+     * Unique ID of the gate
+     */
     protected String uuid;
+
+    /**
+     * This Semaphore allows the gate to execute once per time unit
+     * The TimeCounter makes the Manager release it
+     */
     protected Semaphore uniquenessSemaphore;
     protected Manager manager;
 
+    /**
+     * The gates takes care of the movement and payment of cars
+     * Each Gate is a Thread
+     * @param gateNumber Number of thread to create id. Each number shoud be unique
+     */
     Gate(int gateNumber){
         this.uuid = "G" + gateNumber;
         uniquenessSemaphore = new Semaphore(0);

@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.LinkedList;
 
+/**
+ * Reads the lines from a file and returns them in a linkedList
+ */
 public class Reader {
         public static LinkedList<String> read(String path) {
             File file;

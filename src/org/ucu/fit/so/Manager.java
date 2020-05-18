@@ -5,18 +5,41 @@ import java.util.LinkedList;
 
 public class Manager {
 
+    /**
+     * This class simulates time
+     */
     private final TimeCounter timeCounter;
+    /**
+     * A HashMap containing <Gate id, TollGate> </Gate>
+     */
     private final HashMap<String, TollGate> gates;
+    /**
+     * TO BE UPDATED
+     * The planner retrieves the vehicle that should be placed in the TollGates
+     * In further versions processes planing is going to be implemented
+     */
     private final Planner planner;
+
     private final String outputPath;
+    /**
+     * Number of threads that have ended their work in a unit of time
+     */
     private int threadSignals = 0;
+
+
     private final LogHandler logger = new LogHandler();
+    /**
+     * TO BE UPDATED
+     * List of vehicles that are able to enter a tollGate
+     */
     private final LinkedList<Vehicle> prospectsToEnter = new LinkedList<>();
+
 
     /**
      * The Manager is the connection between time counter and the Gates threads
-     * @param outputPath Path to write the logs
      * @param tollGates Hash Map with all the Gates from the Toll
+     * @param planner The planer selects the cars that are able to enter toolGates
+     * @param outputPath Path to write the logs
      */
     public Manager(HashMap<String, TollGate> tollGates, Planner planner, String outputPath) {
         this.timeCounter = new TimeCounter(this);
@@ -54,6 +77,9 @@ public class Manager {
         }
     }
 
+    /**
+     * This method is executed when the timeCounter
+     */
     public void notifyManager(){
         uploadVehiclesInGates();
         releaseGates();
@@ -105,7 +131,7 @@ public class Manager {
     private LinkedList<TollGate> getAvailableGates(){
         LinkedList<TollGate> availableGates = new LinkedList<>();
         for (TollGate gate : gates.values()){
-            if(!gate.roadIsFull()) {
+            if(gate.roadIsNotFull()) {
                 availableGates.add(gate);
             }
         }
@@ -122,6 +148,10 @@ public class Manager {
         }
     }
 
+    /**
+     * Ads a task to the log
+     * @param report report to add to log file
+     */
     public synchronized void reportTask(TaskReport report){
         report.setInstant(timeCounter.getActualTime());
         LinkedList<String> lines = report.getReportLines();
@@ -130,6 +160,13 @@ public class Manager {
         }
     }
 
+    /**
+     * Returns true if:
+     * There is no more vehicles waiting to access the toll
+     * All gates are empty and there is no vehicles on them
+     * These are the conditions that make the program end
+     * @return true if the program can be ended
+     */
     public boolean hasEnded(){
         boolean endIsHere = planner.isEmpty();
         if (endIsHere){
@@ -142,13 +179,4 @@ public class Manager {
         }
         return endIsHere;
     }
-
-    /*public boolean stillRunning(){
-        boolean stillRunning = false;
-        for (Gate gate : gates.values()){
-            stillRunning = stillRunning || gate.isAlive();
-        }
-        stillRunning = stillRunning || timerCounter.isAlive();
-        return stillRunning;
-    }*/
 }
