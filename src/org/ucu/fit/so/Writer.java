@@ -4,6 +4,12 @@ import java.io.*;
 import java.util.LinkedList;
 
 public class Writer {
+
+    /**
+     * Writes a line in a file
+     * @param path path of the file
+     * @param text line to write
+     */
     public static void write(String path, String text) {
         FileWriter fr = null;
         BufferedWriter br = null;

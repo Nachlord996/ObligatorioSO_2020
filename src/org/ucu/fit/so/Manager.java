@@ -5,20 +5,49 @@ import java.util.LinkedList;
 
 public class Manager {
 
+    /**
+     * This class simulates time
+     */
     private TimeCounter timeCounter;
+
+    /**
+     * A HashMap containing <Gate id, TollGate> </Gate>
+     */
     private HashMap<String, TollGate> gates;
+
+    /**
+     * TO BE UPDATED
+     * The planner retrieves the vehicle that should be placed in the TollGates
+     * In further versions processes planing is going to be implemented
+     */
     private Planner planner;
 
+    /**
+     * Number of threads that have ended their work in a unit of time
+     */
     private int threadSignals;
+
+
     private LogHandler logger;
+
+    /**
+     * Thread to execute the time counter
+     */
     private Thread timerCounter;
 
+
+    /**
+     * TO BE UPDATED
+     * List of vehicles that are able to enter a tollGate
+     */
     private LinkedList<Vehicle> prospectsToEnter;
 
     /**
      * The Manager is the connection between time counter and the Gates threads
      * @param tc Time counter instance
      * @param tollGates Hash Map with all the Gates from the Toll
+     * @param planner The planer selects the cars that are able to enter toolGates
+     * @param archive
      */
     public Manager(TimeCounter tc, HashMap<String, TollGate> tollGates, Planner planner, LogArchive archive) {
         this.timeCounter = tc;
@@ -56,6 +85,9 @@ public class Manager {
         }
     }
 
+    /**
+     * This method is executed when the timeCounter
+     */
     public void notifyManager(){
         uploadVehiclesInGates();
         releaseGates();
@@ -122,6 +154,10 @@ public class Manager {
         }
     }
 
+    /**
+     * Ads a task to the log
+     * @param report
+     */
     public synchronized void reportTask(TaskReport report){
         report.setInstant(timeCounter.getActualTime());
         LinkedList<String> lines = report.getReportLines();
@@ -130,6 +166,13 @@ public class Manager {
         }
     }
 
+    /**
+     * Returns true if:
+     * There is no more vehicles waiting to access the toll
+     * All gates are empty and there is no vehicles on them
+     * These are the conditions that make the program end
+     * @return true if the program can be ended
+     */
     public boolean hasEnded(){
         boolean endIsHere = planner.isEmpty();
         if (endIsHere){
@@ -143,6 +186,10 @@ public class Manager {
         return endIsHere;
     }
 
+    /**
+     * Returns true if there is a gate running
+     * @return true if there is a gate running
+     */
     public boolean stillRunning(){
         boolean stillRunning = false;
         for (Gate gate : gates.values()){

@@ -8,13 +8,23 @@ public class TimeCounter implements Runnable{
     //Controls that all gates have executed
     private Semaphore timerSemaphore;
 
+    /**
+     * Int represents the moment of time of the simulation
+     */
     private int timeCounter;
 
+    /**
+     * Class that simulates time
+     */
     public TimeCounter(){
         timerSemaphore = new Semaphore(1);
         timeCounter = -1;
     }
 
+    /**
+     * Returns the moment of time during the simulation
+     * @return int, time moment
+     */
     public int getActualTime(){
         return timeCounter;
     }
@@ -49,7 +59,6 @@ public class TimeCounter implements Runnable{
                 e.printStackTrace();
             }
         }
-        // Turn off all gates after timer finished
-        Program.PROCESS_MANAGER.releaseGates();
+
     }
 }

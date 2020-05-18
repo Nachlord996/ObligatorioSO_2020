@@ -4,6 +4,9 @@ import java.util.LinkedList;
 
 public class TaskReport {
 
+    /**
+     * The information about all tasks completed
+     */
     private LinkedList<Task> completedTasks;
 
     public TaskReport(){
@@ -24,6 +27,10 @@ public class TaskReport {
         completedTasks.clear();
     }
 
+    /**
+     * Returns a linked list with strings of al tasks performed in the simulation
+     * @return LinkedList of Strings. Each string has data in csv format
+     */
     public LinkedList<String> getReportLines(){
         LinkedList<String> report = new LinkedList<>();
         for (Task task : completedTasks){
