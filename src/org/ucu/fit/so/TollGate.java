@@ -63,6 +63,10 @@ public class TollGate extends Gate {
                     road[position - 1] = road[position]; //Moves vehicle
                     road[position] = null; //The previous position of the vehicle ends empty
                 }
+                else{
+                    task = new Task(this.uuid, position, road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Esperó a que se desocupe la caja");
+                    report.addTask(task);
+                }
             }
         }
         return report;
