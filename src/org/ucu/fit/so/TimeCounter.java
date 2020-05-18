@@ -42,11 +42,11 @@ public class TimeCounter implements Runnable{
         System.out.println("The clock has started");
         while(true){
             try {
-
                 //If threads have stopped working the clock can run
                 this.timerSemaphore.acquire();
 
                 if(manager.hasEnded()) {
+                    manager.releaseGates();
                     break;
                 }
 
@@ -60,6 +60,7 @@ public class TimeCounter implements Runnable{
                 e.printStackTrace();
             }
         }
+        System.out.println("The clock has finished");
         manager.makeLogReport();
     }
 }

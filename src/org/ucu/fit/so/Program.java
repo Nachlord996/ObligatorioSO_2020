@@ -6,8 +6,7 @@ import java.util.LinkedList;
 public class Program {
 
     private static final HashMap<String,TollGate> TOLL_GATES = new HashMap<>();
-    private static Manager PROCESS_MANAGER;
-    private static Planner planner;
+    private static Planner PLANNER;
     private static String OUTPUT_TEXT_PATH;
 
     public static void main(String[] args){
@@ -23,39 +22,63 @@ public class Program {
     }
 
     private static void initialize() throws InitialConfigurationException {
+        String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
+        String CHARGE_TIME_KEY = "CHARGE_TIME";
+        String ROAD_SIZE_KEY = "ROAD_SIZE";
+
         IDictionaryBuilder builder = new TxtDictionaryBuilder();
         HashMap<String, Object> CONFIG = builder.buildDictionary("src/config/INIT_CONFIG.txt");
+        HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
+        HashMap<String,Object> vehiclesPriorities = builder.buildDictionary("src/config/vehiclePriorities.csv");
+        HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
+
+        int threadNumber;
+        int chargeTime;
+        int roadSize;
+
         if (CONFIG == null) {
             throw new InitialConfigurationException("Config file not found or corrupted");
         }
-        String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
-        if (!CONFIG.containsKey(THREADS_NUMBER_KEY)){
+
+        if (!CONFIG.containsKey(THREADS_NUMBER_KEY)) {
             throw new InitialConfigurationException("Missing parameter for lanes of tollgate");
         }
-        int THREADS_NUMBER;
         try {
-            THREADS_NUMBER = Integer.parseInt(CONFIG.get(THREADS_NUMBER_KEY).toString());
+            threadNumber = Integer.parseInt(CONFIG.get(THREADS_NUMBER_KEY).toString());
         } catch (Exception e) {
             throw new InitialConfigurationException("Incorrect value type for lanes of tollgate");
         }
-        OUTPUT_TEXT_PATH = String.valueOf(CONFIG.get("OUTPUT_PATH"));
 
-        int chargeTime = 2;
-        int roadSize = 3;
+        if (!CONFIG.containsKey(CHARGE_TIME_KEY)) {
+            throw new InitialConfigurationException("Missing parameter for charger time of tollgate");
+        }
+        try {
+            chargeTime = Integer.parseInt(CONFIG.get(CHARGE_TIME_KEY).toString());
+        } catch (Exception e) {
+            throw new InitialConfigurationException("Incorrect value type for charger time of tollgate");
+        }
 
+        if (!CONFIG.containsKey(ROAD_SIZE_KEY)) {
+            throw new InitialConfigurationException("Missing parameter for road size of tollgate");
+        }
+        try {
+            roadSize = Integer.parseInt(CONFIG.get(ROAD_SIZE_KEY).toString());
+        } catch (Exception e) {
+            throw new InitialConfigurationException("Incorrect value type for road size of tollgate");
+        }
 
-        for (int i = 0; i < THREADS_NUMBER; i++){
+        OUTPUT_TEXT_PATH = CONFIG.get("OUTPUT_PATH").toString();
+
+        //Instance Gates and put in TOLL_GATES
+        for (int i = 0; i < threadNumber; i++){
             TollGate gate = new TollGate(i,roadSize,chargeTime);
             TOLL_GATES.put(gate.uuid, gate);
         }
-
-
-        HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
-        HashMap<String,Object> vehiclesPriorities = builder.buildDictionary("src/config/vehiclePriorities.csv");
+        //Parse Value of vehiclesPriorities to Integer and put in vehiclesPrioritiesParsed
         for(String key:vehiclesPriorities.keySet()){
             vehiclesPrioritiesParsed.put(key,Integer.parseInt(vehiclesPriorities.get(key).toString()));
         }
-        HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
+        //Read the vehicles file and put them in vehiclesForTime
         for(String line : Reader.read("src/data/vehicles.csv")){
             String[] array = line.split(",");
 
@@ -77,14 +100,13 @@ public class Program {
                 vehiclesForTime.get(amountTime).add(vehicle);
             }
         }
-        planner = new Planner(vehiclesPrioritiesParsed,vehiclesForTime);
+        PLANNER = new Planner(vehiclesPrioritiesParsed,vehiclesForTime);
     }
 
     private static void start(){
         try {
-            PROCESS_MANAGER = new Manager(TOLL_GATES, planner,OUTPUT_TEXT_PATH);
+            Manager PROCESS_MANAGER = new Manager(TOLL_GATES, PLANNER, OUTPUT_TEXT_PATH);
             PROCESS_MANAGER.begin();
-
         } catch (Exception e){
             e.printStackTrace();
         }

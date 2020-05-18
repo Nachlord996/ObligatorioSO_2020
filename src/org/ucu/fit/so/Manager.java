@@ -34,6 +34,8 @@ public class Manager {
      */
     private final LinkedList<Vehicle> prospectsToEnter = new LinkedList<>();
 
+    private final HashMap<Integer, LinkedList<Vehicle>> prospectsToEnter2 = new HashMap<>();
+
 
     /**
      * The Manager is the connection between time counter and the Gates threads
@@ -62,7 +64,6 @@ public class Manager {
             gate.setManager(this);
             gate.start();
         }
-
     }
 
     /**
@@ -178,5 +179,9 @@ public class Manager {
             }
         }
         return endIsHere;
+    }
+
+    public void deleteGate(Gate gate){
+        gates.remove(gate.uuid);
     }
 }

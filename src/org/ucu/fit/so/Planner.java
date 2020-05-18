@@ -26,12 +26,12 @@ public class Planner {
         this.vehiclesForTime = vehiclesForTime;
     }
 
-    /*
-      Returns a HashMap with: key = time to appear. value = linked list of vehicles that appear in that time
+    /**
+      Returns a HashMap with: key = priority to appear. value = linked list of vehicles that appear in that time
       @param time Time to get the vehicles
-     * @return HashMap with: key = time to appear. value = linked list of vehicles that appear in that time
+     * @return HashMap with: key = priority to appear. value = linked list of vehicles that appear in that time
      */
-    /*public HashMap<Integer, LinkedList<Vehicle>> getVehiclesForPriority(int time) {
+    public HashMap<Integer, LinkedList<Vehicle>> getVehiclesForPriority(int time) {
         HashMap<Integer,LinkedList<Vehicle>> vehiclesForPriority = new HashMap<>();
         if (vehiclesForTime.containsKey(time)){
             for(Vehicle vehicle: vehiclesForTime.get(time)){
@@ -43,7 +43,7 @@ public class Planner {
             }
         }
         return vehiclesForPriority;
-    }*/
+    }
 
     /**
      * Returns a list with vehicles of a required time

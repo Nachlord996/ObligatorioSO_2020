@@ -20,6 +20,8 @@ public class TaskReport {
         completedTasks.add(task);
     }
 
+
+
     /*public void clearReport(){
         completedTasks.clear();
     }*/
