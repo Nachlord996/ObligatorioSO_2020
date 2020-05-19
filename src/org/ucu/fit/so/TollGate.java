@@ -14,7 +14,7 @@ public class TollGate extends Gate {
      * @param roadSize   Size of the road of the gate
      * @param timeToPay  Time that a vehicle spends passing through the gate
      */
-    TollGate(int gateNumber, int roadSize, int timeToPay) {
+     TollGate(int gateNumber, int roadSize, int timeToPay) {
         super(gateNumber);
         this.road = new Vehicle[roadSize];
         this.timeToCharge = timeToPay;
@@ -29,18 +29,19 @@ public class TollGate extends Gate {
         //Checks the last position of the road. If there is someone passing through the gate
         if (road[0] != null) {
 
+            Vehicle vehicle = road[0];
             //This controls the time a vehicle takes to pass through the gate
             this.timeLeftToCharge--;
 
             if (timeLeftToCharge != 0) {
-                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(),road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Pasó un instante en la caja");
+                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(),vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Pasó un instante en la caja");
                 report.addTask(task);
             }
             //Increases the age of the vehicle. This is to measure the spent time
-            road[0].increaseAge();
+            vehicle.increaseAge();
 
             if (timeLeftToCharge == 0) { //If the vehicle has passed
-                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(), road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se le cobró lo correspondiente");
+                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Se le cobró lo correspondiente");
                 report.addTask(task);
 
                 usedCapacity--; //Reduces the vehicles on road

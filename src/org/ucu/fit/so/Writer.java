@@ -16,7 +16,10 @@ public class Writer {
         BufferedWriter br;
         File file = new File(path);
         if (file.exists() && !file.isDirectory()){
-            file.delete();
+            boolean deleted = false;
+            while(!deleted){
+                deleted = file.delete();
+            }
         }
         try {
             fr = new FileWriter(path);

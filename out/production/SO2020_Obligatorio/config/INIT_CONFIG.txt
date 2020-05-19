@@ -1,5 +1,8 @@
-// Cantidad de carriles del peaje
+// Number of open gates for Toll
 TOLL_LANES_NUMBER,4
+// Time spent by vehicles in pay position
 CHARGE_TIME,3
+// Length of each gate's road
 ROAD_SIZE,5
+// Input file of data to simulate
 INPUT_FILE,src/data/input/Test8.csv

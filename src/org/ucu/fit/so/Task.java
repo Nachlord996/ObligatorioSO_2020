@@ -32,7 +32,7 @@ public class Task {
 
     /**
      * Set the instant of the task
-     * @param instant
+     * @param instant Instant of action
      */
     public void setInstant(int instant){
         if (instant < 0){

@@ -14,7 +14,7 @@ public class Program {
     public static void main(String[] args){
         try {
             initialize();
-            System.out.println("Inicializacion correcta");
+            System.out.println("Successfully Initialized");
             start();
         } catch (InitialConfigurationException init){
             System.out.println(init.getMessage());
@@ -28,21 +28,22 @@ public class Program {
         String CHARGE_TIME_KEY = "CHARGE_TIME";
         String ROAD_SIZE_KEY = "ROAD_SIZE";
         String INPUT_FILE_KEY = "INPUT_FILE";
-        
+
         IDictionaryBuilder builder = new TxtDictionaryBuilder();
         HashMap<String, Object> CONFIG = builder.buildDictionary("src/config/INIT_CONFIG.txt");
-        HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
-        HashMap<String,Object> vehiclesPriorities = builder.buildDictionary("src/config/vehiclePriorities.csv");
-        HashMap<Integer,LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
+        HashMap<String, Object> V_PRIORITIES = builder.buildDictionary("src/config/vehiclePriorities.csv");
+        HashMap<String, Integer> vehiclesPrioritiesParsed = new HashMap<>();
+        HashMap<Integer, LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
 
         int threadNumber;
         int chargeTime;
         int roadSize;
 
-
-
-
         if (CONFIG == null) {
+            throw new InitialConfigurationException("Config file not found or corrupted");
+        }
+
+        if (V_PRIORITIES == null) {
             throw new InitialConfigurationException("Config file not found or corrupted");
         }
 
@@ -77,55 +78,69 @@ public class Program {
             throw new InitialConfigurationException("Missing parameter for inputFile");
         }
 
-
         //Here the file input should be selected
         File fileInput = new File(CONFIG.get(INPUT_FILE_KEY).toString());
 
-        if(!fileInput.exists() || fileInput.isDirectory()){
+        if (!fileInput.exists() || fileInput.isDirectory()) {
             throw new InitialConfigurationException("Input file not found or is a Directory");
         }
 
-        OUTPUT_TEXT_PATH = "src/data/output/Output_"+fileInput.getName();
-
+        OUTPUT_TEXT_PATH = "src/data/output/Output_" + fileInput.getName();
 
         //Instance Gates and put in TOLL_GATES
-        for (int i = 0; i < threadNumber; i++){
-            TollGate gate = new TollGate(i,roadSize,chargeTime);
+        TollGate gate;
+        for (int i = 0; i < threadNumber; i++) {
+            gate = new TollGate(i, roadSize, chargeTime);
             TOLL_GATES.put(gate.uuid, gate);
         }
 
         //Parse Value of vehiclesPriorities to Integer and put in vehiclesPrioritiesParsed
-        for(String key:vehiclesPriorities.keySet()){
-            int priority = Integer.parseInt(vehiclesPriorities.get(key).toString());
-            vehiclesPrioritiesParsed.put(key,priority);
-            if(AMOUNT_PRIORITIES<priority){
-                AMOUNT_PRIORITIES = priority;
+        String rawPriority;
+        int priority;
+        for (String key : V_PRIORITIES.keySet()) {
+            rawPriority = V_PRIORITIES.get(key).toString();
+            try {
+                priority = Integer.parseInt(rawPriority);
+                vehiclesPrioritiesParsed.put(key, priority);
+                if (AMOUNT_PRIORITIES < priority) {
+                    AMOUNT_PRIORITIES = priority;
+                }
+            } catch (Exception e) {
+                throw new InitialConfigurationException("Invalid value for priority at: " + key + ", " + rawPriority);
             }
         }
+
         //Read the vehicles file and put them in vehiclesForTime
-        for(String line : Reader.read(fileInput.getPath())){
-            String[] array = line.split(",");
+        int amountVehicles;
+        int amountTime;
+        String carType;
+        String[] array;
+        Vehicle vehicle;
+        LinkedList<String> lines = Reader.read(fileInput.getPath());
 
-            int amountVehicles;
-
-            try{
+        for (String line : lines) {
+            array = line.split(",");
+            try {
                 amountVehicles = Integer.parseInt(array[2]);
-            }catch (Exception e){
+                amountTime = Integer.parseInt(array[0]);
+                carType = array[1];
+            } catch (Exception e) {
                 continue;
             }
-            int amountTime = Integer.parseInt(array[0]);
-            String carType = array[1];
-
-            if(!vehiclesForTime.containsKey(amountTime)){
-                vehiclesForTime.put(amountTime,new LinkedList<>());
+            if (!V_PRIORITIES.containsKey(carType)){
+                continue;
             }
-            for(int i =0 ; i < amountVehicles; i++) {
-                Vehicle vehicle = new Vehicle(carType,vehiclesPrioritiesParsed.get(carType));
+            if (!vehiclesForTime.containsKey(amountTime)) {
+                vehiclesForTime.put(amountTime, new LinkedList<>());
+            }
+            for (int i = 0; i < amountVehicles; i++) {
+                vehicle = new Vehicle(carType, vehiclesPrioritiesParsed.get(carType));
                 vehiclesForTime.get(amountTime).add(vehicle);
             }
         }
-        PLANNER = new Planner(vehiclesPrioritiesParsed,vehiclesForTime);
 
+        // Initialize planner using priorities table and vehicles ordered by entry time
+        PLANNER = new Planner(vehiclesPrioritiesParsed, vehiclesForTime);
     }
 
     private static void start(){

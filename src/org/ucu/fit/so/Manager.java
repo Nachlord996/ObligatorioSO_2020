@@ -1,10 +1,10 @@
 package org.ucu.fit.so;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Manager<prospectsToEnter2> {
+@SuppressWarnings("unused")
+public class Manager {
 
     /**
      * This class simulates time
@@ -49,6 +49,7 @@ public class Manager<prospectsToEnter2> {
         this.gates = tollGates;
         this.planner = planner;
         this.outputPath = outputPath;
+        //noinspection unchecked
         this.prospectsToEnterWithPriority = new LinkedList[amountOfPriorities];
     }
 
@@ -102,6 +103,7 @@ public class Manager<prospectsToEnter2> {
      * Get gates with room to add a vehicle (at the beginning of the road obviously)
      * To each available gate send a vehicle
      */
+    @SuppressWarnings("unused")
     public void uploadVehiclesInGates(){
         //Current time in simulation
         int time = timeCounter.getActualTime();
@@ -187,10 +189,10 @@ public class Manager<prospectsToEnter2> {
      * Ads a task to the log
      * @param report report to add to log file
      */
-    public synchronized void reportTask(TaskReport report){
+    public synchronized void reportTask(TaskReport report) {
         report.setInstant(timeCounter.getActualTime());
         LinkedList<String> lines = report.getReportLines();
-        for(String logLine : lines){
+        for (String logLine : lines) {
             logger.log(logLine);
         }
     }

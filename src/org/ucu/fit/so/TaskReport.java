@@ -20,20 +20,15 @@ public class TaskReport {
         completedTasks.add(task);
     }
 
-
-
-    /*public void clearReport(){
-        completedTasks.clear();
-    }*/
-
     /**
      * Returns a linked list with strings of al tasks performed in the simulation
      * @return LinkedList of Strings. Each string has data in csv format
      */
     public LinkedList<String> getReportLines(){
         LinkedList<String> report = new LinkedList<>();
+        String message;
         for (Task task : completedTasks){
-            String message = task.getReportMessage();
+            message = task.getReportMessage();
             if (message != null){
                 report.add(message);
             }

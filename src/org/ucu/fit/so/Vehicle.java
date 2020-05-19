@@ -18,7 +18,7 @@ public class Vehicle {
 
     /**
      * Class that represents a vehicle
-     * @param typeOfVehicle Tipe of the vehicle
+     * @param typeOfVehicle Type of the vehicle
      * @param priority Priority of the vehicle (this will be used to multi queue planning)
      */
     public Vehicle(String typeOfVehicle, int priority) {

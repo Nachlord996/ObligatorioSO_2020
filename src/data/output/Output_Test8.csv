@@ -3,27 +3,24 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 0,G0,4,Police,V1,1,1,Se movio de pos: 4 a pos: 3
 1,G0,3,Police,V1,1,2,Se movio de pos: 3 a pos: 2
 1,G0,4,Van,V3,2,1,Se movio de pos: 4 a pos: 3
-1,G3,4,MotorCycle,V6,2,1,Se movio de pos: 4 a pos: 3
-1,G2,4,MotorCycle,V5,2,1,Se movio de pos: 4 a pos: 3
 1,G1,3,Police,V2,1,2,Se movio de pos: 3 a pos: 2
 1,G1,4,Van,V4,2,1,Se movio de pos: 4 a pos: 3
+1,G3,4,MotorCycle,V6,2,1,Se movio de pos: 4 a pos: 3
+1,G2,4,MotorCycle,V5,2,1,Se movio de pos: 4 a pos: 3
 2,G0,2,Police,V1,1,3,Se movio de pos: 2 a pos: 1
 2,G0,3,Van,V3,2,2,Se movio de pos: 3 a pos: 2
 2,G0,4,MotorCycle,V7,2,1,Se movio de pos: 4 a pos: 3
 2,G1,2,Police,V2,1,3,Se movio de pos: 2 a pos: 1
 2,G1,3,Van,V4,2,2,Se movio de pos: 3 a pos: 2
 2,G1,4,Car,V10,2,1,Se movio de pos: 4 a pos: 3
-2,G3,3,MotorCycle,V6,2,2,Se movio de pos: 3 a pos: 2
-2,G3,4,Car,V12,2,1,Se movio de pos: 4 a pos: 3
 2,G2,3,MotorCycle,V5,2,2,Se movio de pos: 3 a pos: 2
 2,G2,4,Car,V11,2,1,Se movio de pos: 4 a pos: 3
+2,G3,3,MotorCycle,V6,2,2,Se movio de pos: 3 a pos: 2
+2,G3,4,Car,V12,2,1,Se movio de pos: 4 a pos: 3
 3,G0,1,Police,V1,1,4,Se movio de pos: 1 a pos: 0
 3,G0,2,Van,V3,2,3,Se movio de pos: 2 a pos: 1
 3,G0,3,MotorCycle,V7,2,2,Se movio de pos: 3 a pos: 2
 3,G0,4,Ambulance,V19,1,1,Se movio de pos: 4 a pos: 3
-3,G2,2,MotorCycle,V5,2,3,Se movio de pos: 2 a pos: 1
-3,G2,3,Car,V11,2,2,Se movio de pos: 3 a pos: 2
-3,G2,4,Car,V14,2,1,Se movio de pos: 4 a pos: 3
 3,G1,1,Police,V2,1,4,Se movio de pos: 1 a pos: 0
 3,G1,2,Van,V4,2,3,Se movio de pos: 2 a pos: 1
 3,G1,3,Car,V10,2,2,Se movio de pos: 3 a pos: 2
@@ -31,6 +28,9 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 3,G3,2,MotorCycle,V6,2,3,Se movio de pos: 2 a pos: 1
 3,G3,3,Car,V12,2,2,Se movio de pos: 3 a pos: 2
 3,G3,4,Van,V17,2,1,Se movio de pos: 4 a pos: 3
+3,G2,2,MotorCycle,V5,2,3,Se movio de pos: 2 a pos: 1
+3,G2,3,Car,V11,2,2,Se movio de pos: 3 a pos: 2
+3,G2,4,Car,V14,2,1,Se movio de pos: 4 a pos: 3
 4,G0,0,Police,V1,1,4,Pasó un instante en la caja
 4,G0,1,Van,V3,2,4,Espera en posición: 1
 4,G0,2,MotorCycle,V7,2,3,Espera en posición: 2
@@ -69,11 +69,6 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 5,G3,2,Van,V17,2,3,Espera en posición: 2
 5,G3,3,Van,V22,2,2,Espera en posición: 3
 5,G3,4,Van,V24,2,1,Espera en posición: 4
-6,G1,0,Police,V2,1,7,Se le cobró lo correspondiente
-6,G1,1,Van,V4,2,6,Se movio de pos: 1 a pos: 0
-6,G1,2,Car,V10,2,5,Se movio de pos: 2 a pos: 1
-6,G1,3,Car,V13,2,4,Se movio de pos: 3 a pos: 2
-6,G1,4,Van,V20,2,3,Se movio de pos: 4 a pos: 3
 6,G0,0,Police,V1,1,7,Se le cobró lo correspondiente
 6,G0,1,Van,V3,2,6,Se movio de pos: 1 a pos: 0
 6,G0,2,MotorCycle,V7,2,5,Se movio de pos: 2 a pos: 1
@@ -89,6 +84,11 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 6,G3,2,Van,V17,2,4,Espera en posición: 2
 6,G3,3,Van,V22,2,3,Espera en posición: 3
 6,G3,4,Van,V24,2,2,Espera en posición: 4
+6,G1,0,Police,V2,1,7,Se le cobró lo correspondiente
+6,G1,1,Van,V4,2,6,Se movio de pos: 1 a pos: 0
+6,G1,2,Car,V10,2,5,Se movio de pos: 2 a pos: 1
+6,G1,3,Car,V13,2,4,Se movio de pos: 3 a pos: 2
+6,G1,4,Van,V20,2,3,Se movio de pos: 4 a pos: 3
 7,G0,0,Van,V3,2,6,Pasó un instante en la caja
 7,G0,1,MotorCycle,V7,2,6,Espera en posición: 1
 7,G0,2,Ambulance,V19,1,5,Espera en posición: 2
@@ -114,36 +114,36 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 8,G0,2,Ambulance,V19,1,6,Espera en posición: 2
 8,G0,3,Van,V18,2,5,Espera en posición: 3
 8,G0,4,Car,V25,2,2,Espera en posición: 4
-8,G3,0,Car,V12,2,6,Pasó un instante en la caja
-8,G3,1,Van,V17,2,6,Espera en posición: 1
-8,G3,2,Van,V22,2,5,Espera en posición: 2
-8,G3,3,Van,V24,2,4,Espera en posición: 3
-8,G3,4,Car,V28,2,1,Espera en posición: 4
-8,G2,0,Car,V11,2,6,Pasó un instante en la caja
-8,G2,1,Car,V14,2,6,Espera en posición: 1
-8,G2,2,Van,V21,2,5,Espera en posición: 2
-8,G2,3,Van,V23,2,4,Espera en posición: 3
-8,G2,4,Car,V27,2,1,Espera en posición: 4
 8,G1,0,Van,V4,2,7,Pasó un instante en la caja
 8,G1,1,Car,V10,2,7,Espera en posición: 1
 8,G1,2,Car,V13,2,6,Espera en posición: 2
 8,G1,3,Van,V20,2,5,Espera en posición: 3
 8,G1,4,Car,V26,2,2,Espera en posición: 4
+8,G2,0,Car,V11,2,6,Pasó un instante en la caja
+8,G2,1,Car,V14,2,6,Espera en posición: 1
+8,G2,2,Van,V21,2,5,Espera en posición: 2
+8,G2,3,Van,V23,2,4,Espera en posición: 3
+8,G2,4,Car,V27,2,1,Espera en posición: 4
+8,G3,0,Car,V12,2,6,Pasó un instante en la caja
+8,G3,1,Van,V17,2,6,Espera en posición: 1
+8,G3,2,Van,V22,2,5,Espera en posición: 2
+8,G3,3,Van,V24,2,4,Espera en posición: 3
+8,G3,4,Car,V28,2,1,Espera en posición: 4
 9,G0,0,Van,V3,2,9,Se le cobró lo correspondiente
 9,G0,1,MotorCycle,V7,2,8,Se movio de pos: 1 a pos: 0
 9,G0,2,Ambulance,V19,1,7,Se movio de pos: 2 a pos: 1
 9,G0,3,Van,V18,2,6,Se movio de pos: 3 a pos: 2
 9,G0,4,Car,V25,2,3,Se movio de pos: 4 a pos: 3
-9,G2,0,Car,V11,2,7,Pasó un instante en la caja
-9,G2,1,Car,V14,2,7,Espera en posición: 1
-9,G2,2,Van,V21,2,6,Espera en posición: 2
-9,G2,3,Van,V23,2,5,Espera en posición: 3
-9,G2,4,Car,V27,2,2,Espera en posición: 4
 9,G1,0,Van,V4,2,9,Se le cobró lo correspondiente
 9,G1,1,Car,V10,2,8,Se movio de pos: 1 a pos: 0
 9,G1,2,Car,V13,2,7,Se movio de pos: 2 a pos: 1
 9,G1,3,Van,V20,2,6,Se movio de pos: 3 a pos: 2
 9,G1,4,Car,V26,2,3,Se movio de pos: 4 a pos: 3
+9,G2,0,Car,V11,2,7,Pasó un instante en la caja
+9,G2,1,Car,V14,2,7,Espera en posición: 1
+9,G2,2,Van,V21,2,6,Espera en posición: 2
+9,G2,3,Van,V23,2,5,Espera en posición: 3
+9,G2,4,Car,V27,2,2,Espera en posición: 4
 9,G3,0,Car,V12,2,7,Pasó un instante en la caja
 9,G3,1,Van,V17,2,7,Espera en posición: 1
 9,G3,2,Van,V22,2,6,Espera en posición: 2
@@ -169,36 +169,31 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 10,G3,2,Van,V22,2,7,Se movio de pos: 2 a pos: 1
 10,G3,3,Van,V24,2,6,Se movio de pos: 3 a pos: 2
 10,G3,4,Car,V28,2,3,Se movio de pos: 4 a pos: 3
-11,G0,0,MotorCycle,V7,2,9,Pasó un instante en la caja
-11,G0,1,Ambulance,V19,1,9,Espera en posición: 1
-11,G0,2,Van,V18,2,8,Espera en posición: 2
-11,G0,3,Car,V25,2,5,Espera en posición: 3
-11,G0,4,Car,V29,2,2,Espera en posición: 4
-11,G3,0,Van,V17,2,8,Pasó un instante en la caja
-11,G3,1,Van,V22,2,8,Espera en posición: 1
-11,G3,2,Van,V24,2,7,Espera en posición: 2
-11,G3,3,Car,V28,2,4,Espera en posición: 3
-11,G3,4,Car,V32,2,1,Espera en posición: 4
-11,G2,0,Car,V14,2,8,Pasó un instante en la caja
-11,G2,1,Van,V21,2,8,Espera en posición: 1
-11,G2,2,Van,V23,2,7,Espera en posición: 2
-11,G2,3,Car,V27,2,4,Espera en posición: 3
-11,G2,4,Car,V31,2,1,Espera en posición: 4
 11,G1,0,Car,V10,2,9,Pasó un instante en la caja
 11,G1,1,Car,V13,2,9,Espera en posición: 1
 11,G1,2,Van,V20,2,8,Espera en posición: 2
 11,G1,3,Car,V26,2,5,Espera en posición: 3
 11,G1,4,Car,V30,2,2,Espera en posición: 4
+11,G0,0,MotorCycle,V7,2,9,Pasó un instante en la caja
+11,G0,1,Ambulance,V19,1,9,Espera en posición: 1
+11,G0,2,Van,V18,2,8,Espera en posición: 2
+11,G0,3,Car,V25,2,5,Espera en posición: 3
+11,G0,4,Car,V29,2,2,Espera en posición: 4
+11,G2,0,Car,V14,2,8,Pasó un instante en la caja
+11,G2,1,Van,V21,2,8,Espera en posición: 1
+11,G2,2,Van,V23,2,7,Espera en posición: 2
+11,G2,3,Car,V27,2,4,Espera en posición: 3
+11,G2,4,Car,V31,2,1,Espera en posición: 4
+11,G3,0,Van,V17,2,8,Pasó un instante en la caja
+11,G3,1,Van,V22,2,8,Espera en posición: 1
+11,G3,2,Van,V24,2,7,Espera en posición: 2
+11,G3,3,Car,V28,2,4,Espera en posición: 3
+11,G3,4,Car,V32,2,1,Espera en posición: 4
 12,G0,0,MotorCycle,V7,2,11,Se le cobró lo correspondiente
 12,G0,1,Ambulance,V19,1,10,Se movio de pos: 1 a pos: 0
 12,G0,2,Van,V18,2,9,Se movio de pos: 2 a pos: 1
 12,G0,3,Car,V25,2,6,Se movio de pos: 3 a pos: 2
 12,G0,4,Car,V29,2,3,Se movio de pos: 4 a pos: 3
-12,G1,0,Car,V10,2,11,Se le cobró lo correspondiente
-12,G1,1,Car,V13,2,10,Se movio de pos: 1 a pos: 0
-12,G1,2,Van,V20,2,9,Se movio de pos: 2 a pos: 1
-12,G1,3,Car,V26,2,6,Se movio de pos: 3 a pos: 2
-12,G1,4,Car,V30,2,3,Se movio de pos: 4 a pos: 3
 12,G2,0,Car,V14,2,9,Pasó un instante en la caja
 12,G2,1,Van,V21,2,9,Espera en posición: 1
 12,G2,2,Van,V23,2,8,Espera en posición: 2
@@ -209,6 +204,11 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 12,G3,2,Van,V24,2,8,Espera en posición: 2
 12,G3,3,Car,V28,2,5,Espera en posición: 3
 12,G3,4,Car,V32,2,2,Espera en posición: 4
+12,G1,0,Car,V10,2,11,Se le cobró lo correspondiente
+12,G1,1,Car,V13,2,10,Se movio de pos: 1 a pos: 0
+12,G1,2,Van,V20,2,9,Se movio de pos: 2 a pos: 1
+12,G1,3,Car,V26,2,6,Se movio de pos: 3 a pos: 2
+12,G1,4,Car,V30,2,3,Se movio de pos: 4 a pos: 3
 13,G0,0,Ambulance,V19,1,10,Pasó un instante en la caja
 13,G0,1,Van,V18,2,10,Espera en posición: 1
 13,G0,2,Car,V25,2,7,Espera en posición: 2
@@ -229,11 +229,6 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 13,G3,2,Van,V24,2,9,Se movio de pos: 2 a pos: 1
 13,G3,3,Car,V28,2,6,Se movio de pos: 3 a pos: 2
 13,G3,4,Car,V32,2,3,Se movio de pos: 4 a pos: 3
-14,G3,0,Van,V22,2,10,Pasó un instante en la caja
-14,G3,1,Van,V24,2,10,Espera en posición: 1
-14,G3,2,Car,V28,2,7,Espera en posición: 2
-14,G3,3,Car,V32,2,4,Espera en posición: 3
-14,G3,4,Car,V36,2,1,Espera en posición: 4
 14,G0,0,Ambulance,V19,1,11,Pasó un instante en la caja
 14,G0,1,Van,V18,2,11,Espera en posición: 1
 14,G0,2,Car,V25,2,8,Espera en posición: 2
@@ -249,21 +244,26 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 14,G2,2,Car,V27,2,7,Espera en posición: 2
 14,G2,3,Car,V31,2,4,Espera en posición: 3
 14,G2,4,Car,V35,2,1,Espera en posición: 4
+14,G3,0,Van,V22,2,10,Pasó un instante en la caja
+14,G3,1,Van,V24,2,10,Espera en posición: 1
+14,G3,2,Car,V28,2,7,Espera en posición: 2
+14,G3,3,Car,V32,2,4,Espera en posición: 3
+14,G3,4,Car,V36,2,1,Espera en posición: 4
 15,G0,0,Ambulance,V19,1,13,Se le cobró lo correspondiente
 15,G0,1,Van,V18,2,12,Se movio de pos: 1 a pos: 0
 15,G0,2,Car,V25,2,9,Se movio de pos: 2 a pos: 1
 15,G0,3,Car,V29,2,6,Se movio de pos: 3 a pos: 2
 15,G0,4,Car,V33,2,3,Se movio de pos: 4 a pos: 3
-15,G2,0,Van,V21,2,11,Pasó un instante en la caja
-15,G2,1,Van,V23,2,11,Espera en posición: 1
-15,G2,2,Car,V27,2,8,Espera en posición: 2
-15,G2,3,Car,V31,2,5,Espera en posición: 3
-15,G2,4,Car,V35,2,2,Espera en posición: 4
 15,G1,0,Car,V13,2,13,Se le cobró lo correspondiente
 15,G1,1,Van,V20,2,12,Se movio de pos: 1 a pos: 0
 15,G1,2,Car,V26,2,9,Se movio de pos: 2 a pos: 1
 15,G1,3,Car,V30,2,6,Se movio de pos: 3 a pos: 2
 15,G1,4,Car,V34,2,3,Se movio de pos: 4 a pos: 3
+15,G2,0,Van,V21,2,11,Pasó un instante en la caja
+15,G2,1,Van,V23,2,11,Espera en posición: 1
+15,G2,2,Car,V27,2,8,Espera en posición: 2
+15,G2,3,Car,V31,2,5,Espera en posición: 3
+15,G2,4,Car,V35,2,2,Espera en posición: 4
 15,G3,0,Van,V22,2,11,Pasó un instante en la caja
 15,G3,1,Van,V24,2,11,Espera en posición: 1
 15,G3,2,Car,V28,2,8,Espera en posición: 2
@@ -319,16 +319,16 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 18,G1,2,Car,V30,2,9,Se movio de pos: 2 a pos: 1
 18,G1,3,Car,V34,2,6,Se movio de pos: 3 a pos: 2
 18,G1,4,Car,V38,2,3,Se movio de pos: 4 a pos: 3
-18,G3,0,Van,V24,2,13,Pasó un instante en la caja
-18,G3,1,Car,V28,2,11,Espera en posición: 1
-18,G3,2,Car,V32,2,8,Espera en posición: 2
-18,G3,3,Car,V36,2,5,Espera en posición: 3
-18,G3,4,Car,V40,2,2,Espera en posición: 4
 18,G2,0,Van,V23,2,13,Pasó un instante en la caja
 18,G2,1,Car,V27,2,11,Espera en posición: 1
 18,G2,2,Car,V31,2,8,Espera en posición: 2
 18,G2,3,Car,V35,2,5,Espera en posición: 3
 18,G2,4,Car,V39,2,2,Espera en posición: 4
+18,G3,0,Van,V24,2,13,Pasó un instante en la caja
+18,G3,1,Car,V28,2,11,Espera en posición: 1
+18,G3,2,Car,V32,2,8,Espera en posición: 2
+18,G3,3,Car,V36,2,5,Espera en posición: 3
+18,G3,4,Car,V40,2,2,Espera en posición: 4
 19,G0,0,Car,V25,2,12,Pasó un instante en la caja
 19,G0,1,Car,V29,2,10,Espera en posición: 1
 19,G0,2,Car,V33,2,7,Espera en posición: 2
@@ -379,16 +379,16 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 21,G1,2,Car,V34,2,9,Se movio de pos: 2 a pos: 1
 21,G1,3,Car,V38,2,6,Se movio de pos: 3 a pos: 2
 21,G1,4,Car,V42,2,3,Se movio de pos: 4 a pos: 3
-21,G3,0,Car,V28,2,13,Pasó un instante en la caja
-21,G3,1,Car,V32,2,11,Espera en posición: 1
-21,G3,2,Car,V36,2,8,Espera en posición: 2
-21,G3,3,Car,V40,2,5,Espera en posición: 3
-21,G3,4,Car,V44,2,2,Espera en posición: 4
 21,G2,0,Car,V27,2,13,Pasó un instante en la caja
 21,G2,1,Car,V31,2,11,Espera en posición: 1
 21,G2,2,Car,V35,2,8,Espera en posición: 2
 21,G2,3,Car,V39,2,5,Espera en posición: 3
 21,G2,4,Car,V43,2,2,Espera en posición: 4
+21,G3,0,Car,V28,2,13,Pasó un instante en la caja
+21,G3,1,Car,V32,2,11,Espera en posición: 1
+21,G3,2,Car,V36,2,8,Espera en posición: 2
+21,G3,3,Car,V40,2,5,Espera en posición: 3
+21,G3,4,Car,V44,2,2,Espera en posición: 4
 22,G0,0,Car,V29,2,12,Pasó un instante en la caja
 22,G0,1,Car,V33,2,10,Espera en posición: 1
 22,G0,2,Car,V37,2,7,Espera en posición: 2
@@ -434,16 +434,16 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 24,G0,2,Car,V37,2,9,Se movio de pos: 2 a pos: 1
 24,G0,3,Car,V41,2,6,Se movio de pos: 3 a pos: 2
 24,G0,4,Commercial Truck,V8,3,3,Se movio de pos: 4 a pos: 3
-24,G1,0,Car,V30,2,15,Se le cobró lo correspondiente
-24,G1,1,Car,V34,2,12,Se movio de pos: 1 a pos: 0
-24,G1,2,Car,V38,2,9,Se movio de pos: 2 a pos: 1
-24,G1,3,Car,V42,2,6,Se movio de pos: 3 a pos: 2
-24,G1,4,Commercial Truck,V9,3,3,Se movio de pos: 4 a pos: 3
 24,G2,0,Car,V31,2,13,Pasó un instante en la caja
 24,G2,1,Car,V35,2,11,Espera en posición: 1
 24,G2,2,Car,V39,2,8,Espera en posición: 2
 24,G2,3,Car,V43,2,5,Espera en posición: 3
 24,G2,4,Commercial Truck,V15,3,2,Espera en posición: 4
+24,G1,0,Car,V30,2,15,Se le cobró lo correspondiente
+24,G1,1,Car,V34,2,12,Se movio de pos: 1 a pos: 0
+24,G1,2,Car,V38,2,9,Se movio de pos: 2 a pos: 1
+24,G1,3,Car,V42,2,6,Se movio de pos: 3 a pos: 2
+24,G1,4,Commercial Truck,V9,3,3,Se movio de pos: 4 a pos: 3
 24,G3,0,Car,V32,2,13,Pasó un instante en la caja
 24,G3,1,Car,V36,2,11,Espera en posición: 1
 24,G3,2,Car,V40,2,8,Espera en posición: 2
@@ -471,14 +471,14 @@ Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Ac
 26,G0,1,Car,V37,2,11,Espera en posición: 1
 26,G0,2,Car,V41,2,8,Espera en posición: 2
 26,G0,3,Commercial Truck,V8,3,5,Espera en posición: 3
-26,G1,0,Car,V34,2,13,Pasó un instante en la caja
-26,G1,1,Car,V38,2,11,Espera en posición: 1
-26,G1,2,Car,V42,2,8,Espera en posición: 2
-26,G1,3,Commercial Truck,V9,3,5,Espera en posición: 3
 26,G2,0,Car,V35,2,12,Pasó un instante en la caja
 26,G2,1,Car,V39,2,10,Espera en posición: 1
 26,G2,2,Car,V43,2,7,Espera en posición: 2
 26,G2,3,Commercial Truck,V15,3,4,Espera en posición: 3
+26,G1,0,Car,V34,2,13,Pasó un instante en la caja
+26,G1,1,Car,V38,2,11,Espera en posición: 1
+26,G1,2,Car,V42,2,8,Espera en posición: 2
+26,G1,3,Commercial Truck,V9,3,5,Espera en posición: 3
 26,G3,0,Car,V36,2,12,Pasó un instante en la caja
 26,G3,1,Car,V40,2,10,Espera en posición: 1
 26,G3,2,Car,V44,2,7,Espera en posición: 2

@@ -7,19 +7,19 @@ public abstract class Gate extends Thread {
     /**
      * Unique ID of the gate
      */
-    protected String uuid;
+    protected final String uuid;
 
     /**
      * This Semaphore allows the gate to execute once per time unit
      * The TimeCounter makes the Manager release it
      */
-    protected Semaphore uniquenessSemaphore;
+    protected final Semaphore uniquenessSemaphore;
     protected Manager manager;
 
     /**
      * The gates takes care of the movement and payment of cars
      * Each Gate is a Thread
-     * @param gateNumber Number of thread to create id. Each number shoud be unique
+     * @param gateNumber Number of thread to create id. Each number should be unique
      */
     Gate(int gateNumber){
         this.uuid = "G" + gateNumber;
@@ -30,9 +30,9 @@ public abstract class Gate extends Thread {
     }
     @Override
     public void run(){
+        TaskReport report;
         while(true){
             try {
-
                 //If timer allows
                 uniquenessSemaphore.acquire();
 
@@ -41,14 +41,13 @@ public abstract class Gate extends Thread {
                     break;
                 }
 
-                TaskReport report = this.consume();
+                report = this.consume();
 
                 //Report done task
                 manager.reportTask(report);
 
                 //Tells the manager that ended
                 manager.signal();
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
