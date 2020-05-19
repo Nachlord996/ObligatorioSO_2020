@@ -1,5 +1,4 @@
 // Cantidad de carriles del peaje
 TOLL_LANES_NUMBER,5
-OUTPUT_PATH,src/data/output.csv
 CHARGE_TIME,2
 ROAD_SIZE,3
