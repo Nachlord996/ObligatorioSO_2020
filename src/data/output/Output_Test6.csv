@@ -1,0 +1,8 @@
+Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Action
+0,G0,1,Ambulance,V2,1,1,Se movio de pos: 1 a pos: 0
+1,G0,0,Ambulance,V2,1,1,Pasó un instante en la caja
+1,G0,1,Car,V1,2,1,Espera en posición: 1
+2,G0,0,Ambulance,V2,1,3,Se le cobró lo correspondiente
+2,G0,1,Car,V1,2,2,Se movio de pos: 1 a pos: 0
+3,G0,0,Car,V1,2,2,Pasó un instante en la caja
+4,G0,0,Car,V1,2,4,Se le cobró lo correspondiente

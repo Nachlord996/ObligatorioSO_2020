@@ -1,0 +1,21 @@
+Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time Waiting, Action
+0,G2,2,Car,V3,2,1,Se movio de pos: 2 a pos: 1
+0,G1,2,Car,V2,2,1,Se movio de pos: 2 a pos: 1
+0,G4,2,Car,V5,2,1,Se movio de pos: 2 a pos: 1
+0,G3,2,Car,V4,2,1,Se movio de pos: 2 a pos: 1
+0,G0,2,Car,V1,2,1,Se movio de pos: 2 a pos: 1
+1,G0,1,Car,V1,2,2,Se movio de pos: 1 a pos: 0
+1,G1,1,Car,V2,2,2,Se movio de pos: 1 a pos: 0
+1,G2,1,Car,V3,2,2,Se movio de pos: 1 a pos: 0
+1,G3,1,Car,V4,2,2,Se movio de pos: 1 a pos: 0
+1,G4,1,Car,V5,2,2,Se movio de pos: 1 a pos: 0
+2,G0,0,Car,V1,2,2,Pasó un instante en la caja
+2,G1,0,Car,V2,2,2,Pasó un instante en la caja
+2,G2,0,Car,V3,2,2,Pasó un instante en la caja
+2,G3,0,Car,V4,2,2,Pasó un instante en la caja
+2,G4,0,Car,V5,2,2,Pasó un instante en la caja
+3,G0,0,Car,V1,2,4,Se le cobró lo correspondiente
+3,G1,0,Car,V2,2,4,Se le cobró lo correspondiente
+3,G2,0,Car,V3,2,4,Se le cobró lo correspondiente
+3,G3,0,Car,V4,2,4,Se le cobró lo correspondiente
+3,G4,0,Car,V5,2,4,Se le cobró lo correspondiente

@@ -1,4 +1,5 @@
 // Cantidad de carriles del peaje
-TOLL_LANES_NUMBER,5
-CHARGE_TIME,2
-ROAD_SIZE,3
+TOLL_LANES_NUMBER,4
+CHARGE_TIME,3
+ROAD_SIZE,5
+INPUT_FILE,src/data/input/Test8.csv

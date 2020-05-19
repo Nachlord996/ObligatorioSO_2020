@@ -27,6 +27,7 @@ public class Program {
         String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
         String CHARGE_TIME_KEY = "CHARGE_TIME";
         String ROAD_SIZE_KEY = "ROAD_SIZE";
+        String INPUT_FILE_KEY = "INPUT_FILE";
         
         IDictionaryBuilder builder = new TxtDictionaryBuilder();
         HashMap<String, Object> CONFIG = builder.buildDictionary("src/config/INIT_CONFIG.txt");
@@ -38,13 +39,7 @@ public class Program {
         int chargeTime;
         int roadSize;
 
-        File fileInput = new File("src/data/input/vehicles.csv");
 
-        if(!fileInput.exists() || fileInput.isDirectory()){
-            throw new InitialConfigurationException("Input file not found or is a Directory");
-        }
-
-        OUTPUT_TEXT_PATH = "src/data/output/Output_"+fileInput.getName();
 
 
         if (CONFIG == null) {
@@ -77,6 +72,20 @@ public class Program {
         } catch (Exception e) {
             throw new InitialConfigurationException("Incorrect value type for road size of tollgate");
         }
+
+        if (!CONFIG.containsKey(INPUT_FILE_KEY)) {
+            throw new InitialConfigurationException("Missing parameter for inputFile");
+        }
+
+
+        //Here the file input should be selected
+        File fileInput = new File(CONFIG.get(INPUT_FILE_KEY).toString());
+
+        if(!fileInput.exists() || fileInput.isDirectory()){
+            throw new InitialConfigurationException("Input file not found or is a Directory");
+        }
+
+        OUTPUT_TEXT_PATH = "src/data/output/Output_"+fileInput.getName();
 
 
         //Instance Gates and put in TOLL_GATES
