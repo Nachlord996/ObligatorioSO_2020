@@ -1,5 +1,6 @@
 package org.ucu.fit.so;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -26,6 +27,7 @@ public class Program {
         String THREADS_NUMBER_KEY = "TOLL_LANES_NUMBER";
         String CHARGE_TIME_KEY = "CHARGE_TIME";
         String ROAD_SIZE_KEY = "ROAD_SIZE";
+        
         IDictionaryBuilder builder = new TxtDictionaryBuilder();
         HashMap<String, Object> CONFIG = builder.buildDictionary("src/config/INIT_CONFIG.txt");
         HashMap<String,Integer> vehiclesPrioritiesParsed = new HashMap<>();
@@ -35,6 +37,15 @@ public class Program {
         int threadNumber;
         int chargeTime;
         int roadSize;
+
+        File fileInput = new File("src/data/input/vehicles.csv");
+
+        if(!fileInput.exists() || fileInput.isDirectory()){
+            throw new InitialConfigurationException("Input file not found or is a Directory");
+        }
+
+        OUTPUT_TEXT_PATH = "src/data/output/Output_"+fileInput.getName();
+
 
         if (CONFIG == null) {
             throw new InitialConfigurationException("Config file not found or corrupted");
@@ -67,7 +78,6 @@ public class Program {
             throw new InitialConfigurationException("Incorrect value type for road size of tollgate");
         }
 
-        OUTPUT_TEXT_PATH = CONFIG.get("OUTPUT_PATH").toString();
 
         //Instance Gates and put in TOLL_GATES
         for (int i = 0; i < threadNumber; i++){
@@ -84,7 +94,7 @@ public class Program {
             }
         }
         //Read the vehicles file and put them in vehiclesForTime
-        for(String line : Reader.read("src/data/vehicles.csv")){
+        for(String line : Reader.read(fileInput.getPath())){
             String[] array = line.split(",");
 
             int amountVehicles;
