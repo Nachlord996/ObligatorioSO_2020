@@ -15,6 +15,13 @@ public class Vehicle {
 
     private int age;
     private final int priority;
+    private boolean working = true;
+    private int counterBreak=-1;
+    private int counterRepair=-1;
+
+    public boolean isWorking() {
+        return working;
+    }
 
     /**
      * Class that represents a vehicle
@@ -38,12 +45,39 @@ public class Vehicle {
         return numOfCars;
     }
 
+    public void setCounterBreak(int counterBreak) {
+        this.counterBreak = counterBreak;
+    }
+
+    public void setCounterRepair(int counterRepair) {
+        this.counterRepair = counterRepair;
+    }
+
+    private void updateIsWorking(){
+        if(working){
+            if(counterBreak==0){
+                working = false;
+            }
+            else{
+                counterBreak--;
+            }
+        }
+        else{
+            if(counterRepair==0){
+                working = true;
+            }
+            else{
+                counterRepair--;
+            }
+        }
+    }
     /**
      * Increases vehicle´s age. This is used to measure spent time in queue and road
      * TO BE UPDATED. This will be used in order to rise the vehicle priority
      */
     public void increaseAge() {
         age++;
+        updateIsWorking();
     }
 
     /**

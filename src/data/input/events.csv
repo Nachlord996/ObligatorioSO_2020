@@ -1,0 +1,5 @@
+#Time, ID, Action = 0 (Break) = 1 (Fix)
+3,G1,0
+1,G1,1
+1,V1,0
+3,V1,1

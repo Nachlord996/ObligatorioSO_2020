@@ -8,7 +8,10 @@ public abstract class Gate extends Thread {
      * Unique ID of the gate
      */
     protected final String uuid;
+    private int counterBreak;
+    private int counterRepair;
 
+    private boolean working = true;
     /**
      * This Semaphore allows the gate to execute once per time unit
      * The TimeCounter makes the Manager release it
@@ -19,24 +22,31 @@ public abstract class Gate extends Thread {
     /**
      * The gates takes care of the movement and payment of cars
      * Each Gate is a Thread
+     *
      * @param gateNumber Number of thread to create id. Each number should be unique
      */
-    Gate(int gateNumber){
+    Gate(int gateNumber) {
         this.uuid = "G" + gateNumber;
         uniquenessSemaphore = new Semaphore(0);
     }
+
+    public void setWorking(boolean working) {
+        this.working = working;
+    }
+
     public void setManager(Manager manager) {
         this.manager = manager;
     }
+
     @Override
-    public void run(){
+    public void run() {
         TaskReport report;
-        while(true){
+        while (true) {
             try {
                 //If timer allows
                 uniquenessSemaphore.acquire();
 
-                if(manager.hasEnded()){
+                if (manager.hasEnded()) {
                     manager.signal();
                     break;
                 }
@@ -54,11 +64,41 @@ public abstract class Gate extends Thread {
         }
     }
 
+    public boolean isWorking() {
+        return working;
+    }
+
+    public void setCounterBreak(int counterBreak) {
+        this.counterBreak = counterBreak;
+    }
+
+    public void setCounterRepair(int counterRepair) {
+        this.counterRepair = counterRepair;
+    }
+
+    private void updateIsWorking() {
+        if (working) {
+            if (counterBreak == 0) {
+                working = false;
+            } else {
+                counterBreak--;
+            }
+        } else {
+            if (counterRepair == 0) {
+                working = true;
+            } else {
+                counterRepair--;
+            }
+        }
+
+    }
+
+
     /**
      * Turns on the uniquenessSemaphore
      * This causes that the thread can run one time
      */
-    public void turnOnGate(){
+    public void turnOnGate() {
         uniquenessSemaphore.release();
     }
 

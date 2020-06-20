@@ -15,15 +15,16 @@ public class Planner {
      * The value is a linked list of vehicles that appear in the selected time
      */
     private final HashMap<Integer, LinkedList<Vehicle>> vehiclesForTime;
-
+    private final LinkedList<Vehicle>[] prospectsToEnterWithPriority;
     /**
      * The planner manages the vehicles by time. Its work is to select vehicles to put in gates
      * @param vehiclesPriorities Key = vehicleType (string). Value = priority value (integer)
      * @param vehiclesForTime Key = timeToAppear (integer). Value = Vehicles linked list
      */
-    public Planner(HashMap<String, Integer> vehiclesPriorities, HashMap<Integer, LinkedList<Vehicle>> vehiclesForTime) {
+    public Planner(HashMap<String, Integer> vehiclesPriorities, HashMap<Integer, LinkedList<Vehicle>> vehiclesForTime, int amountOfPriorities) {
         this.vehiclesPriorities = vehiclesPriorities;
         this.vehiclesForTime = vehiclesForTime;
+        this.prospectsToEnterWithPriority = new LinkedList[amountOfPriorities];
     }
 
     /**
@@ -31,7 +32,7 @@ public class Planner {
       @param time Time to get the vehicles
      * @return HashMap with: key = priority to appear. value = linked list of vehicles that appear in that time
      */
-    public HashMap<Integer, LinkedList<Vehicle>> getVehiclesForPriority(int time) {
+    public LinkedList<Vehicle>[] getVehiclesForPriority(int time) {
         HashMap<Integer, LinkedList<Vehicle>> vehiclesForPriority = new HashMap<>();
         if (vehiclesForTime.containsKey(time)) {
             for (Vehicle vehicle : getVehicleArrivedAtTime(time)) {
@@ -42,8 +43,19 @@ public class Planner {
                 vehiclesForPriority.get(priority).add(vehicle);
             }
         }
-        return vehiclesForPriority;
+        if (vehiclesForPriority != null){
+            for(Integer key : vehiclesForPriority.keySet()){
+                for(Vehicle vehicle : vehiclesForPriority.get(key)){
+                    if(prospectsToEnterWithPriority[key-1] == null){
+                        prospectsToEnterWithPriority[key-1] = new LinkedList<>();
+                    }
+                    prospectsToEnterWithPriority[key-1].addLast(vehicle);
+                }
+            }
+        }
+        return prospectsToEnterWithPriority;
     }
+
 
     /**
      * Returns a list with vehicles of a required time
@@ -60,5 +72,20 @@ public class Planner {
 
     public boolean isEmpty(){
         return vehiclesForTime.isEmpty();
+    }
+
+    public void returnVehicle(Vehicle vehicle){
+        if(vehicle.getPriority()==1){
+            if(prospectsToEnterWithPriority[0] == null){
+                prospectsToEnterWithPriority[0] = new LinkedList<>();
+            }
+            prospectsToEnterWithPriority[0].addFirst(vehicle);
+        }
+        else{
+            if(prospectsToEnterWithPriority[1] == null){
+                prospectsToEnterWithPriority[1] = new LinkedList<>();
+            }
+            prospectsToEnterWithPriority[1].addFirst(vehicle);
+        }
     }
 }

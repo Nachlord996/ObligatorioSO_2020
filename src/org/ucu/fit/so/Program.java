@@ -35,6 +35,7 @@ public class Program {
         HashMap<String, Integer> vehiclesPrioritiesParsed = new HashMap<>();
         HashMap<Integer, LinkedList<Vehicle>> vehiclesForTime = new HashMap<>();
 
+
         int threadNumber;
         int chargeTime;
         int roadSize;
@@ -116,9 +117,11 @@ public class Program {
         String carType;
         String[] array;
         Vehicle vehicle;
-        LinkedList<String> lines = Reader.read(fileInput.getPath());
+        LinkedList<String> linesVehicles = Reader.read(fileInput.getPath());
 
-        for (String line : lines) {
+        HashMap<String,Vehicle> vehicleHashMap = new HashMap<>();
+
+        for (String line : linesVehicles) {
             array = line.split(",");
             try {
                 amountVehicles = Integer.parseInt(array[2]);
@@ -135,17 +138,43 @@ public class Program {
             }
             for (int i = 0; i < amountVehicles; i++) {
                 vehicle = new Vehicle(carType, vehiclesPrioritiesParsed.get(carType));
+                vehicleHashMap.put(vehicle.getUuid(),vehicle);
                 vehiclesForTime.get(amountTime).add(vehicle);
+            }
+        }
+        LinkedList<String> linesEvents = Reader.read("src/data/input/events.csv");
+        for(String line : linesEvents){
+            if(line.contains("#")){
+                continue;
+            }
+            array = line.split(",");
+            int action = Integer.parseInt(array[2]);
+            int time = Integer.parseInt(array[0]);
+            if(array[1].contains("G")){
+                if(action==1){
+                    TOLL_GATES.get(array[1]).setCounterRepair(time);
+                }
+                else if(action==0){
+                    TOLL_GATES.get(array[1]).setCounterBreak(time);
+                }
+            }
+            if(array[1].contains("V")){
+                if(action==1){
+                    vehicleHashMap.get(array[1]).setCounterRepair(time);
+                }
+                else if(action==0){
+                    vehicleHashMap.get(array[1]).setCounterBreak(time);
+                }
             }
         }
 
         // Initialize planner using priorities table and vehicles ordered by entry time
-        PLANNER = new Planner(vehiclesPrioritiesParsed, vehiclesForTime);
+        PLANNER = new Planner(vehiclesPrioritiesParsed, vehiclesForTime,AMOUNT_PRIORITIES);
     }
 
     private static void start(){
         try {
-            Manager PROCESS_MANAGER = new Manager(TOLL_GATES, PLANNER, OUTPUT_TEXT_PATH, AMOUNT_PRIORITIES);
+            Manager PROCESS_MANAGER = new Manager(TOLL_GATES, PLANNER, OUTPUT_TEXT_PATH);
             PROCESS_MANAGER.begin();
         } catch (Exception e){
             e.printStackTrace();
