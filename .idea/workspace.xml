@@ -20,16 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fcdd77-7939-4294-ab70-cf920c116420" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/data/input/events.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/META-INF/SO2020_Obligatorio.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_Test8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_Test8.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/output/Output_Test8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/output/Output_Test8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" afterDir="false" />
     </list>
@@ -132,42 +126,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589677761216" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1592696995753">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom" timestamp="1592716549120">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589852135437" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592696995753" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1592696995753">
+    <state width="1323" height="136" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592716549120" />
+    <state width="1323" height="136" key="GridCell.Tab.0.center" timestamp="1592716549120">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589852135437" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592696995753" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1592696995753">
+    <state width="1323" height="136" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592716549120" />
+    <state width="1323" height="136" key="GridCell.Tab.0.left" timestamp="1592716549120">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589852135436" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592696995753" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1592696995753">
+    <state width="1323" height="136" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592716549120" />
+    <state width="1323" height="136" key="GridCell.Tab.0.right" timestamp="1592716549120">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589852135437" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592696995753" />
-    <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1589743329090">
+    <state width="1323" height="136" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592716549120" />
+    <state width="1323" height="237" key="GridCell.Tab.1.bottom" timestamp="1592709546260">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
-    <state width="1323" height="227" key="GridCell.Tab.1.center" timestamp="1589743329090">
+    <state width="1323" height="237" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592709546260" />
+    <state width="1323" height="237" key="GridCell.Tab.1.center" timestamp="1592709546260">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
-    <state width="1323" height="227" key="GridCell.Tab.1.left" timestamp="1589743329090">
+    <state width="1323" height="237" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1592709546260" />
+    <state width="1323" height="237" key="GridCell.Tab.1.left" timestamp="1592709546260">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
-    <state width="1323" height="227" key="GridCell.Tab.1.right" timestamp="1589743329090">
+    <state width="1323" height="237" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1592709546260" />
+    <state width="1323" height="237" key="GridCell.Tab.1.right" timestamp="1592709546260">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1589743329090" />
+    <state width="1323" height="237" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1592709546260" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1589658104179">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -184,10 +178,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="322" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.738@0.0.1366.738" timestamp="1589767605744" />
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1589745612546">
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup" timestamp="1592711174478">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1589745612546" />
+    <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1592711174478" />
     <state x="346" y="50" width="672" height="688" key="search.everywhere.popup" timestamp="1592694167767">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -198,18 +192,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="((HashMap.Node)vehicles.entrySet().toArray()[0]).getValue()" custom="java.util.HashMap.Node" />
-        <watch expression="vehicles.entrySet().toArray()[1]" />
-        <watch expression="vehicles.entrySet().toArray()[1]" language="JAVA" />
-        <watch expression="vehicles.entrySet().toArray()[1]" language="JAVA" />
+        <watch expression="((HashMap.Node)gates.entrySet().toArray()[0]).getValue()" custom="java.util.HashMap.Node" />
       </configuration>
     </watches-manager>
   </component>

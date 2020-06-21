@@ -57,6 +57,7 @@ public class Vehicle {
         if(working){
             if(counterBreak==0){
                 working = false;
+                counterBreak = -1;
             }
             else{
                 counterBreak--;
@@ -65,6 +66,7 @@ public class Vehicle {
         else{
             if(counterRepair==0){
                 working = true;
+                counterRepair = -1;
             }
             else{
                 counterRepair--;

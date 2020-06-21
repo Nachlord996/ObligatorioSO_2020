@@ -31,14 +31,17 @@ public class TollGate extends Gate {
     TaskReport consume() {
         TaskReport report = new TaskReport();
         Task task;
+
+        //If the tollGate is broken
         if (!isWorking()) {
             task = new Task(this.uuid, "Casilla fuera de funcionamiento");
             report.addTask(task);
-            return report;
         }
+
         //Checks the last position of the road. If there is someone passing through the gate
         if (road[0] != null && road[0].isWorking()) {
             Vehicle vehicle = road[0];
+
             //This controls the time a vehicle takes to pass through the gate
             this.timeLeftToCharge--;
 
@@ -46,6 +49,7 @@ public class TollGate extends Gate {
                 task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Pasó un instante en la caja");
                 report.addTask(task);
             }
+
             //Increases the age of the vehicle. This is to measure the spent time
             vehicle.increaseAge();
 
@@ -58,16 +62,26 @@ public class TollGate extends Gate {
 
                 timeLeftToCharge = timeToCharge; //Restores time to pay
             }
-        } else if (road[0] != null && !road[0].isWorking()) {
-            LinkedList<Vehicle> stuckVehicles = new LinkedList<>();
-            for (int position = 1; position < road.length; position++) {
-                if (road[position] != null) {
-                    stuckVehicles.addLast(road[position]);
+        } else if (road[0] != null && !road[0].isWorking() && this.isWorking()) { //If the car in the last position broke down
+            road[0].increaseAge();
+            if (this.isWorking()) {
+                LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(0);
+                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(), road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se Rompio. cometió la muricion");
+                report.addTask(task);
+                setWorking(false);
+                manager.returnVehiclesToPlanner(stuckVehicles);
+            } else {
+                if (road[0].isWorking()){
+                    if (this.roadHasNoBrokenVehicles()){
+                        setWorking(true);
+                        task = new Task(this.uuid, "Casilla vuelve a estar en funcionamiento");
+                        report.addTask(task);
+                    }
                 }
-                road[position] = null;
+                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(), road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se arregló el vehiculo");
+                report.addTask(task);
             }
-            setWorking(false);
-            manager.returnVehiclesToPlanner(stuckVehicles);
+
         } else {
             int position;
             for (position = 1; position < road.length; position++) { //Checks all position from the end to the beginning
@@ -85,27 +99,53 @@ public class TollGate extends Gate {
                         task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Espera en posición: " + position);
                         report.addTask(task);
                     }
-                } else if (road[position] != null && !road[position].isWorking()) {
-                    break;
-                }
-            }
-
-            if (position < road.length && road[position] != null && !road[position].isWorking()) {
-                LinkedList<Vehicle> stuckVehicles = new LinkedList<>();
-                for (int positionFromBrokenCar = position + 1; positionFromBrokenCar < road.length; positionFromBrokenCar++) {
-                    if (road[positionFromBrokenCar] != null) {
-                        stuckVehicles.addLast(road[positionFromBrokenCar]);
+                } else if (road[position] != null && !road[position].isWorking()) { //BrokenCarProtocol
+                    road[position].increaseAge();
+                    if (this.isWorking()) {
+                        LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(position);
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se Rompio. cometió la muricion");
+                        report.addTask(task);
+                        manager.returnVehiclesToPlanner(stuckVehicles);
+                        setWorking(false);
+                    } else {
+                        if (road[position].isWorking()) {
+                            if (this.roadHasNoBrokenVehicles()){
+                                setWorking(true);
+                                task = new Task(this.uuid, "Casilla vuelve a estar en funcionamiento");
+                                report.addTask(task);
+                            }
+                        }
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se arregló el vehiculo");
+                        report.addTask(task);
                     }
-                    road[positionFromBrokenCar] = null;
                 }
-                setWorking(false);
-                manager.returnVehiclesToPlanner(stuckVehicles);
             }
-
-
         }
-
         return report;
+    }
+
+
+    private LinkedList<Vehicle> getBehindWorkingVehicles(int beginningPosition) {
+        LinkedList<Vehicle> stuckVehicles = new LinkedList<>();
+
+        //Retrieves all vehicles to the planner
+        for (int position = beginningPosition + 1; position < road.length; position++) {
+            if (road[position] != null && road[position].isWorking()) {
+                stuckVehicles.addLast(road[position]);
+                usedCapacity--;
+                road[position] = null;
+            }
+        }
+        return stuckVehicles;
+    }
+
+    private boolean roadHasNoBrokenVehicles(){
+        for (int position = 0; position < road.length; position++) {
+            if (road[position] != null && !road[position].isWorking()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
