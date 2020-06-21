@@ -8,12 +8,7 @@ public abstract class Gate extends Thread {
      * Unique ID of the gate
      */
     protected final String uuid;
-    private int counterBreak;
-    private int counterRepair;
 
-    private boolean vehiclesCanPay = true;
-
-    private boolean working = true;
 
     /**
      * This Semaphore allows the gate to execute once per time unit
@@ -31,10 +26,6 @@ public abstract class Gate extends Thread {
     Gate(int gateNumber) {
         this.uuid = "G" + gateNumber;
         uniquenessSemaphore = new Semaphore(0);
-    }
-
-    public void setWorking(boolean working) {
-        this.working = working;
     }
 
     public void setManager(Manager manager) {
@@ -64,40 +55,6 @@ public abstract class Gate extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
-    }
-
-    public boolean isWorking() {
-        return working;
-    }
-
-    public void setCounterBreak(int counterBreak) {
-        this.counterBreak = counterBreak;
-    }
-
-    public void setCounterRepair(int counterRepair) {
-        this.counterRepair = counterRepair;
-    }
-
-    public boolean getVehiclesCanPay() {
-        return vehiclesCanPay;
-    }
-
-    public void setVehiclesCanPay(boolean vehiclesCanPay) {
-        this.vehiclesCanPay = vehiclesCanPay;
-    }
-
-    protected void updatePaydeskStatus() {
-        if (vehiclesCanPay) {
-            counterBreak--;
-            if (counterBreak == 0) {
-                vehiclesCanPay = false;
-            }
-        } else {
-            if (counterRepair == 0) {
-                vehiclesCanPay = true;
-            }
-            counterRepair--;
         }
     }
 

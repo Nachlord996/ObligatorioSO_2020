@@ -105,17 +105,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592770435597">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="440" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1592770435597" />
     <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1592760137542">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -134,25 +139,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589677761216" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1592762883266">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1323" height="527" key="GridCell.Tab.0.bottom" timestamp="1592772329552">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="527" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589852135437" />
+    <state width="1323" height="527" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
     <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1592762883266">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1323" height="527" key="GridCell.Tab.0.center" timestamp="1592772329552">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="527" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589852135437" />
+    <state width="1323" height="527" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
     <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1592762883266">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1323" height="527" key="GridCell.Tab.0.left" timestamp="1592772329552">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="527" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589852135436" />
+    <state width="1323" height="527" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
     <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1592762883266">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1323" height="527" key="GridCell.Tab.0.right" timestamp="1592772329552">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="527" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589852135437" />
+    <state width="1323" height="527" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
     <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1592752988584">
       <screen x="0" y="0" width="1366" height="738" />

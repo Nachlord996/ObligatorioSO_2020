@@ -1,6 +1,5 @@
 package org.ucu.fit.so;
 
-import java.lang.reflect.Array;
 import java.util.LinkedList;
 
 public class TollGate extends Gate {
@@ -9,6 +8,10 @@ public class TollGate extends Gate {
     private final int timeToCharge;
     private int timeLeftToCharge;
     private int usedCapacity = 0;
+    private int counterBreak;
+    private int counterRepair;
+    private boolean vehiclesCanPay = true;
+    private boolean working = true;
 
 
     public int getUsedCapacity() {
@@ -208,5 +211,45 @@ public class TollGate extends Gate {
     public boolean roadIsEmpty() {
         return usedCapacity == 0;
     }
+
+
+    public boolean isWorking() {
+        return working;
+    }
+
+    public void setCounterBreak(int counterBreak) {
+        this.counterBreak = counterBreak;
+    }
+
+    public void setCounterRepair(int counterRepair) {
+        this.counterRepair = counterRepair;
+    }
+
+    public boolean getVehiclesCanPay() {
+        return vehiclesCanPay;
+    }
+
+    public void setVehiclesCanPay(boolean vehiclesCanPay) {
+        this.vehiclesCanPay = vehiclesCanPay;
+    }
+
+    protected void updatePaydeskStatus() {
+        if (vehiclesCanPay) {
+            counterBreak--;
+            if (counterBreak == 0) {
+                vehiclesCanPay = false;
+            }
+        } else {
+            if (counterRepair == 0) {
+                vehiclesCanPay = true;
+            }
+            counterRepair--;
+        }
+    }
+
+    public void setWorking(boolean working) {
+        this.working = working;
+    }
+
 
 }
