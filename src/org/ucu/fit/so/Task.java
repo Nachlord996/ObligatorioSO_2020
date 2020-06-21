@@ -58,7 +58,7 @@ public class Task {
         StringBuilder builder = new StringBuilder();
         builder.append(instant);
         builder.append(",").append(gateID);
-        if(customMessage!=""){
+        if(!customMessage.isEmpty()){
             builder.append(",").append(customMessage);
             return new String(builder);
         }

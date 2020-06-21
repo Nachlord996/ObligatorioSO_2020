@@ -55,22 +55,19 @@ public class Vehicle {
 
     private void updateIsWorking(){
         if(working){
+            counterBreak--;
             if(counterBreak==0){
                 working = false;
                 counterBreak = -1;
             }
-            else{
-                counterBreak--;
-            }
         }
         else{
+
             if(counterRepair==0){
                 working = true;
                 counterRepair = -1;
             }
-            else{
-                counterRepair--;
-            }
+            counterRepair--;
         }
     }
     /**
