@@ -92,12 +92,10 @@ public abstract class Gate extends Thread {
             counterBreak--;
             if (counterBreak == 0) {
                 vehiclesCanPay = false;
-                counterBreak = -1;
             }
         } else {
             if (counterRepair == 0) {
                 vehiclesCanPay = true;
-                counterRepair = -1;
             }
             counterRepair--;
         }

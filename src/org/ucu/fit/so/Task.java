@@ -10,7 +10,7 @@ public class Task {
     private int position;
     private String vehicleType;
     private String customMessage = "";
-
+    private int timeWaitingInPreselector;
     /**
      * A task is created to save information about the simulation.
      * @param gateID The id where the event has occurred
@@ -20,7 +20,7 @@ public class Task {
      * @param priority The vehicle priority
      * @param action The action it has performed
      */
-    public Task(String gateID, int position, String vehicleType, String vehicleID, int timeWaiting, int priority, String action) {
+    public Task(String gateID, int position, String vehicleType, String vehicleID, int timeWaiting, int priority, String action, int timeWaitingInPreselector) {
         this.gateID = gateID;
         this.vehicleID = vehicleID;
         this.timeWaiting = timeWaiting;
@@ -28,11 +28,12 @@ public class Task {
         this.action = action;
         this.position = position;
         this.vehicleType = vehicleType;
+        this.timeWaitingInPreselector = timeWaitingInPreselector;
         instant = -1;
     }
     public Task(String gateID, String customMessage){
         this.gateID = gateID;
-        this.vehicleType = customMessage;
+        this.customMessage = customMessage;
         instant = -1;
     }
     /**
@@ -59,7 +60,7 @@ public class Task {
         builder.append(instant);
         builder.append(",").append(gateID);
         if(!customMessage.isEmpty()){
-            builder.append(",").append(customMessage);
+            builder.append(",,,,,,,").append(customMessage);
             return new String(builder);
         }
         builder.append(",").append(position);
@@ -67,6 +68,7 @@ public class Task {
         builder.append(",").append(vehicleID);
         builder.append(",").append(priority);
         builder.append(",").append(timeWaiting);
+        builder.append(",").append(timeWaitingInPreselector);
         builder.append(",").append(action);
         return new String(builder);
     }

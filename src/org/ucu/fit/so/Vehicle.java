@@ -4,6 +4,7 @@ public class Vehicle {
     private final String typeOfVehicle;
     private final String uuid;
     private static int numOfCars;
+    private int timeWaited=-1;
 
     public int getAge() {
         return age;
@@ -14,10 +15,23 @@ public class Vehicle {
     }
 
     private int age;
-    private final int priority;
+    private int priority;
     private boolean working = true;
     private int counterBreak=-1;
     private int counterRepair=-1;
+    private boolean recentlyRepair = false;
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public boolean isRecentlyRepair() {
+        return recentlyRepair;
+    }
+
+    public void setRecentlyRepair(boolean recentlyRepair) {
+        this.recentlyRepair = recentlyRepair;
+    }
 
     public boolean isWorking() {
         return working;
@@ -31,7 +45,6 @@ public class Vehicle {
     public Vehicle(String typeOfVehicle, int priority) {
         this.typeOfVehicle = typeOfVehicle;
         this.uuid = "V" + getNumOfCars();
-        this.age = 0;
         this.priority = priority;
     }
 
@@ -56,13 +69,12 @@ public class Vehicle {
     private void updateIsWorking(){
         if(working){
             counterBreak--;
-            if(counterBreak==0){
+            if(counterBreak==1){
                 working = false;
                 counterBreak = -1;
             }
         }
         else{
-
             if(counterRepair==0){
                 working = true;
                 counterRepair = -1;
@@ -79,6 +91,13 @@ public class Vehicle {
         updateIsWorking();
     }
 
+    public int getTimeWaited() {
+        return timeWaited;
+    }
+
+    public void increaseTimeWaited() {
+        timeWaited++;
+    }
     /**
      * Returns string with the unique id of the vehicle
      * @return String

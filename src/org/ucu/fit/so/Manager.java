@@ -97,7 +97,13 @@ public class Manager {
 
         //Gets HashMap with new vehicles.
         LinkedList<Vehicle>[] newVehicles = planner.getVehiclesForPriority(time);
-
+        for(LinkedList<Vehicle> vehicles: newVehicles){
+            if(vehicles !=null){
+                for(Vehicle vehicle: vehicles){
+                    vehicle.increaseTimeWaited();
+                }
+            }
+        }
         //Available gates are filled with cars
         LinkedList<TollGate> availableGates = getAvailableGates();
         for (TollGate tollGate : availableGates){
@@ -124,7 +130,7 @@ public class Manager {
     private LinkedList<TollGate> getAvailableGates(){
         LinkedList<TollGate> availableGates = new LinkedList<>();
         for (TollGate gate : gates.values()){
-            if(gate.roadIsNotFull()) {
+            if(gate.roadIsNotFull() && gate.getVehiclesCanPay()) {
                 availableGates.add(gate);
             }
         }
