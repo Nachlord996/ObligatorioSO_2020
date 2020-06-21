@@ -10,10 +10,18 @@ public abstract class Gate extends Thread {
     protected final String uuid;
     private int counterBreak;
     private int counterRepair;
-
+    private boolean recentlyBroken = false;
     private boolean vehiclesCanPay = true;
 
     private boolean working = true;
+
+    public boolean isRecentlyBroken() {
+        return recentlyBroken;
+    }
+
+    public void setRecentlyBroken(boolean recentlyBroken) {
+        this.recentlyBroken = recentlyBroken;
+    }
 
     /**
      * This Semaphore allows the gate to execute once per time unit
@@ -83,15 +91,13 @@ public abstract class Gate extends Thread {
         return vehiclesCanPay;
     }
 
-    public void setVehiclesCanPay(boolean vehiclesCanPay) {
-        this.vehiclesCanPay = vehiclesCanPay;
-    }
 
     protected void updatePaydeskStatus() {
         if (vehiclesCanPay) {
             counterBreak--;
             if (counterBreak == 0) {
                 vehiclesCanPay = false;
+                this.setRecentlyBroken(false);
             }
         } else {
             if (counterRepair == 0) {

@@ -1,89 +1,123 @@
 Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time On Road,Time On Preselector, Action
-0,G1,4,Commercial Truck,V2,3,1,0,Se movio de pos: 4 a pos: 3
+0,G0,,,,,,,Se arreglo la caja
 0,G0,4,Commercial Truck,V1,3,1,0,Se movio de pos: 4 a pos: 3
+0,G1,,,,,,,Se arreglo la caja
+0,G1,4,Commercial Truck,V2,3,1,0,Se movio de pos: 4 a pos: 3
+1,G0,,,,,,,Se arreglo la caja
 1,G0,3,Commercial Truck,V1,3,2,0,Se movio de pos: 3 a pos: 2
 1,G0,4,Commercial Truck,V3,3,1,1,Se movio de pos: 4 a pos: 3
 1,G1,,,,,,,Se rompió la caja y no se puede cobrar
 1,V2,,,,,,,Volvio al preselector para replanificación
 1,V4,,,,,,,Volvio al preselector para replanificación
-2,G1,,,,,,,Se rompió la caja y no se puede cobrar
+2,G1,,,,,,,La caja sigue rota
+2,G0,,,,,,,Se arreglo la caja
 2,G0,2,Commercial Truck,V1,3,3,0,Se movio de pos: 2 a pos: 1
 2,G0,3,Commercial Truck,V3,3,2,1,Se movio de pos: 3 a pos: 2
 2,G0,4,Ambulance,V7,1,1,0,Se movio de pos: 4 a pos: 3
-3,G1,,,,,,,Se rompió la caja y no se puede cobrar
+3,G1,,,,,,,La caja sigue rota
+3,G0,,,,,,,Se arreglo la caja
 3,G0,1,Commercial Truck,V1,3,4,0,Se movio de pos: 1 a pos: 0
 3,G0,2,Commercial Truck,V3,3,3,1,Se movio de pos: 2 a pos: 1
 3,G0,3,Ambulance,V7,1,2,0,Se movio de pos: 3 a pos: 2
 3,G0,4,Commercial Truck,V4,2,1,3,Se movio de pos: 4 a pos: 3
+4,G1,,,,,,,Se arreglo la caja
+4,G0,,,,,,,Se arreglo la caja
 4,G0,0,Commercial Truck,V1,3,5,0,Pasó un instante en la caja
 4,G0,1,Commercial Truck,V3,3,4,1,Espera en posición: 1
 4,G0,2,Ambulance,V7,1,3,0,Espera en posición: 2
 4,G0,3,Commercial Truck,V4,2,2,3,Espera en posición: 3
 4,G0,4,Commercial Truck,V2,2,2,3,Espera en posición: 4
+5,G0,,,,,,,Se arreglo la caja
 5,G0,0,Commercial Truck,V1,3,6,0,Pasó un instante en la caja
 5,G0,1,Commercial Truck,V3,3,5,1,Espera en posición: 1
 5,G0,2,Ambulance,V7,1,4,0,Espera en posición: 2
 5,G0,3,Commercial Truck,V4,2,3,3,Espera en posición: 3
 5,G0,4,Commercial Truck,V2,2,3,3,Espera en posición: 4
+5,G1,,,,,,,Se arreglo la caja
 5,G1,4,Car,V8,2,1,2,Se movio de pos: 4 a pos: 3
-6,G1,3,Car,V8,2,2,2,Se movio de pos: 3 a pos: 2
-6,G1,4,Commercial Truck,V5,3,1,6,Se movio de pos: 4 a pos: 3
+6,G0,,,,,,,Se arreglo la caja
 6,G0,0,Commercial Truck,V1,3,7,0,Se le cobró lo correspondiente
 6,G0,1,Commercial Truck,V3,3,6,1,Se movio de pos: 1 a pos: 0
 6,G0,2,Ambulance,V7,1,5,0,Se movio de pos: 2 a pos: 1
 6,G0,3,Commercial Truck,V4,2,4,3,Se movio de pos: 3 a pos: 2
 6,G0,4,Commercial Truck,V2,2,4,3,Se movio de pos: 4 a pos: 3
+6,G1,,,,,,,Se arreglo la caja
+6,G1,3,Car,V8,2,2,2,Se movio de pos: 3 a pos: 2
+6,G1,4,Commercial Truck,V5,3,1,6,Se movio de pos: 4 a pos: 3
+7,G0,,,,,,,Se arreglo la caja
 7,G0,0,Commercial Truck,V3,3,7,1,Pasó un instante en la caja
 7,G0,1,Ambulance,V7,1,6,0,Espera en posición: 1
 7,G0,2,Commercial Truck,V4,2,5,3,Espera en posición: 2
 7,G0,3,Commercial Truck,V2,2,5,3,Espera en posición: 3
+7,G1,,,,,,,Se arreglo la caja
 7,G1,2,Car,V8,2,3,2,Se movio de pos: 2 a pos: 1
 7,G1,3,Commercial Truck,V5,3,2,6,Se movio de pos: 3 a pos: 2
 7,G1,4,Commercial Truck,V6,3,1,7,Se movio de pos: 4 a pos: 3
+8,G0,,,,,,,Se arreglo la caja
 8,G0,0,Commercial Truck,V3,3,8,1,Pasó un instante en la caja
 8,G0,1,Ambulance,V7,1,7,0,Espera en posición: 1
 8,G0,2,Commercial Truck,V4,2,6,3,Espera en posición: 2
 8,G0,3,Commercial Truck,V2,2,6,3,Espera en posición: 3
+8,G1,,,,,,,Se arreglo la caja
 8,G1,1,Car,V8,2,4,2,Se movio de pos: 1 a pos: 0
 8,G1,2,Commercial Truck,V5,3,3,6,Se movio de pos: 2 a pos: 1
 8,G1,3,Commercial Truck,V6,3,2,7,Se movio de pos: 3 a pos: 2
+9,G0,,,,,,,Se arreglo la caja
 9,G0,0,Commercial Truck,V3,3,9,1,Se le cobró lo correspondiente
 9,G0,1,Ambulance,V7,1,8,0,Se movio de pos: 1 a pos: 0
 9,G0,2,Commercial Truck,V4,2,7,3,Se movio de pos: 2 a pos: 1
 9,G0,3,Commercial Truck,V2,2,7,3,Se movio de pos: 3 a pos: 2
+9,G1,,,,,,,Se arreglo la caja
 9,G1,0,Car,V8,2,5,2,Pasó un instante en la caja
 9,G1,1,Commercial Truck,V5,3,4,6,Espera en posición: 1
 9,G1,2,Commercial Truck,V6,3,3,7,Espera en posición: 2
+10,G0,,,,,,,Se arreglo la caja
 10,G0,0,Ambulance,V7,1,9,0,Pasó un instante en la caja
 10,G0,1,Commercial Truck,V4,2,8,3,Espera en posición: 1
 10,G0,2,Commercial Truck,V2,2,8,3,Espera en posición: 2
+10,G1,,,,,,,Se arreglo la caja
 10,G1,0,Car,V8,2,6,2,Pasó un instante en la caja
 10,G1,1,Commercial Truck,V5,3,5,6,Espera en posición: 1
 10,G1,2,Commercial Truck,V6,3,4,7,Espera en posición: 2
+11,G0,,,,,,,Se arreglo la caja
 11,G0,0,Ambulance,V7,1,10,0,Pasó un instante en la caja
 11,G0,1,Commercial Truck,V4,2,9,3,Espera en posición: 1
 11,G0,2,Commercial Truck,V2,2,9,3,Espera en posición: 2
+11,G1,,,,,,,Se arreglo la caja
 11,G1,0,Car,V8,2,7,2,Se le cobró lo correspondiente
 11,G1,1,Commercial Truck,V5,3,6,6,Se movio de pos: 1 a pos: 0
 11,G1,2,Commercial Truck,V6,3,5,7,Se movio de pos: 2 a pos: 1
+12,G1,,,,,,,Se arreglo la caja
+12,G1,0,Commercial Truck,V5,3,7,6,Pasó un instante en la caja
+12,G1,1,Commercial Truck,V6,3,6,7,Espera en posición: 1
+12,G0,,,,,,,Se arreglo la caja
 12,G0,0,Ambulance,V7,1,11,0,Se le cobró lo correspondiente
 12,G0,1,Commercial Truck,V4,2,10,3,Se movio de pos: 1 a pos: 0
 12,G0,2,Commercial Truck,V2,2,10,3,Se movio de pos: 2 a pos: 1
-12,G1,0,Commercial Truck,V5,3,7,6,Pasó un instante en la caja
-12,G1,1,Commercial Truck,V6,3,6,7,Espera en posición: 1
+13,G0,,,,,,,Se arreglo la caja
 13,G0,0,Commercial Truck,V4,2,11,3,Pasó un instante en la caja
 13,G0,1,Commercial Truck,V2,2,11,3,Espera en posición: 1
+13,G1,,,,,,,Se arreglo la caja
 13,G1,0,Commercial Truck,V5,3,8,6,Pasó un instante en la caja
 13,G1,1,Commercial Truck,V6,3,7,7,Espera en posición: 1
-14,G0,0,Commercial Truck,V4,2,12,3,Pasó un instante en la caja
-14,G0,1,Commercial Truck,V2,2,12,3,Espera en posición: 1
+14,G1,,,,,,,Se arreglo la caja
 14,G1,0,Commercial Truck,V5,3,9,6,Se le cobró lo correspondiente
 14,G1,1,Commercial Truck,V6,3,8,7,Se movio de pos: 1 a pos: 0
+14,G0,,,,,,,Se arreglo la caja
+14,G0,0,Commercial Truck,V4,2,12,3,Pasó un instante en la caja
+14,G0,1,Commercial Truck,V2,2,12,3,Espera en posición: 1
+15,G1,,,,,,,Se arreglo la caja
+15,G1,0,Commercial Truck,V6,3,9,7,Pasó un instante en la caja
+15,G0,,,,,,,Se arreglo la caja
 15,G0,0,Commercial Truck,V4,2,13,3,Se le cobró lo correspondiente
 15,G0,1,Commercial Truck,V2,2,13,3,Se movio de pos: 1 a pos: 0
-15,G1,0,Commercial Truck,V6,3,9,7,Pasó un instante en la caja
+16,G0,,,,,,,Se arreglo la caja
 16,G0,0,Commercial Truck,V2,2,14,3,Pasó un instante en la caja
+16,G1,,,,,,,Se arreglo la caja
 16,G1,0,Commercial Truck,V6,3,10,7,Pasó un instante en la caja
-17,G1,0,Commercial Truck,V6,3,11,7,Se le cobró lo correspondiente
+17,G0,,,,,,,Se arreglo la caja
 17,G0,0,Commercial Truck,V2,2,15,3,Pasó un instante en la caja
+17,G1,,,,,,,Se arreglo la caja
+17,G1,0,Commercial Truck,V6,3,11,7,Se le cobró lo correspondiente
+18,G0,,,,,,,Se arreglo la caja
 18,G0,0,Commercial Truck,V2,2,16,3,Se le cobró lo correspondiente

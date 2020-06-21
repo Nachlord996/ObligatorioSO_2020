@@ -58,11 +58,16 @@ public class TollGate extends Gate {
     private void checkGateAvailability(TaskReport report) {
         Task task;
         updatePaydeskStatus();
-        if (!this.getVehiclesCanPay()) {
+        if (!this.getVehiclesCanPay() && !this.isRecentlyBroken()) {
             task = new Task(this.uuid, "Se rompió la caja y no se puede cobrar");
             report.addTask(task);
             LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(-1,report);
             manager.returnVehiclesToPlanner(stuckVehicles);
+            this.setRecentlyBroken(true);
+        }
+        else if(!this.getVehiclesCanPay() && this.isRecentlyBroken()){
+            task = new Task(this.uuid, "La caja sigue rota");
+            report.addTask(task);
         }
     }
 
