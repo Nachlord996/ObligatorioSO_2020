@@ -117,6 +117,7 @@ public class Manager {
     }
 
     public void returnVehiclesToPlanner(LinkedList<Vehicle> vehicles){
+        int time = timeCounter.getActualTime();
         for(Vehicle vehicle : vehicles){
             planner.returnVehicle(vehicle);
         }
