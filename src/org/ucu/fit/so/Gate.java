@@ -11,7 +11,10 @@ public abstract class Gate extends Thread {
     private int counterBreak;
     private int counterRepair;
 
+    private boolean vehiclesCanPay = true;
+
     private boolean working = true;
+
     /**
      * This Semaphore allows the gate to execute once per time unit
      * The TimeCounter makes the Manager release it
@@ -76,23 +79,29 @@ public abstract class Gate extends Thread {
         this.counterRepair = counterRepair;
     }
 
-    private void updateIsWorking() {
-        if (working) {
+    public boolean getVehiclesCanPay() {
+        return vehiclesCanPay;
+    }
+
+    public void setVehiclesCanPay(boolean vehiclesCanPay) {
+        this.vehiclesCanPay = vehiclesCanPay;
+    }
+
+    protected void updatePaydeskStatus() {
+        if (vehiclesCanPay) {
+            counterBreak--;
             if (counterBreak == 0) {
-                working = false;
-            } else {
-                counterBreak--;
+                vehiclesCanPay = false;
+                counterBreak = -1;
             }
         } else {
             if (counterRepair == 0) {
-                working = true;
-            } else {
-                counterRepair--;
+                vehiclesCanPay = true;
+                counterRepair = -1;
             }
+            counterRepair--;
         }
-
     }
-
 
     /**
      * Turns on the uniquenessSemaphore

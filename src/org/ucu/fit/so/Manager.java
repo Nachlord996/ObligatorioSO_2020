@@ -102,7 +102,7 @@ public class Manager {
         LinkedList<TollGate> availableGates = getAvailableGates();
         for (TollGate tollGate : availableGates){
             for (LinkedList<Vehicle> vehicles : newVehicles) {
-                if (vehicles != null && !vehicles.isEmpty() && tollGate.isWorking() ) {
+                if (vehicles != null && !vehicles.isEmpty() && tollGate.isWorking() && tollGate.getVehiclesCanPay() ) {
                     tollGate.addVehicleToRoad(vehicles.pop());
                     break;
                 }

@@ -1,5 +1,6 @@
 package org.ucu.fit.so;
 
+import java.lang.reflect.Array;
 import java.util.LinkedList;
 
 public class TollGate extends Gate {
@@ -29,8 +30,20 @@ public class TollGate extends Gate {
 
     @Override
     TaskReport consume() {
-        TaskReport report = new TaskReport();
         Task task;
+        TaskReport report = new TaskReport();
+
+        //Checks if payDesk is broken
+        checkGateAvailability(report);
+
+        //Se encarga de procesar los casos de vehiculos rotos
+        checkForBrokenVehicles(report);
+
+        //Se encarga de procesar el vehiculo en la caja de cobranza
+        processPaydesk(report);
+
+        //Se encarga de procesar los vehiculos de la ruta
+        processRoad(report);
 
         //If the tollGate is broken
         if (!isWorking()) {
@@ -38,90 +51,109 @@ public class TollGate extends Gate {
             report.addTask(task);
         }
 
-        //Checks the last position of the road. If there is someone passing through the gate
-        if (road[0] != null && road[0].isWorking()) {
-            Vehicle vehicle = road[0];
+        return report;
+    }
 
-            //This controls the time a vehicle takes to pass through the gate
-            this.timeLeftToCharge--;
-
-            if (timeLeftToCharge != 0) {
-                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Pasó un instante en la caja");
-                report.addTask(task);
-            }
-
-            //Increases the age of the vehicle. This is to measure the spent time
-            vehicle.increaseAge();
-
-            if (timeLeftToCharge == 0) { //If the vehicle has passed
-                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Se le cobró lo correspondiente");
-                report.addTask(task);
-
-                usedCapacity--; //Reduces the vehicles on road
-                road[0] = null; //Eliminates the vehicle
-
-                timeLeftToCharge = timeToCharge; //Restores time to pay
-            }
-        } else if (road[0] != null && !road[0].isWorking()) { //If the car in the last position broke down
-            road[0].increaseAge();
-            if (this.isWorking()) {
-                LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(0);
-                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(), road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se Rompio.");
-                report.addTask(task);
-                setWorking(false);
-                manager.returnVehiclesToPlanner(stuckVehicles);
-            } else {
-                if (road[0].isWorking() && this.roadHasNoBrokenVehicles()) {
-                    setWorking(true);
-                    task = new Task(this.uuid, "Casilla vuelve a estar en funcionamiento");
-                    report.addTask(task);
-                }
-                task = new Task(this.uuid, 0, road[0].getTypeOfVehicle(), road[0].getUuid(), road[0].getAge(), road[0].getPriority(), "Se arregló el vehiculo");
-                report.addTask(task);
-            }
+    private void checkGateAvailability(TaskReport report) {
+        Task task;
+        updatePaydeskStatus();
+        if (!this.getVehiclesCanPay()) {
+            task = new Task(this.uuid, "Se rompió la caja, no se puede cobrar");
+            report.addTask(task);
+            LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(-1);
+            manager.returnVehiclesToPlanner(stuckVehicles);
         }
-        int position;
-        for (position = 1; position < road.length; position++) { //Checks all position from the end to the beginning
-            if (road[position] != null && road[position].isWorking()) { //If there is a vehicle
-                road[position].increaseAge(); //Increases spent time
-                if (road[position - 1] == null) { //If there is no one in front of him
-                    //Report movement
-                    task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1));
-                    report.addTask(task);
+    }
 
-                    road[position - 1] = road[position]; //Moves vehicle
-                    road[position] = null; //The previous position of the vehicle ends empty
-                } else {
-                    task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Espera en posición: " + position);
-                    report.addTask(task);
-                }
-            } else if (road[position] != null && !road[position].isWorking()) { //BrokenCarProtocol
-                road[position].increaseAge();
-                if (this.isWorking()) {
-                    LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(position);
-                    task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se Rompio");
-                    report.addTask(task);
-                    manager.returnVehiclesToPlanner(stuckVehicles);
-                    setWorking(false);
-                } else if (road[position].isWorking()) {
-                    if (this.roadHasNoBrokenVehicles()) {
-                        setWorking(true);
-                        task = new Task(this.uuid, "Casilla vuelve a estar en funcionamiento");
+    private void checkForBrokenVehicles(TaskReport report) {
+        Task task;
+        for (int position = 0; position < road.length; position++) {
+            if (road[position] != null) {
+                if (!road[position].isWorking()) { //If the car in the last position broke down
+                    road[position].increaseAge();
+                    if (this.isWorking()) {
+                        LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(position);
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se Rompio.");
+                        report.addTask(task);
+                        setWorking(false);
+                        manager.returnVehiclesToPlanner(stuckVehicles);
+                    } else if (road[position].isWorking()) {
+                        if (this.roadHasNoBrokenVehicles()) {
+                            setWorking(true);
+                            task = new Task(this.uuid, "Casilla vuelve a estar en funcionamiento");
+                            report.addTask(task);
+                        }
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se arregló el vehiculo");
+                        report.addTask(task);
+                    } else {
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Está roto");
                         report.addTask(task);
                     }
-                    task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se arregló el vehiculo");
-                    report.addTask(task);
-                } else {
-                    task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Está roto");
-                    report.addTask(task);
                 }
             }
         }
-    
+    }
 
-        return report;
-}
+    private void processPaydesk(TaskReport report) {
+        Task task;
 
+        //Checks the last position of the road. If there is someone passing through the gate
+        if (road[0] != null) {
+            if (road[0].isWorking()) {
+                Vehicle vehicle = road[0];
+
+                if (timeLeftToCharge != 0) {
+                    task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Pasó un instante en la caja");
+                    report.addTask(task);
+                }
+
+                //This controls the time a vehicle takes to pass through the gate
+                this.timeLeftToCharge--;
+
+                if (vehicle.getUuid().equals("V1")) {
+                    if (vehicle.getAge() == 10) {
+                        task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Esta garcha");
+                        report.addTask(task);
+                    }
+                }
+                //Increases the age of the vehicle. This is to measure the spent time
+                vehicle.increaseAge();
+
+                if (timeLeftToCharge == 0) { //If the vehicle has passed
+                    task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Se le cobró lo correspondiente");
+                    report.addTask(task);
+
+                    usedCapacity--; //Reduces the vehicles on road
+                    road[0] = null; //Eliminates the vehicle
+
+                    timeLeftToCharge = timeToCharge; //Restores time to pay
+                }
+            }
+        }
+    }
+
+    private void processRoad(TaskReport report) {
+        Task task;
+        int position;
+        for (position = 1; position < road.length; position++) { //Checks all position from the end to the beginning
+            if (road[position] != null) {
+                if (road[position].isWorking()) { //If there is a vehicle
+                    road[position].increaseAge(); //Increases spent time
+                    if (road[position - 1] == null) { //If there is no one in front of him
+                        //Report movement
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1));
+                        report.addTask(task);
+
+                        road[position - 1] = road[position]; //Moves vehicle
+                        road[position] = null; //The previous position of the vehicle ends empty
+                    } else {
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Espera en posición: " + position);
+                        report.addTask(task);
+                    }
+                }
+            }
+        }
+    }
 
     private LinkedList<Vehicle> getBehindWorkingVehicles(int beginningPosition) {
         LinkedList<Vehicle> stuckVehicles = new LinkedList<>();
