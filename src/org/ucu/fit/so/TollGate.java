@@ -117,10 +117,10 @@ public class TollGate extends Gate {
                 }
             }
         }
-    
+
 
         return report;
-}
+    }
 
 
     private LinkedList<Vehicle> getBehindWorkingVehicles(int beginningPosition) {
