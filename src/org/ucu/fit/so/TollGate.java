@@ -8,14 +8,22 @@ public class TollGate extends Gate {
     private final int timeToCharge;
     private int timeLeftToCharge;
     private int usedCapacity = 0;
-    private int counterBreak;
-    private int counterRepair;
+    private int counterBreak = -1;
+    private int counterRepair = -1;
     private boolean vehiclesCanPay = true;
     private boolean working = true;
-
+    private boolean recentlyBroken = false;
 
     public int getUsedCapacity() {
         return usedCapacity;
+    }
+
+    public boolean isRecentlyBroken() {
+        return recentlyBroken;
+    }
+
+    public void setRecentlyBroken(boolean recentlyBroken) {
+        this.recentlyBroken = recentlyBroken;
     }
 
     /**
@@ -61,13 +69,24 @@ public class TollGate extends Gate {
     private void checkGateAvailability(TaskReport report) {
         Task task;
         updatePaydeskStatus();
-        if (!this.getVehiclesCanPay()) {
+        if (!this.getVehiclesCanPay() && !this.isRecentlyBroken()) {
             task = new Task(this.uuid, "Se rompió la caja y no se puede cobrar");
             report.addTask(task);
-            LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(-1,report);
+            LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(-1, report);
             manager.returnVehiclesToPlanner(stuckVehicles);
+            this.setRecentlyBroken(true);
+        } else if (this.getVehiclesCanPay() && this.isRecentlyBroken()) {
+            this.setRecentlyBroken(false);
+            task = new Task(this.uuid, "La caja se arreglo");
+            report.addTask(task);
+        }
+        else if (!this.getVehiclesCanPay() && this.isRecentlyBroken()){
+            task = new Task(this.uuid, "La caja sigue rota");
+            report.addTask(task);
         }
     }
+
+
 
     private void checkForBrokenVehicles(TaskReport report) {
         Task task;
@@ -76,13 +95,13 @@ public class TollGate extends Gate {
                 if (!road[position].isWorking()) { //If the car in the position broke down
                     road[position].increaseAge();
                     if (this.isWorking()) {
-                        LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(position,report);
-                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se rompio el vehiculo",road[position].getTimeWaited());
+                        LinkedList<Vehicle> stuckVehicles = getBehindWorkingVehicles(position, report);
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se rompio el vehiculo", road[position].getTimeWaited());
                         report.addTask(task);
                         setWorking(false);
                         manager.returnVehiclesToPlanner(stuckVehicles);
                     } else if (road[position].isWorking()) {
-                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se arregló el vehiculo",road[position].getTimeWaited());
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se arregló el vehiculo", road[position].getTimeWaited());
                         report.addTask(task);
                         if (this.roadHasNoBrokenVehicles()) {
                             setWorking(true);
@@ -91,7 +110,7 @@ public class TollGate extends Gate {
                         }
                         road[position].setRecentlyRepair(true);
                     } else {
-                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Está roto",road[position].getTimeWaited());
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Está roto", road[position].getTimeWaited());
                         report.addTask(task);
                     }
                 }
@@ -113,13 +132,13 @@ public class TollGate extends Gate {
             this.timeLeftToCharge--;
 
             if (timeLeftToCharge != 0) {
-                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Pasó un instante en la caja",vehicle.getTimeWaited());
+                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Pasó un instante en la caja", vehicle.getTimeWaited());
                 report.addTask(task);
             }
 
 
             if (timeLeftToCharge == 0) { //If the vehicle has passed
-                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Se le cobró lo correspondiente",vehicle.getTimeWaited());
+                task = new Task(this.uuid, 0, vehicle.getTypeOfVehicle(), vehicle.getUuid(), vehicle.getAge(), vehicle.getPriority(), "Se le cobró lo correspondiente", vehicle.getTimeWaited());
                 report.addTask(task);
 
                 usedCapacity--; //Reduces the vehicles on road
@@ -136,21 +155,20 @@ public class TollGate extends Gate {
         for (position = 1; position < road.length; position++) { //Checks all position from the end to the beginning
             if (road[position] != null) {
                 if (road[position].isWorking()) { //If there is a vehicle
-                    if(!road[position].isRecentlyRepair()){
+                    if (!road[position].isRecentlyRepair()) {
                         road[position].increaseAge(); //Increases spent time
-                    }
-                    else{
+                    } else {
                         road[position].setRecentlyRepair(false);
                     }
                     if (road[position - 1] == null) { //If there is no one in front of him
                         //Report movement
-                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1),road[position].getTimeWaited());
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Se movio de pos: " + position + " a pos: " + (position - 1), road[position].getTimeWaited());
                         report.addTask(task);
 
                         road[position - 1] = road[position]; //Moves vehicle
                         road[position] = null; //The previous position of the vehicle ends empty
                     } else {
-                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Espera en posición: " + position,road[position].getTimeWaited());
+                        task = new Task(this.uuid, position, road[position].getTypeOfVehicle(), road[position].getUuid(), road[position].getAge(), road[position].getPriority(), "Espera en posición: " + position, road[position].getTimeWaited());
                         report.addTask(task);
                     }
                 }
@@ -166,7 +184,7 @@ public class TollGate extends Gate {
             if (road[position] != null && road[position].isWorking()) {
                 stuckVehicles.addLast(road[position]);
                 usedCapacity--;
-                taskReport.addTask(new Task(road[position].getUuid(),"Volvio al preselector para replanificación"));
+                taskReport.addTask(new Task(road[position].getUuid(), "Volvio al preselector para replanificación"));
                 road[position] = null;
             }
         }
@@ -229,21 +247,17 @@ public class TollGate extends Gate {
         return vehiclesCanPay;
     }
 
-    public void setVehiclesCanPay(boolean vehiclesCanPay) {
-        this.vehiclesCanPay = vehiclesCanPay;
-    }
-
     protected void updatePaydeskStatus() {
         if (vehiclesCanPay) {
-            counterBreak--;
             if (counterBreak == 0) {
                 vehiclesCanPay = false;
             }
+            counterBreak--;
         } else {
+            counterRepair--;
             if (counterRepair == 0) {
                 vehiclesCanPay = true;
             }
-            counterRepair--;
         }
     }
 

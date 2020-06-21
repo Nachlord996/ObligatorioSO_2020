@@ -21,19 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e8fcdd77-7939-4294-ab70-cf920c116420" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_Test8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_Test8.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/INIT_CONFIG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/INIT_CONFIG.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/input/events.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/events.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/input/vehicles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/vehicles.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/output/Output_Test8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/output/Output_Test8.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/output/Output_vehicles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/output/Output_vehicles.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Gate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/LogHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/LogHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,13 +98,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -121,11 +113,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="440" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1592770435597" />
-    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1592760137542">
+    <state x="889" y="71" key="#com.intellij.ide.util.MemberChooser" timestamp="1592774252005">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589680225264" />
-    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1592760137542" />
+    <state x="889" y="71" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1592774252005" />
     <state x="747" y="118" key="#xdebugger.evaluate" timestamp="1589742339577">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -139,26 +131,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589677761216" />
-    <state width="1323" height="527" key="GridCell.Tab.0.bottom" timestamp="1592772329552">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1592776277419">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
-    <state width="1323" height="527" key="GridCell.Tab.0.center" timestamp="1592772329552">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
+    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1592776277419">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
-    <state width="1323" height="527" key="GridCell.Tab.0.left" timestamp="1592772329552">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
+    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1592776277419">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
-    <state width="1323" height="527" key="GridCell.Tab.0.right" timestamp="1592772329552">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1592776277419">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592762883266" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1592752988584">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

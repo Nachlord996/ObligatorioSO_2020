@@ -76,7 +76,16 @@ public class Planner {
     }
 
     public boolean isEmpty() {
-        return vehiclesForTime.isEmpty();
+        boolean endIsHere = vehiclesForTime.isEmpty();
+        if (endIsHere){
+            for (LinkedList<Vehicle> vehicles: prospectsToEnterWithPriority){
+                if (vehicles!=null && !vehicles.isEmpty()){
+                    endIsHere = false;
+                    break;
+                }
+            }
+        }
+        return endIsHere;
     }
 
     public void returnVehicle(Vehicle vehicle) {

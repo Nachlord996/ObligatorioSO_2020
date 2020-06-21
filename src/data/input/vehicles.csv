@@ -1,4 +1,5 @@
 Time, Vehicles, Amount
-0,Commercial Truck,6
-2,Ambulance,1
-3,Car,1
+0,Commercial Truck,1
+4,Commercial Truck,1
+#2,Ambulance,1
+#3,Car,1
