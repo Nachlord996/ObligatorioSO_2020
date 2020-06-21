@@ -142,10 +142,10 @@ public class TollGate extends Gate {
     private boolean roadHasNoBrokenVehicles(){
         for (int position = 0; position < road.length; position++) {
             if (road[position] != null && !road[position].isWorking()) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     /**
