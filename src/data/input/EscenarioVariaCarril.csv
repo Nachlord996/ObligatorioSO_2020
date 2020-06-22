@@ -1,0 +1,32 @@
+Time,Vehicle Type,Amount
+0,Car,4
+2,Car,4
+3,Car,4
+5,Car,4
+6,Car,4
+8,Car,4
+9,Car,4
+11,Car,4
+12,Car,4
+14,Car,4
+15,Car,4
+17,Car,4
+18,Car,4
+20,Car,4
+21,Car,4
+23,Car,4
+24,Car,4
+25,Car,2
+0,Commercial Truck,1
+3,Commercial Truck,2
+7,Commercial Truck,2
+10,Commercial Truck,2
+14,Commercial Truck,2
+17,Commercial Truck,2
+21,Commercial Truck,2
+24,Commercial Truck,2
+0,Ambulance,3
+6,Ambulance,3
+12,Ambulance,3
+18,Ambulance,3
+24,Ambulance,3

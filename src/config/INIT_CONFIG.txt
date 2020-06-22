@@ -1,8 +1,8 @@
 // Number of open gates for Toll
-TOLL_LANES_NUMBER,2
+TOLL_LANES_NUMBER,5
 // Time spent by vehicles in pay position
 CHARGE_TIME,3
 // Length of each gate's road
-ROAD_SIZE,5
+ROAD_SIZE,20
 // Input file of data to simulate
-INPUT_FILE,src/data/input/vehicles.csv
+INPUT_FILE,src/data/input/EscenarioVariaCarril.csv

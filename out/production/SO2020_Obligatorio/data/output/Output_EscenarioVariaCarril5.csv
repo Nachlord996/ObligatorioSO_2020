@@ -1,0 +1,1390 @@
+Instant, Gate ID, Position, Vehicle Type, Vehicle ID, Priority, Time On Road,Time On Preselector, Action
+0,G1,4,Car,V1,2,1,0,Se movio de pos: 4 a pos: 3
+0,G0,4,Ambulance,V96,1,1,0,Se movio de pos: 4 a pos: 3
+0,G2,4,Car,V2,2,1,0,Se movio de pos: 4 a pos: 3
+0,G3,4,Car,V3,2,1,0,Se movio de pos: 4 a pos: 3
+0,G4,4,Car,V4,2,1,0,Se movio de pos: 4 a pos: 3
+1,G0,3,Ambulance,V96,1,2,0,Se movio de pos: 3 a pos: 2
+1,G0,4,Car,V5,2,1,0,Se movio de pos: 4 a pos: 3
+1,G1,3,Car,V1,2,2,0,Se movio de pos: 3 a pos: 2
+1,G1,4,Car,V6,2,1,0,Se movio de pos: 4 a pos: 3
+1,G2,3,Car,V2,2,2,0,Se movio de pos: 3 a pos: 2
+1,G2,4,Car,V7,2,1,0,Se movio de pos: 4 a pos: 3
+1,G3,3,Car,V3,2,2,0,Se movio de pos: 3 a pos: 2
+1,G3,4,Car,V8,2,1,0,Se movio de pos: 4 a pos: 3
+1,G4,3,Car,V4,2,2,0,Se movio de pos: 3 a pos: 2
+1,G4,4,Commercial Truck,V81,3,1,1,Se movio de pos: 4 a pos: 3
+2,G1,2,Car,V1,2,3,0,Se movio de pos: 2 a pos: 1
+2,G1,3,Car,V6,2,2,0,Se movio de pos: 3 a pos: 2
+2,G1,4,Car,V10,2,1,0,Se movio de pos: 4 a pos: 3
+2,G0,2,Ambulance,V96,1,3,0,Se movio de pos: 2 a pos: 1
+2,G0,3,Car,V5,2,2,0,Se movio de pos: 3 a pos: 2
+2,G0,4,Car,V9,2,1,0,Se movio de pos: 4 a pos: 3
+2,G2,2,Car,V2,2,3,0,Se movio de pos: 2 a pos: 1
+2,G2,3,Car,V7,2,2,0,Se movio de pos: 3 a pos: 2
+2,G2,4,Car,V11,2,1,0,Se movio de pos: 4 a pos: 3
+2,G3,2,Car,V3,2,3,0,Se movio de pos: 2 a pos: 1
+2,G3,3,Car,V8,2,2,0,Se movio de pos: 3 a pos: 2
+2,G3,4,Car,V12,2,1,0,Se movio de pos: 4 a pos: 3
+2,G4,2,Car,V4,2,3,0,Se movio de pos: 2 a pos: 1
+2,G4,3,Commercial Truck,V81,3,2,1,Se movio de pos: 3 a pos: 2
+3,G0,1,Ambulance,V96,1,4,0,Se movio de pos: 1 a pos: 0
+3,G0,2,Car,V5,2,3,0,Se movio de pos: 2 a pos: 1
+3,G0,3,Car,V9,2,2,0,Se movio de pos: 3 a pos: 2
+3,G0,4,Commercial Truck,V83,3,1,0,Se movio de pos: 4 a pos: 3
+3,G1,1,Car,V1,2,4,0,Se movio de pos: 1 a pos: 0
+3,G1,2,Car,V6,2,3,0,Se movio de pos: 2 a pos: 1
+3,G1,3,Car,V10,2,2,0,Se movio de pos: 3 a pos: 2
+3,G3,1,Car,V3,2,4,0,Se movio de pos: 1 a pos: 0
+3,G3,2,Car,V8,2,3,0,Se movio de pos: 2 a pos: 1
+3,G3,3,Car,V12,2,2,0,Se movio de pos: 3 a pos: 2
+3,G2,1,Car,V2,2,4,0,Se movio de pos: 1 a pos: 0
+3,G2,2,Car,V7,2,3,0,Se movio de pos: 2 a pos: 1
+3,G2,3,Car,V11,2,2,0,Se movio de pos: 3 a pos: 2
+3,G4,1,Car,V4,2,4,0,Se movio de pos: 1 a pos: 0
+3,G4,2,Commercial Truck,V81,3,3,1,Se movio de pos: 2 a pos: 1
+3,G4,4,Commercial Truck,V82,3,1,0,Se movio de pos: 4 a pos: 3
+4,G0,0,Ambulance,V96,1,5,0,Pasó un instante en la caja
+4,G0,1,Car,V5,2,4,0,Espera en posición: 1
+4,G0,2,Car,V9,2,3,0,Espera en posición: 2
+4,G0,3,Commercial Truck,V83,3,2,0,Espera en posición: 3
+4,G1,0,Car,V1,2,5,0,Pasó un instante en la caja
+4,G1,1,Car,V6,2,4,0,Espera en posición: 1
+4,G1,2,Car,V10,2,3,0,Espera en posición: 2
+4,G1,4,Car,V13,2,1,0,Se movio de pos: 4 a pos: 3
+4,G2,0,Car,V2,2,5,0,Pasó un instante en la caja
+4,G2,1,Car,V7,2,4,0,Espera en posición: 1
+4,G2,2,Car,V11,2,3,0,Espera en posición: 2
+4,G2,4,Car,V14,2,1,0,Se movio de pos: 4 a pos: 3
+4,G3,0,Car,V3,2,5,0,Pasó un instante en la caja
+4,G3,1,Car,V8,2,4,0,Espera en posición: 1
+4,G3,2,Car,V12,2,3,0,Espera en posición: 2
+4,G3,4,Car,V15,2,1,0,Se movio de pos: 4 a pos: 3
+4,G4,0,Car,V4,2,5,0,Pasó un instante en la caja
+4,G4,1,Commercial Truck,V81,3,4,1,Espera en posición: 1
+4,G4,3,Commercial Truck,V82,3,2,0,Se movio de pos: 3 a pos: 2
+4,G4,4,Car,V16,2,1,0,Se movio de pos: 4 a pos: 3
+5,G0,0,Ambulance,V96,1,6,0,Pasó un instante en la caja
+5,G0,1,Car,V5,2,5,0,Espera en posición: 1
+5,G0,2,Car,V9,2,4,0,Espera en posición: 2
+5,G0,3,Commercial Truck,V83,3,3,0,Espera en posición: 3
+5,G0,4,Car,V17,2,1,0,Espera en posición: 4
+5,G1,0,Car,V1,2,6,0,Pasó un instante en la caja
+5,G1,1,Car,V6,2,5,0,Espera en posición: 1
+5,G1,2,Car,V10,2,4,0,Espera en posición: 2
+5,G1,3,Car,V13,2,2,0,Espera en posición: 3
+5,G1,4,Car,V18,2,1,0,Espera en posición: 4
+5,G2,0,Car,V2,2,6,0,Pasó un instante en la caja
+5,G2,1,Car,V7,2,5,0,Espera en posición: 1
+5,G2,2,Car,V11,2,4,0,Espera en posición: 2
+5,G2,3,Car,V14,2,2,0,Espera en posición: 3
+5,G2,4,Car,V19,2,1,0,Espera en posición: 4
+5,G3,0,Car,V3,2,6,0,Pasó un instante en la caja
+5,G3,1,Car,V8,2,5,0,Espera en posición: 1
+5,G3,2,Car,V12,2,4,0,Espera en posición: 2
+5,G3,3,Car,V15,2,2,0,Espera en posición: 3
+5,G3,4,Car,V20,2,1,0,Espera en posición: 4
+5,G4,0,Car,V4,2,6,0,Pasó un instante en la caja
+5,G4,1,Commercial Truck,V81,3,5,1,Espera en posición: 1
+5,G4,2,Commercial Truck,V82,3,3,0,Espera en posición: 2
+5,G4,3,Car,V16,2,2,0,Espera en posición: 3
+6,G0,0,Ambulance,V96,1,7,0,Se le cobró lo correspondiente
+6,G0,1,Car,V5,2,6,0,Se movio de pos: 1 a pos: 0
+6,G0,2,Car,V9,2,5,0,Se movio de pos: 2 a pos: 1
+6,G0,3,Commercial Truck,V83,3,4,0,Se movio de pos: 3 a pos: 2
+6,G0,4,Car,V17,2,2,0,Se movio de pos: 4 a pos: 3
+6,G1,0,Car,V1,2,7,0,Se le cobró lo correspondiente
+6,G1,1,Car,V6,2,6,0,Se movio de pos: 1 a pos: 0
+6,G1,2,Car,V10,2,5,0,Se movio de pos: 2 a pos: 1
+6,G1,3,Car,V13,2,3,0,Se movio de pos: 3 a pos: 2
+6,G1,4,Car,V18,2,2,0,Se movio de pos: 4 a pos: 3
+6,G2,0,Car,V2,2,7,0,Se le cobró lo correspondiente
+6,G2,1,Car,V7,2,6,0,Se movio de pos: 1 a pos: 0
+6,G2,2,Car,V11,2,5,0,Se movio de pos: 2 a pos: 1
+6,G2,3,Car,V14,2,3,0,Se movio de pos: 3 a pos: 2
+6,G2,4,Car,V19,2,2,0,Se movio de pos: 4 a pos: 3
+6,G3,0,Car,V3,2,7,0,Se le cobró lo correspondiente
+6,G3,1,Car,V8,2,6,0,Se movio de pos: 1 a pos: 0
+6,G3,2,Car,V12,2,5,0,Se movio de pos: 2 a pos: 1
+6,G3,3,Car,V15,2,3,0,Se movio de pos: 3 a pos: 2
+6,G3,4,Car,V20,2,2,0,Se movio de pos: 4 a pos: 3
+6,G4,0,Car,V4,2,7,0,Se le cobró lo correspondiente
+6,G4,1,Commercial Truck,V81,3,6,1,Se movio de pos: 1 a pos: 0
+6,G4,2,Commercial Truck,V82,3,4,0,Se movio de pos: 2 a pos: 1
+6,G4,3,Car,V16,2,3,0,Se movio de pos: 3 a pos: 2
+6,G4,4,Ambulance,V97,1,1,0,Se movio de pos: 4 a pos: 3
+7,G0,0,Car,V5,2,7,0,Pasó un instante en la caja
+7,G0,1,Car,V9,2,6,0,Espera en posición: 1
+7,G0,2,Commercial Truck,V83,3,5,0,Espera en posición: 2
+7,G0,3,Car,V17,2,3,0,Espera en posición: 3
+7,G0,4,Car,V21,2,1,1,Espera en posición: 4
+7,G1,0,Car,V6,2,7,0,Pasó un instante en la caja
+7,G1,1,Car,V10,2,6,0,Espera en posición: 1
+7,G1,2,Car,V13,2,4,0,Espera en posición: 2
+7,G1,3,Car,V18,2,3,0,Espera en posición: 3
+7,G1,4,Car,V22,2,1,1,Espera en posición: 4
+7,G3,0,Car,V8,2,7,0,Pasó un instante en la caja
+7,G3,1,Car,V12,2,6,0,Espera en posición: 1
+7,G3,2,Car,V15,2,4,0,Espera en posición: 2
+7,G3,3,Car,V20,2,3,0,Espera en posición: 3
+7,G3,4,Car,V24,2,1,1,Espera en posición: 4
+7,G2,0,Car,V7,2,7,0,Pasó un instante en la caja
+7,G2,1,Car,V11,2,6,0,Espera en posición: 1
+7,G2,2,Car,V14,2,4,0,Espera en posición: 2
+7,G2,3,Car,V19,2,3,0,Espera en posición: 3
+7,G2,4,Car,V23,2,1,1,Espera en posición: 4
+7,G4,0,Commercial Truck,V81,3,7,1,Pasó un instante en la caja
+7,G4,1,Commercial Truck,V82,3,5,0,Espera en posición: 1
+7,G4,2,Car,V16,2,4,0,Espera en posición: 2
+7,G4,3,Ambulance,V97,1,2,0,Espera en posición: 3
+7,G4,4,Car,V25,2,1,0,Espera en posición: 4
+8,G0,0,Car,V5,2,8,0,Pasó un instante en la caja
+8,G0,1,Car,V9,2,7,0,Espera en posición: 1
+8,G0,2,Commercial Truck,V83,3,6,0,Espera en posición: 2
+8,G0,3,Car,V17,2,4,0,Espera en posición: 3
+8,G0,4,Car,V21,2,2,1,Espera en posición: 4
+8,G1,0,Car,V6,2,8,0,Pasó un instante en la caja
+8,G1,1,Car,V10,2,7,0,Espera en posición: 1
+8,G1,2,Car,V13,2,5,0,Espera en posición: 2
+8,G1,3,Car,V18,2,4,0,Espera en posición: 3
+8,G1,4,Car,V22,2,2,1,Espera en posición: 4
+8,G3,0,Car,V8,2,8,0,Pasó un instante en la caja
+8,G3,1,Car,V12,2,7,0,Espera en posición: 1
+8,G3,2,Car,V15,2,5,0,Espera en posición: 2
+8,G3,3,Car,V20,2,4,0,Espera en posición: 3
+8,G3,4,Car,V24,2,2,1,Espera en posición: 4
+8,G4,0,Commercial Truck,V81,3,8,1,Pasó un instante en la caja
+8,G4,1,Commercial Truck,V82,3,6,0,Espera en posición: 1
+8,G4,2,Car,V16,2,5,0,Espera en posición: 2
+8,G4,3,Ambulance,V97,1,3,0,Espera en posición: 3
+8,G4,4,Car,V25,2,2,0,Espera en posición: 4
+8,G2,0,Car,V7,2,8,0,Pasó un instante en la caja
+8,G2,1,Car,V11,2,7,0,Espera en posición: 1
+8,G2,2,Car,V14,2,5,0,Espera en posición: 2
+8,G2,3,Car,V19,2,4,0,Espera en posición: 3
+8,G2,4,Car,V23,2,2,1,Espera en posición: 4
+9,G0,0,Car,V5,2,9,0,Se le cobró lo correspondiente
+9,G0,1,Car,V9,2,8,0,Se movio de pos: 1 a pos: 0
+9,G0,2,Commercial Truck,V83,3,7,0,Se movio de pos: 2 a pos: 1
+9,G0,3,Car,V17,2,5,0,Se movio de pos: 3 a pos: 2
+9,G0,4,Car,V21,2,3,1,Se movio de pos: 4 a pos: 3
+9,G1,0,Car,V6,2,9,0,Se le cobró lo correspondiente
+9,G1,1,Car,V10,2,8,0,Se movio de pos: 1 a pos: 0
+9,G1,2,Car,V13,2,6,0,Se movio de pos: 2 a pos: 1
+9,G1,3,Car,V18,2,5,0,Se movio de pos: 3 a pos: 2
+9,G1,4,Car,V22,2,3,1,Se movio de pos: 4 a pos: 3
+9,G2,0,Car,V7,2,9,0,Se le cobró lo correspondiente
+9,G2,1,Car,V11,2,8,0,Se movio de pos: 1 a pos: 0
+9,G2,2,Car,V14,2,6,0,Se movio de pos: 2 a pos: 1
+9,G2,3,Car,V19,2,5,0,Se movio de pos: 3 a pos: 2
+9,G2,4,Car,V23,2,3,1,Se movio de pos: 4 a pos: 3
+9,G3,0,Car,V8,2,9,0,Se le cobró lo correspondiente
+9,G3,1,Car,V12,2,8,0,Se movio de pos: 1 a pos: 0
+9,G3,2,Car,V15,2,6,0,Se movio de pos: 2 a pos: 1
+9,G3,3,Car,V20,2,5,0,Se movio de pos: 3 a pos: 2
+9,G3,4,Car,V24,2,3,1,Se movio de pos: 4 a pos: 3
+9,G4,0,Commercial Truck,V81,3,9,1,Se le cobró lo correspondiente
+9,G4,1,Commercial Truck,V82,3,7,0,Se movio de pos: 1 a pos: 0
+9,G4,2,Car,V16,2,6,0,Se movio de pos: 2 a pos: 1
+9,G4,3,Ambulance,V97,1,4,0,Se movio de pos: 3 a pos: 2
+9,G4,4,Car,V25,2,3,0,Se movio de pos: 4 a pos: 3
+10,G0,0,Car,V9,2,9,0,Pasó un instante en la caja
+10,G0,1,Commercial Truck,V83,3,8,0,Espera en posición: 1
+10,G0,2,Car,V17,2,6,0,Espera en posición: 2
+10,G0,3,Car,V21,2,4,1,Espera en posición: 3
+10,G0,4,Car,V26,2,1,3,Espera en posición: 4
+10,G1,0,Car,V10,2,9,0,Pasó un instante en la caja
+10,G1,1,Car,V13,2,7,0,Espera en posición: 1
+10,G1,2,Car,V18,2,6,0,Espera en posición: 2
+10,G1,3,Car,V22,2,4,1,Espera en posición: 3
+10,G1,4,Car,V27,2,1,3,Espera en posición: 4
+10,G3,0,Car,V12,2,9,0,Pasó un instante en la caja
+10,G3,1,Car,V15,2,7,0,Espera en posición: 1
+10,G3,2,Car,V20,2,6,0,Espera en posición: 2
+10,G3,3,Car,V24,2,4,1,Espera en posición: 3
+10,G3,4,Car,V29,2,1,1,Espera en posición: 4
+10,G2,0,Car,V11,2,9,0,Pasó un instante en la caja
+10,G2,1,Car,V14,2,7,0,Espera en posición: 1
+10,G2,2,Car,V19,2,6,0,Espera en posición: 2
+10,G2,3,Car,V23,2,4,1,Espera en posición: 3
+10,G2,4,Car,V28,2,1,3,Espera en posición: 4
+10,G4,0,Commercial Truck,V82,3,8,0,Pasó un instante en la caja
+10,G4,1,Car,V16,2,7,0,Espera en posición: 1
+10,G4,2,Ambulance,V97,1,5,0,Espera en posición: 2
+10,G4,3,Car,V25,2,4,0,Espera en posición: 3
+10,G4,4,Car,V30,2,1,1,Espera en posición: 4
+11,G0,0,Car,V9,2,10,0,Pasó un instante en la caja
+11,G0,1,Commercial Truck,V83,3,9,0,Espera en posición: 1
+11,G0,2,Car,V17,2,7,0,Espera en posición: 2
+11,G0,3,Car,V21,2,5,1,Espera en posición: 3
+11,G0,4,Car,V26,2,2,3,Espera en posición: 4
+11,G1,0,Car,V10,2,10,0,Pasó un instante en la caja
+11,G1,1,Car,V13,2,8,0,Espera en posición: 1
+11,G1,2,Car,V18,2,7,0,Espera en posición: 2
+11,G1,3,Car,V22,2,5,1,Espera en posición: 3
+11,G1,4,Car,V27,2,2,3,Espera en posición: 4
+11,G2,0,Car,V11,2,10,0,Pasó un instante en la caja
+11,G2,1,Car,V14,2,8,0,Espera en posición: 1
+11,G2,2,Car,V19,2,7,0,Espera en posición: 2
+11,G2,3,Car,V23,2,5,1,Espera en posición: 3
+11,G2,4,Car,V28,2,2,3,Espera en posición: 4
+11,G3,0,Car,V12,2,10,0,Pasó un instante en la caja
+11,G3,1,Car,V15,2,8,0,Espera en posición: 1
+11,G3,2,Car,V20,2,7,0,Espera en posición: 2
+11,G3,3,Car,V24,2,5,1,Espera en posición: 3
+11,G3,4,Car,V29,2,2,1,Espera en posición: 4
+11,G4,0,Commercial Truck,V82,3,9,0,Pasó un instante en la caja
+11,G4,1,Car,V16,2,8,0,Espera en posición: 1
+11,G4,2,Ambulance,V97,1,6,0,Espera en posición: 2
+11,G4,3,Car,V25,2,5,0,Espera en posición: 3
+11,G4,4,Car,V30,2,2,1,Espera en posición: 4
+12,G0,0,Car,V9,2,11,0,Se le cobró lo correspondiente
+12,G0,1,Commercial Truck,V83,3,10,0,Se movio de pos: 1 a pos: 0
+12,G0,2,Car,V17,2,8,0,Se movio de pos: 2 a pos: 1
+12,G0,3,Car,V21,2,6,1,Se movio de pos: 3 a pos: 2
+12,G0,4,Car,V26,2,3,3,Se movio de pos: 4 a pos: 3
+12,G1,0,Car,V10,2,11,0,Se le cobró lo correspondiente
+12,G1,1,Car,V13,2,9,0,Se movio de pos: 1 a pos: 0
+12,G1,2,Car,V18,2,8,0,Se movio de pos: 2 a pos: 1
+12,G1,3,Car,V22,2,6,1,Se movio de pos: 3 a pos: 2
+12,G1,4,Car,V27,2,3,3,Se movio de pos: 4 a pos: 3
+12,G2,0,Car,V11,2,11,0,Se le cobró lo correspondiente
+12,G2,1,Car,V14,2,9,0,Se movio de pos: 1 a pos: 0
+12,G2,2,Car,V19,2,8,0,Se movio de pos: 2 a pos: 1
+12,G2,3,Car,V23,2,6,1,Se movio de pos: 3 a pos: 2
+12,G2,4,Car,V28,2,3,3,Se movio de pos: 4 a pos: 3
+12,G3,0,Car,V12,2,11,0,Se le cobró lo correspondiente
+12,G3,1,Car,V15,2,9,0,Se movio de pos: 1 a pos: 0
+12,G3,2,Car,V20,2,8,0,Se movio de pos: 2 a pos: 1
+12,G3,3,Car,V24,2,6,1,Se movio de pos: 3 a pos: 2
+12,G3,4,Car,V29,2,3,1,Se movio de pos: 4 a pos: 3
+12,G4,0,Commercial Truck,V82,3,10,0,Se le cobró lo correspondiente
+12,G4,1,Car,V16,2,9,0,Se movio de pos: 1 a pos: 0
+12,G4,2,Ambulance,V97,1,7,0,Se movio de pos: 2 a pos: 1
+12,G4,3,Car,V25,2,6,0,Se movio de pos: 3 a pos: 2
+12,G4,4,Car,V30,2,3,1,Se movio de pos: 4 a pos: 3
+13,G0,0,Commercial Truck,V83,3,11,0,Pasó un instante en la caja
+13,G0,1,Car,V17,2,9,0,Espera en posición: 1
+13,G0,2,Car,V21,2,7,1,Espera en posición: 2
+13,G0,3,Car,V26,2,4,3,Espera en posición: 3
+13,G0,4,Ambulance,V98,1,1,1,Espera en posición: 4
+13,G1,0,Car,V13,2,10,0,Pasó un instante en la caja
+13,G1,1,Car,V18,2,9,0,Espera en posición: 1
+13,G1,2,Car,V22,2,7,1,Espera en posición: 2
+13,G1,3,Car,V27,2,4,3,Espera en posición: 3
+13,G1,4,Car,V31,2,1,4,Espera en posición: 4
+13,G2,0,Car,V14,2,10,0,Pasó un instante en la caja
+13,G2,1,Car,V19,2,9,0,Espera en posición: 1
+13,G2,2,Car,V23,2,7,1,Espera en posición: 2
+13,G2,3,Car,V28,2,4,3,Espera en posición: 3
+13,G2,4,Car,V32,2,1,4,Espera en posición: 4
+13,G3,0,Car,V15,2,10,0,Pasó un instante en la caja
+13,G3,1,Car,V20,2,9,0,Espera en posición: 1
+13,G3,2,Car,V24,2,7,1,Espera en posición: 2
+13,G3,3,Car,V29,2,4,1,Espera en posición: 3
+13,G3,4,Car,V33,2,1,3,Espera en posición: 4
+13,G4,0,Car,V16,2,10,0,Pasó un instante en la caja
+13,G4,1,Ambulance,V97,1,8,0,Espera en posición: 1
+13,G4,2,Car,V25,2,7,0,Espera en posición: 2
+13,G4,3,Car,V30,2,4,1,Espera en posición: 3
+13,G4,4,Car,V34,2,1,3,Espera en posición: 4
+14,G0,0,Commercial Truck,V83,3,12,0,Pasó un instante en la caja
+14,G0,1,Car,V17,2,10,0,Espera en posición: 1
+14,G0,2,Car,V21,2,8,1,Espera en posición: 2
+14,G0,3,Car,V26,2,5,3,Espera en posición: 3
+14,G0,4,Ambulance,V98,1,2,1,Espera en posición: 4
+14,G1,0,Car,V13,2,11,0,Pasó un instante en la caja
+14,G1,1,Car,V18,2,10,0,Espera en posición: 1
+14,G1,2,Car,V22,2,8,1,Espera en posición: 2
+14,G1,3,Car,V27,2,5,3,Espera en posición: 3
+14,G1,4,Car,V31,2,2,4,Espera en posición: 4
+14,G3,0,Car,V15,2,11,0,Pasó un instante en la caja
+14,G3,1,Car,V20,2,10,0,Espera en posición: 1
+14,G3,2,Car,V24,2,8,1,Espera en posición: 2
+14,G3,3,Car,V29,2,5,1,Espera en posición: 3
+14,G3,4,Car,V33,2,2,3,Espera en posición: 4
+14,G4,0,Car,V16,2,11,0,Pasó un instante en la caja
+14,G4,1,Ambulance,V97,1,9,0,Espera en posición: 1
+14,G4,2,Car,V25,2,8,0,Espera en posición: 2
+14,G4,3,Car,V30,2,5,1,Espera en posición: 3
+14,G4,4,Car,V34,2,2,3,Espera en posición: 4
+14,G2,0,Car,V14,2,11,0,Pasó un instante en la caja
+14,G2,1,Car,V19,2,10,0,Espera en posición: 1
+14,G2,2,Car,V23,2,8,1,Espera en posición: 2
+14,G2,3,Car,V28,2,5,3,Espera en posición: 3
+14,G2,4,Car,V32,2,2,4,Espera en posición: 4
+15,G0,0,Commercial Truck,V83,3,13,0,Se le cobró lo correspondiente
+15,G0,1,Car,V17,2,11,0,Se movio de pos: 1 a pos: 0
+15,G0,2,Car,V21,2,9,1,Se movio de pos: 2 a pos: 1
+15,G0,3,Car,V26,2,6,3,Se movio de pos: 3 a pos: 2
+15,G0,4,Ambulance,V98,1,3,1,Se movio de pos: 4 a pos: 3
+15,G1,0,Car,V13,2,12,0,Se le cobró lo correspondiente
+15,G1,1,Car,V18,2,11,0,Se movio de pos: 1 a pos: 0
+15,G1,2,Car,V22,2,9,1,Se movio de pos: 2 a pos: 1
+15,G1,3,Car,V27,2,6,3,Se movio de pos: 3 a pos: 2
+15,G1,4,Car,V31,2,3,4,Se movio de pos: 4 a pos: 3
+15,G2,0,Car,V14,2,12,0,Se le cobró lo correspondiente
+15,G2,1,Car,V19,2,11,0,Se movio de pos: 1 a pos: 0
+15,G2,2,Car,V23,2,9,1,Se movio de pos: 2 a pos: 1
+15,G2,3,Car,V28,2,6,3,Se movio de pos: 3 a pos: 2
+15,G2,4,Car,V32,2,3,4,Se movio de pos: 4 a pos: 3
+15,G3,0,Car,V15,2,12,0,Se le cobró lo correspondiente
+15,G3,1,Car,V20,2,11,0,Se movio de pos: 1 a pos: 0
+15,G3,2,Car,V24,2,9,1,Se movio de pos: 2 a pos: 1
+15,G3,3,Car,V29,2,6,1,Se movio de pos: 3 a pos: 2
+15,G3,4,Car,V33,2,3,3,Se movio de pos: 4 a pos: 3
+15,G4,0,Car,V16,2,12,0,Se le cobró lo correspondiente
+15,G4,1,Ambulance,V97,1,10,0,Se movio de pos: 1 a pos: 0
+15,G4,2,Car,V25,2,9,0,Se movio de pos: 2 a pos: 1
+15,G4,3,Car,V30,2,6,1,Se movio de pos: 3 a pos: 2
+15,G4,4,Car,V34,2,3,3,Se movio de pos: 4 a pos: 3
+16,G0,0,Car,V17,2,12,0,Pasó un instante en la caja
+16,G0,1,Car,V21,2,10,1,Espera en posición: 1
+16,G0,2,Car,V26,2,7,3,Espera en posición: 2
+16,G0,3,Ambulance,V98,1,4,1,Espera en posición: 3
+16,G0,4,Car,V35,2,1,6,Espera en posición: 4
+16,G1,0,Car,V18,2,12,0,Pasó un instante en la caja
+16,G1,1,Car,V22,2,10,1,Espera en posición: 1
+16,G1,2,Car,V27,2,7,3,Espera en posición: 2
+16,G1,3,Car,V31,2,4,4,Espera en posición: 3
+16,G1,4,Car,V36,2,1,6,Espera en posición: 4
+16,G2,0,Car,V19,2,12,0,Pasó un instante en la caja
+16,G2,1,Car,V23,2,10,1,Espera en posición: 1
+16,G2,2,Car,V28,2,7,3,Espera en posición: 2
+16,G2,3,Car,V32,2,4,4,Espera en posición: 3
+16,G2,4,Car,V37,2,1,5,Espera en posición: 4
+16,G3,0,Car,V20,2,12,0,Pasó un instante en la caja
+16,G3,1,Car,V24,2,10,1,Espera en posición: 1
+16,G3,2,Car,V29,2,7,1,Espera en posición: 2
+16,G3,3,Car,V33,2,4,3,Espera en posición: 3
+16,G3,4,Car,V38,2,1,5,Espera en posición: 4
+16,G4,0,Ambulance,V97,1,11,0,Pasó un instante en la caja
+16,G4,1,Car,V25,2,10,0,Espera en posición: 1
+16,G4,2,Car,V30,2,7,1,Espera en posición: 2
+16,G4,3,Car,V34,2,4,3,Espera en posición: 3
+16,G4,4,Car,V39,2,1,5,Espera en posición: 4
+17,G0,0,Car,V17,2,13,0,Pasó un instante en la caja
+17,G0,1,Car,V21,2,11,1,Espera en posición: 1
+17,G0,2,Car,V26,2,8,3,Espera en posición: 2
+17,G0,3,Ambulance,V98,1,5,1,Espera en posición: 3
+17,G0,4,Car,V35,2,2,6,Espera en posición: 4
+17,G1,0,Car,V18,2,13,0,Pasó un instante en la caja
+17,G1,1,Car,V22,2,11,1,Espera en posición: 1
+17,G1,2,Car,V27,2,8,3,Espera en posición: 2
+17,G1,3,Car,V31,2,5,4,Espera en posición: 3
+17,G1,4,Car,V36,2,2,6,Espera en posición: 4
+17,G3,0,Car,V20,2,13,0,Pasó un instante en la caja
+17,G3,1,Car,V24,2,11,1,Espera en posición: 1
+17,G3,2,Car,V29,2,8,1,Espera en posición: 2
+17,G3,3,Car,V33,2,5,3,Espera en posición: 3
+17,G3,4,Car,V38,2,2,5,Espera en posición: 4
+17,G2,0,Car,V19,2,13,0,Pasó un instante en la caja
+17,G2,1,Car,V23,2,11,1,Espera en posición: 1
+17,G2,2,Car,V28,2,8,3,Espera en posición: 2
+17,G2,3,Car,V32,2,5,4,Espera en posición: 3
+17,G2,4,Car,V37,2,2,5,Espera en posición: 4
+17,G4,0,Ambulance,V97,1,12,0,Pasó un instante en la caja
+17,G4,1,Car,V25,2,11,0,Espera en posición: 1
+17,G4,2,Car,V30,2,8,1,Espera en posición: 2
+17,G4,3,Car,V34,2,5,3,Espera en posición: 3
+17,G4,4,Car,V39,2,2,5,Espera en posición: 4
+18,G0,0,Car,V17,2,14,0,Se le cobró lo correspondiente
+18,G0,1,Car,V21,2,12,1,Se movio de pos: 1 a pos: 0
+18,G0,2,Car,V26,2,9,3,Se movio de pos: 2 a pos: 1
+18,G0,3,Ambulance,V98,1,6,1,Se movio de pos: 3 a pos: 2
+18,G0,4,Car,V35,2,3,6,Se movio de pos: 4 a pos: 3
+18,G1,0,Car,V18,2,14,0,Se le cobró lo correspondiente
+18,G1,1,Car,V22,2,12,1,Se movio de pos: 1 a pos: 0
+18,G1,2,Car,V27,2,9,3,Se movio de pos: 2 a pos: 1
+18,G1,3,Car,V31,2,6,4,Se movio de pos: 3 a pos: 2
+18,G1,4,Car,V36,2,3,6,Se movio de pos: 4 a pos: 3
+18,G2,0,Car,V19,2,14,0,Se le cobró lo correspondiente
+18,G2,1,Car,V23,2,12,1,Se movio de pos: 1 a pos: 0
+18,G2,2,Car,V28,2,9,3,Se movio de pos: 2 a pos: 1
+18,G2,3,Car,V32,2,6,4,Se movio de pos: 3 a pos: 2
+18,G2,4,Car,V37,2,3,5,Se movio de pos: 4 a pos: 3
+18,G3,0,Car,V20,2,14,0,Se le cobró lo correspondiente
+18,G3,1,Car,V24,2,12,1,Se movio de pos: 1 a pos: 0
+18,G3,2,Car,V29,2,9,1,Se movio de pos: 2 a pos: 1
+18,G3,3,Car,V33,2,6,3,Se movio de pos: 3 a pos: 2
+18,G3,4,Car,V38,2,3,5,Se movio de pos: 4 a pos: 3
+18,G4,0,Ambulance,V97,1,13,0,Se le cobró lo correspondiente
+18,G4,1,Car,V25,2,12,0,Se movio de pos: 1 a pos: 0
+18,G4,2,Car,V30,2,9,1,Se movio de pos: 2 a pos: 1
+18,G4,3,Car,V34,2,6,3,Se movio de pos: 3 a pos: 2
+18,G4,4,Car,V39,2,3,5,Se movio de pos: 4 a pos: 3
+19,G0,0,Car,V21,2,13,1,Pasó un instante en la caja
+19,G0,1,Car,V26,2,10,3,Espera en posición: 1
+19,G0,2,Ambulance,V98,1,7,1,Espera en posición: 2
+19,G0,3,Car,V35,2,4,6,Espera en posición: 3
+19,G0,4,Ambulance,V99,1,1,1,Espera en posición: 4
+19,G1,0,Car,V22,2,13,1,Pasó un instante en la caja
+19,G1,1,Car,V27,2,10,3,Espera en posición: 1
+19,G1,2,Car,V31,2,7,4,Espera en posición: 2
+19,G1,3,Car,V36,2,4,6,Espera en posición: 3
+19,G1,4,Car,V40,2,1,8,Espera en posición: 4
+19,G2,0,Car,V23,2,13,1,Pasó un instante en la caja
+19,G2,1,Car,V28,2,10,3,Espera en posición: 1
+19,G2,2,Car,V32,2,7,4,Espera en posición: 2
+19,G2,3,Car,V37,2,4,5,Espera en posición: 3
+19,G2,4,Car,V41,2,1,7,Espera en posición: 4
+19,G3,0,Car,V24,2,13,1,Pasó un instante en la caja
+19,G3,1,Car,V29,2,10,1,Espera en posición: 1
+19,G3,2,Car,V33,2,7,3,Espera en posición: 2
+19,G3,3,Car,V38,2,4,5,Espera en posición: 3
+19,G3,4,Car,V42,2,1,7,Espera en posición: 4
+19,G4,0,Car,V25,2,13,0,Pasó un instante en la caja
+19,G4,1,Car,V30,2,10,1,Espera en posición: 1
+19,G4,2,Car,V34,2,7,3,Espera en posición: 2
+19,G4,3,Car,V39,2,4,5,Espera en posición: 3
+19,G4,4,Car,V43,2,1,7,Espera en posición: 4
+20,G0,0,Car,V21,2,14,1,Pasó un instante en la caja
+20,G0,1,Car,V26,2,11,3,Espera en posición: 1
+20,G0,2,Ambulance,V98,1,8,1,Espera en posición: 2
+20,G0,3,Car,V35,2,5,6,Espera en posición: 3
+20,G0,4,Ambulance,V99,1,2,1,Espera en posición: 4
+20,G1,0,Car,V22,2,14,1,Pasó un instante en la caja
+20,G1,1,Car,V27,2,11,3,Espera en posición: 1
+20,G1,2,Car,V31,2,8,4,Espera en posición: 2
+20,G1,3,Car,V36,2,5,6,Espera en posición: 3
+20,G1,4,Car,V40,2,2,8,Espera en posición: 4
+20,G2,0,Car,V23,2,14,1,Pasó un instante en la caja
+20,G2,1,Car,V28,2,11,3,Espera en posición: 1
+20,G2,2,Car,V32,2,8,4,Espera en posición: 2
+20,G2,3,Car,V37,2,5,5,Espera en posición: 3
+20,G2,4,Car,V41,2,2,7,Espera en posición: 4
+20,G3,0,Car,V24,2,14,1,Pasó un instante en la caja
+20,G3,1,Car,V29,2,11,1,Espera en posición: 1
+20,G3,2,Car,V33,2,8,3,Espera en posición: 2
+20,G3,3,Car,V38,2,5,5,Espera en posición: 3
+20,G3,4,Car,V42,2,2,7,Espera en posición: 4
+20,G4,0,Car,V25,2,14,0,Pasó un instante en la caja
+20,G4,1,Car,V30,2,11,1,Espera en posición: 1
+20,G4,2,Car,V34,2,8,3,Espera en posición: 2
+20,G4,3,Car,V39,2,5,5,Espera en posición: 3
+20,G4,4,Car,V43,2,2,7,Espera en posición: 4
+21,G0,0,Car,V21,2,15,1,Se le cobró lo correspondiente
+21,G0,1,Car,V26,2,12,3,Se movio de pos: 1 a pos: 0
+21,G0,2,Ambulance,V98,1,9,1,Se movio de pos: 2 a pos: 1
+21,G0,3,Car,V35,2,6,6,Se movio de pos: 3 a pos: 2
+21,G0,4,Ambulance,V99,1,3,1,Se movio de pos: 4 a pos: 3
+21,G1,0,Car,V22,2,15,1,Se le cobró lo correspondiente
+21,G1,1,Car,V27,2,12,3,Se movio de pos: 1 a pos: 0
+21,G1,2,Car,V31,2,9,4,Se movio de pos: 2 a pos: 1
+21,G1,3,Car,V36,2,6,6,Se movio de pos: 3 a pos: 2
+21,G1,4,Car,V40,2,3,8,Se movio de pos: 4 a pos: 3
+21,G2,0,Car,V23,2,15,1,Se le cobró lo correspondiente
+21,G2,1,Car,V28,2,12,3,Se movio de pos: 1 a pos: 0
+21,G2,2,Car,V32,2,9,4,Se movio de pos: 2 a pos: 1
+21,G2,3,Car,V37,2,6,5,Se movio de pos: 3 a pos: 2
+21,G2,4,Car,V41,2,3,7,Se movio de pos: 4 a pos: 3
+21,G3,0,Car,V24,2,15,1,Se le cobró lo correspondiente
+21,G3,1,Car,V29,2,12,1,Se movio de pos: 1 a pos: 0
+21,G3,2,Car,V33,2,9,3,Se movio de pos: 2 a pos: 1
+21,G3,3,Car,V38,2,6,5,Se movio de pos: 3 a pos: 2
+21,G3,4,Car,V42,2,3,7,Se movio de pos: 4 a pos: 3
+21,G4,0,Car,V25,2,15,0,Se le cobró lo correspondiente
+21,G4,1,Car,V30,2,12,1,Se movio de pos: 1 a pos: 0
+21,G4,2,Car,V34,2,9,3,Se movio de pos: 2 a pos: 1
+21,G4,3,Car,V39,2,6,5,Se movio de pos: 3 a pos: 2
+21,G4,4,Car,V43,2,3,7,Se movio de pos: 4 a pos: 3
+22,G0,0,Car,V26,2,13,3,Pasó un instante en la caja
+22,G0,1,Ambulance,V98,1,10,1,Espera en posición: 1
+22,G0,2,Car,V35,2,7,6,Espera en posición: 2
+22,G0,3,Ambulance,V99,1,4,1,Espera en posición: 3
+22,G0,4,Car,V44,2,1,10,Espera en posición: 4
+22,G1,0,Car,V27,2,13,3,Pasó un instante en la caja
+22,G1,1,Car,V31,2,10,4,Espera en posición: 1
+22,G1,2,Car,V36,2,7,6,Espera en posición: 2
+22,G1,3,Car,V40,2,4,8,Espera en posición: 3
+22,G1,4,Car,V45,2,1,8,Espera en posición: 4
+22,G2,0,Car,V28,2,13,3,Pasó un instante en la caja
+22,G2,1,Car,V32,2,10,4,Espera en posición: 1
+22,G2,2,Car,V37,2,7,5,Espera en posición: 2
+22,G2,3,Car,V41,2,4,7,Espera en posición: 3
+22,G2,4,Car,V46,2,1,8,Espera en posición: 4
+22,G3,0,Car,V29,2,13,1,Pasó un instante en la caja
+22,G3,1,Car,V33,2,10,3,Espera en posición: 1
+22,G3,2,Car,V38,2,7,5,Espera en posición: 2
+22,G3,3,Car,V42,2,4,7,Espera en posición: 3
+22,G3,4,Car,V47,2,1,8,Espera en posición: 4
+22,G4,0,Car,V30,2,13,1,Pasó un instante en la caja
+22,G4,1,Car,V34,2,10,3,Espera en posición: 1
+22,G4,2,Car,V39,2,7,5,Espera en posición: 2
+22,G4,3,Car,V43,2,4,7,Espera en posición: 3
+22,G4,4,Car,V48,2,1,8,Espera en posición: 4
+23,G0,0,Car,V26,2,14,3,Pasó un instante en la caja
+23,G0,1,Ambulance,V98,1,11,1,Espera en posición: 1
+23,G0,2,Car,V35,2,8,6,Espera en posición: 2
+23,G0,3,Ambulance,V99,1,5,1,Espera en posición: 3
+23,G0,4,Car,V44,2,2,10,Espera en posición: 4
+23,G1,0,Car,V27,2,14,3,Pasó un instante en la caja
+23,G1,1,Car,V31,2,11,4,Espera en posición: 1
+23,G1,2,Car,V36,2,8,6,Espera en posición: 2
+23,G1,3,Car,V40,2,5,8,Espera en posición: 3
+23,G1,4,Car,V45,2,2,8,Espera en posición: 4
+23,G2,0,Car,V28,2,14,3,Pasó un instante en la caja
+23,G2,1,Car,V32,2,11,4,Espera en posición: 1
+23,G2,2,Car,V37,2,8,5,Espera en posición: 2
+23,G2,3,Car,V41,2,5,7,Espera en posición: 3
+23,G2,4,Car,V46,2,2,8,Espera en posición: 4
+23,G3,0,Car,V29,2,14,1,Pasó un instante en la caja
+23,G3,1,Car,V33,2,11,3,Espera en posición: 1
+23,G3,2,Car,V38,2,8,5,Espera en posición: 2
+23,G3,3,Car,V42,2,5,7,Espera en posición: 3
+23,G3,4,Car,V47,2,2,8,Espera en posición: 4
+23,G4,0,Car,V30,2,14,1,Pasó un instante en la caja
+23,G4,1,Car,V34,2,11,3,Espera en posición: 1
+23,G4,2,Car,V39,2,8,5,Espera en posición: 2
+23,G4,3,Car,V43,2,5,7,Espera en posición: 3
+23,G4,4,Car,V48,2,2,8,Espera en posición: 4
+24,G0,0,Car,V26,2,15,3,Se le cobró lo correspondiente
+24,G0,1,Ambulance,V98,1,12,1,Se movio de pos: 1 a pos: 0
+24,G0,2,Car,V35,2,9,6,Se movio de pos: 2 a pos: 1
+24,G0,3,Ambulance,V99,1,6,1,Se movio de pos: 3 a pos: 2
+24,G0,4,Car,V44,2,3,10,Se movio de pos: 4 a pos: 3
+24,G1,0,Car,V27,2,15,3,Se le cobró lo correspondiente
+24,G1,1,Car,V31,2,12,4,Se movio de pos: 1 a pos: 0
+24,G1,2,Car,V36,2,9,6,Se movio de pos: 2 a pos: 1
+24,G1,3,Car,V40,2,6,8,Se movio de pos: 3 a pos: 2
+24,G1,4,Car,V45,2,3,8,Se movio de pos: 4 a pos: 3
+24,G2,0,Car,V28,2,15,3,Se le cobró lo correspondiente
+24,G2,1,Car,V32,2,12,4,Se movio de pos: 1 a pos: 0
+24,G2,2,Car,V37,2,9,5,Se movio de pos: 2 a pos: 1
+24,G2,3,Car,V41,2,6,7,Se movio de pos: 3 a pos: 2
+24,G2,4,Car,V46,2,3,8,Se movio de pos: 4 a pos: 3
+24,G3,0,Car,V29,2,15,1,Se le cobró lo correspondiente
+24,G3,1,Car,V33,2,12,3,Se movio de pos: 1 a pos: 0
+24,G3,2,Car,V38,2,9,5,Se movio de pos: 2 a pos: 1
+24,G3,3,Car,V42,2,6,7,Se movio de pos: 3 a pos: 2
+24,G3,4,Car,V47,2,3,8,Se movio de pos: 4 a pos: 3
+24,G4,0,Car,V30,2,15,1,Se le cobró lo correspondiente
+24,G4,1,Car,V34,2,12,3,Se movio de pos: 1 a pos: 0
+24,G4,2,Car,V39,2,9,5,Se movio de pos: 2 a pos: 1
+24,G4,3,Car,V43,2,6,7,Se movio de pos: 3 a pos: 2
+24,G4,4,Car,V48,2,3,8,Se movio de pos: 4 a pos: 3
+25,G0,0,Ambulance,V98,1,13,1,Pasó un instante en la caja
+25,G0,1,Car,V35,2,10,6,Espera en posición: 1
+25,G0,2,Ambulance,V99,1,7,1,Espera en posición: 2
+25,G0,3,Car,V44,2,4,10,Espera en posición: 3
+25,G0,4,Ambulance,V100,1,1,1,Espera en posición: 4
+25,G1,0,Car,V31,2,13,4,Pasó un instante en la caja
+25,G1,1,Car,V36,2,10,6,Espera en posición: 1
+25,G1,2,Car,V40,2,7,8,Espera en posición: 2
+25,G1,3,Car,V45,2,4,8,Espera en posición: 3
+25,G1,4,Car,V49,2,1,10,Espera en posición: 4
+25,G2,0,Car,V32,2,13,4,Pasó un instante en la caja
+25,G2,1,Car,V37,2,10,5,Espera en posición: 1
+25,G2,2,Car,V41,2,7,7,Espera en posición: 2
+25,G2,3,Car,V46,2,4,8,Espera en posición: 3
+25,G2,4,Car,V50,2,1,10,Espera en posición: 4
+25,G3,0,Car,V33,2,13,3,Pasó un instante en la caja
+25,G3,1,Car,V38,2,10,5,Espera en posición: 1
+25,G3,2,Car,V42,2,7,7,Espera en posición: 2
+25,G3,3,Car,V47,2,4,8,Espera en posición: 3
+25,G3,4,Car,V51,2,1,10,Espera en posición: 4
+25,G4,0,Car,V34,2,13,3,Pasó un instante en la caja
+25,G4,1,Car,V39,2,10,5,Espera en posición: 1
+25,G4,2,Car,V43,2,7,7,Espera en posición: 2
+25,G4,3,Car,V48,2,4,8,Espera en posición: 3
+25,G4,4,Car,V52,2,1,10,Espera en posición: 4
+26,G0,0,Ambulance,V98,1,14,1,Pasó un instante en la caja
+26,G0,1,Car,V35,2,11,6,Espera en posición: 1
+26,G0,2,Ambulance,V99,1,8,1,Espera en posición: 2
+26,G0,3,Car,V44,2,5,10,Espera en posición: 3
+26,G0,4,Ambulance,V100,1,2,1,Espera en posición: 4
+26,G1,0,Car,V31,2,14,4,Pasó un instante en la caja
+26,G1,1,Car,V36,2,11,6,Espera en posición: 1
+26,G1,2,Car,V40,2,8,8,Espera en posición: 2
+26,G1,3,Car,V45,2,5,8,Espera en posición: 3
+26,G1,4,Car,V49,2,2,10,Espera en posición: 4
+26,G2,0,Car,V32,2,14,4,Pasó un instante en la caja
+26,G2,1,Car,V37,2,11,5,Espera en posición: 1
+26,G2,2,Car,V41,2,8,7,Espera en posición: 2
+26,G2,3,Car,V46,2,5,8,Espera en posición: 3
+26,G2,4,Car,V50,2,2,10,Espera en posición: 4
+26,G3,0,Car,V33,2,14,3,Pasó un instante en la caja
+26,G3,1,Car,V38,2,11,5,Espera en posición: 1
+26,G3,2,Car,V42,2,8,7,Espera en posición: 2
+26,G3,3,Car,V47,2,5,8,Espera en posición: 3
+26,G3,4,Car,V51,2,2,10,Espera en posición: 4
+26,G4,0,Car,V34,2,14,3,Pasó un instante en la caja
+26,G4,1,Car,V39,2,11,5,Espera en posición: 1
+26,G4,2,Car,V43,2,8,7,Espera en posición: 2
+26,G4,3,Car,V48,2,5,8,Espera en posición: 3
+26,G4,4,Car,V52,2,2,10,Espera en posición: 4
+27,G0,0,Ambulance,V98,1,15,1,Se le cobró lo correspondiente
+27,G0,1,Car,V35,2,12,6,Se movio de pos: 1 a pos: 0
+27,G0,2,Ambulance,V99,1,9,1,Se movio de pos: 2 a pos: 1
+27,G0,3,Car,V44,2,6,10,Se movio de pos: 3 a pos: 2
+27,G0,4,Ambulance,V100,1,3,1,Se movio de pos: 4 a pos: 3
+27,G1,0,Car,V31,2,15,4,Se le cobró lo correspondiente
+27,G1,1,Car,V36,2,12,6,Se movio de pos: 1 a pos: 0
+27,G1,2,Car,V40,2,9,8,Se movio de pos: 2 a pos: 1
+27,G1,3,Car,V45,2,6,8,Se movio de pos: 3 a pos: 2
+27,G1,4,Car,V49,2,3,10,Se movio de pos: 4 a pos: 3
+27,G2,0,Car,V32,2,15,4,Se le cobró lo correspondiente
+27,G2,1,Car,V37,2,12,5,Se movio de pos: 1 a pos: 0
+27,G2,2,Car,V41,2,9,7,Se movio de pos: 2 a pos: 1
+27,G2,3,Car,V46,2,6,8,Se movio de pos: 3 a pos: 2
+27,G2,4,Car,V50,2,3,10,Se movio de pos: 4 a pos: 3
+27,G3,0,Car,V33,2,15,3,Se le cobró lo correspondiente
+27,G3,1,Car,V38,2,12,5,Se movio de pos: 1 a pos: 0
+27,G3,2,Car,V42,2,9,7,Se movio de pos: 2 a pos: 1
+27,G3,3,Car,V47,2,6,8,Se movio de pos: 3 a pos: 2
+27,G3,4,Car,V51,2,3,10,Se movio de pos: 4 a pos: 3
+27,G4,0,Car,V34,2,15,3,Se le cobró lo correspondiente
+27,G4,1,Car,V39,2,12,5,Se movio de pos: 1 a pos: 0
+27,G4,2,Car,V43,2,9,7,Se movio de pos: 2 a pos: 1
+27,G4,3,Car,V48,2,6,8,Se movio de pos: 3 a pos: 2
+27,G4,4,Car,V52,2,3,10,Se movio de pos: 4 a pos: 3
+28,G0,0,Car,V35,2,13,6,Pasó un instante en la caja
+28,G0,1,Ambulance,V99,1,10,1,Espera en posición: 1
+28,G0,2,Car,V44,2,7,10,Espera en posición: 2
+28,G0,3,Ambulance,V100,1,4,1,Espera en posición: 3
+28,G0,4,Car,V53,2,1,12,Espera en posición: 4
+28,G2,0,Car,V37,2,13,5,Pasó un instante en la caja
+28,G2,1,Car,V41,2,10,7,Espera en posición: 1
+28,G2,2,Car,V46,2,7,8,Espera en posición: 2
+28,G2,3,Car,V50,2,4,10,Espera en posición: 3
+28,G2,4,Car,V55,2,1,12,Espera en posición: 4
+28,G3,0,Car,V38,2,13,5,Pasó un instante en la caja
+28,G3,1,Car,V42,2,10,7,Espera en posición: 1
+28,G3,2,Car,V47,2,7,8,Espera en posición: 2
+28,G3,3,Car,V51,2,4,10,Espera en posición: 3
+28,G3,4,Car,V56,2,1,12,Espera en posición: 4
+28,G4,0,Car,V39,2,13,5,Pasó un instante en la caja
+28,G4,1,Car,V43,2,10,7,Espera en posición: 1
+28,G4,2,Car,V48,2,7,8,Espera en posición: 2
+28,G4,3,Car,V52,2,4,10,Espera en posición: 3
+28,G4,4,Car,V57,2,1,11,Espera en posición: 4
+28,G1,0,Car,V36,2,13,6,Pasó un instante en la caja
+28,G1,1,Car,V40,2,10,8,Espera en posición: 1
+28,G1,2,Car,V45,2,7,8,Espera en posición: 2
+28,G1,3,Car,V49,2,4,10,Espera en posición: 3
+28,G1,4,Car,V54,2,1,12,Espera en posición: 4
+29,G0,0,Car,V35,2,14,6,Pasó un instante en la caja
+29,G0,1,Ambulance,V99,1,11,1,Espera en posición: 1
+29,G0,2,Car,V44,2,8,10,Espera en posición: 2
+29,G0,3,Ambulance,V100,1,5,1,Espera en posición: 3
+29,G0,4,Car,V53,2,2,12,Espera en posición: 4
+29,G1,0,Car,V36,2,14,6,Pasó un instante en la caja
+29,G1,1,Car,V40,2,11,8,Espera en posición: 1
+29,G1,2,Car,V45,2,8,8,Espera en posición: 2
+29,G1,3,Car,V49,2,5,10,Espera en posición: 3
+29,G1,4,Car,V54,2,2,12,Espera en posición: 4
+29,G2,0,Car,V37,2,14,5,Pasó un instante en la caja
+29,G2,1,Car,V41,2,11,7,Espera en posición: 1
+29,G2,2,Car,V46,2,8,8,Espera en posición: 2
+29,G2,3,Car,V50,2,5,10,Espera en posición: 3
+29,G2,4,Car,V55,2,2,12,Espera en posición: 4
+29,G3,0,Car,V38,2,14,5,Pasó un instante en la caja
+29,G3,1,Car,V42,2,11,7,Espera en posición: 1
+29,G3,2,Car,V47,2,8,8,Espera en posición: 2
+29,G3,3,Car,V51,2,5,10,Espera en posición: 3
+29,G3,4,Car,V56,2,2,12,Espera en posición: 4
+29,G4,0,Car,V39,2,14,5,Pasó un instante en la caja
+29,G4,1,Car,V43,2,11,7,Espera en posición: 1
+29,G4,2,Car,V48,2,8,8,Espera en posición: 2
+29,G4,3,Car,V52,2,5,10,Espera en posición: 3
+29,G4,4,Car,V57,2,2,11,Espera en posición: 4
+30,G0,0,Car,V35,2,15,6,Se le cobró lo correspondiente
+30,G0,1,Ambulance,V99,1,12,1,Se movio de pos: 1 a pos: 0
+30,G0,2,Car,V44,2,9,10,Se movio de pos: 2 a pos: 1
+30,G0,3,Ambulance,V100,1,6,1,Se movio de pos: 3 a pos: 2
+30,G0,4,Car,V53,2,3,12,Se movio de pos: 4 a pos: 3
+30,G1,0,Car,V36,2,15,6,Se le cobró lo correspondiente
+30,G1,1,Car,V40,2,12,8,Se movio de pos: 1 a pos: 0
+30,G1,2,Car,V45,2,9,8,Se movio de pos: 2 a pos: 1
+30,G1,3,Car,V49,2,6,10,Se movio de pos: 3 a pos: 2
+30,G1,4,Car,V54,2,3,12,Se movio de pos: 4 a pos: 3
+30,G2,0,Car,V37,2,15,5,Se le cobró lo correspondiente
+30,G2,1,Car,V41,2,12,7,Se movio de pos: 1 a pos: 0
+30,G2,2,Car,V46,2,9,8,Se movio de pos: 2 a pos: 1
+30,G2,3,Car,V50,2,6,10,Se movio de pos: 3 a pos: 2
+30,G2,4,Car,V55,2,3,12,Se movio de pos: 4 a pos: 3
+30,G3,0,Car,V38,2,15,5,Se le cobró lo correspondiente
+30,G3,1,Car,V42,2,12,7,Se movio de pos: 1 a pos: 0
+30,G3,2,Car,V47,2,9,8,Se movio de pos: 2 a pos: 1
+30,G3,3,Car,V51,2,6,10,Se movio de pos: 3 a pos: 2
+30,G3,4,Car,V56,2,3,12,Se movio de pos: 4 a pos: 3
+30,G4,0,Car,V39,2,15,5,Se le cobró lo correspondiente
+30,G4,1,Car,V43,2,12,7,Se movio de pos: 1 a pos: 0
+30,G4,2,Car,V48,2,9,8,Se movio de pos: 2 a pos: 1
+30,G4,3,Car,V52,2,6,10,Se movio de pos: 3 a pos: 2
+30,G4,4,Car,V57,2,3,11,Se movio de pos: 4 a pos: 3
+31,G0,0,Ambulance,V99,1,13,1,Pasó un instante en la caja
+31,G0,1,Car,V44,2,10,10,Espera en posición: 1
+31,G0,2,Ambulance,V100,1,7,1,Espera en posición: 2
+31,G0,3,Car,V53,2,4,12,Espera en posición: 3
+31,G0,4,Car,V58,2,1,14,Espera en posición: 4
+31,G1,0,Car,V40,2,13,8,Pasó un instante en la caja
+31,G1,1,Car,V45,2,10,8,Espera en posición: 1
+31,G1,2,Car,V49,2,7,10,Espera en posición: 2
+31,G1,3,Car,V54,2,4,12,Espera en posición: 3
+31,G1,4,Car,V59,2,1,14,Espera en posición: 4
+31,G2,0,Car,V41,2,13,7,Pasó un instante en la caja
+31,G2,1,Car,V46,2,10,8,Espera en posición: 1
+31,G2,2,Car,V50,2,7,10,Espera en posición: 2
+31,G2,3,Car,V55,2,4,12,Espera en posición: 3
+31,G2,4,Car,V60,2,1,14,Espera en posición: 4
+31,G3,0,Car,V42,2,13,7,Pasó un instante en la caja
+31,G3,1,Car,V47,2,10,8,Espera en posición: 1
+31,G3,2,Car,V51,2,7,10,Espera en posición: 2
+31,G3,3,Car,V56,2,4,12,Espera en posición: 3
+31,G3,4,Car,V61,2,1,12,Espera en posición: 4
+31,G4,0,Car,V43,2,13,7,Pasó un instante en la caja
+31,G4,1,Car,V48,2,10,8,Espera en posición: 1
+31,G4,2,Car,V52,2,7,10,Espera en posición: 2
+31,G4,3,Car,V57,2,4,11,Espera en posición: 3
+31,G4,4,Car,V62,2,1,12,Espera en posición: 4
+32,G0,0,Ambulance,V99,1,14,1,Pasó un instante en la caja
+32,G0,1,Car,V44,2,11,10,Espera en posición: 1
+32,G0,2,Ambulance,V100,1,8,1,Espera en posición: 2
+32,G0,3,Car,V53,2,5,12,Espera en posición: 3
+32,G0,4,Car,V58,2,2,14,Espera en posición: 4
+32,G1,0,Car,V40,2,14,8,Pasó un instante en la caja
+32,G1,1,Car,V45,2,11,8,Espera en posición: 1
+32,G1,2,Car,V49,2,8,10,Espera en posición: 2
+32,G1,3,Car,V54,2,5,12,Espera en posición: 3
+32,G1,4,Car,V59,2,2,14,Espera en posición: 4
+32,G2,0,Car,V41,2,14,7,Pasó un instante en la caja
+32,G2,1,Car,V46,2,11,8,Espera en posición: 1
+32,G2,2,Car,V50,2,8,10,Espera en posición: 2
+32,G2,3,Car,V55,2,5,12,Espera en posición: 3
+32,G2,4,Car,V60,2,2,14,Espera en posición: 4
+32,G4,0,Car,V43,2,14,7,Pasó un instante en la caja
+32,G4,1,Car,V48,2,11,8,Espera en posición: 1
+32,G4,2,Car,V52,2,8,10,Espera en posición: 2
+32,G4,3,Car,V57,2,5,11,Espera en posición: 3
+32,G4,4,Car,V62,2,2,12,Espera en posición: 4
+32,G3,0,Car,V42,2,14,7,Pasó un instante en la caja
+32,G3,1,Car,V47,2,11,8,Espera en posición: 1
+32,G3,2,Car,V51,2,8,10,Espera en posición: 2
+32,G3,3,Car,V56,2,5,12,Espera en posición: 3
+32,G3,4,Car,V61,2,2,12,Espera en posición: 4
+33,G0,0,Ambulance,V99,1,15,1,Se le cobró lo correspondiente
+33,G0,1,Car,V44,2,12,10,Se movio de pos: 1 a pos: 0
+33,G0,2,Ambulance,V100,1,9,1,Se movio de pos: 2 a pos: 1
+33,G0,3,Car,V53,2,6,12,Se movio de pos: 3 a pos: 2
+33,G0,4,Car,V58,2,3,14,Se movio de pos: 4 a pos: 3
+33,G1,0,Car,V40,2,15,8,Se le cobró lo correspondiente
+33,G1,1,Car,V45,2,12,8,Se movio de pos: 1 a pos: 0
+33,G1,2,Car,V49,2,9,10,Se movio de pos: 2 a pos: 1
+33,G1,3,Car,V54,2,6,12,Se movio de pos: 3 a pos: 2
+33,G1,4,Car,V59,2,3,14,Se movio de pos: 4 a pos: 3
+33,G3,0,Car,V42,2,15,7,Se le cobró lo correspondiente
+33,G3,1,Car,V47,2,12,8,Se movio de pos: 1 a pos: 0
+33,G3,2,Car,V51,2,9,10,Se movio de pos: 2 a pos: 1
+33,G3,3,Car,V56,2,6,12,Se movio de pos: 3 a pos: 2
+33,G3,4,Car,V61,2,3,12,Se movio de pos: 4 a pos: 3
+33,G2,0,Car,V41,2,15,7,Se le cobró lo correspondiente
+33,G2,1,Car,V46,2,12,8,Se movio de pos: 1 a pos: 0
+33,G2,2,Car,V50,2,9,10,Se movio de pos: 2 a pos: 1
+33,G2,3,Car,V55,2,6,12,Se movio de pos: 3 a pos: 2
+33,G2,4,Car,V60,2,3,14,Se movio de pos: 4 a pos: 3
+33,G4,0,Car,V43,2,15,7,Se le cobró lo correspondiente
+33,G4,1,Car,V48,2,12,8,Se movio de pos: 1 a pos: 0
+33,G4,2,Car,V52,2,9,10,Se movio de pos: 2 a pos: 1
+33,G4,3,Car,V57,2,6,11,Se movio de pos: 3 a pos: 2
+33,G4,4,Car,V62,2,3,12,Se movio de pos: 4 a pos: 3
+34,G0,0,Car,V44,2,13,10,Pasó un instante en la caja
+34,G0,1,Ambulance,V100,1,10,1,Espera en posición: 1
+34,G0,2,Car,V53,2,7,12,Espera en posición: 2
+34,G0,3,Car,V58,2,4,14,Espera en posición: 3
+34,G0,4,Car,V63,2,1,15,Espera en posición: 4
+34,G1,0,Car,V45,2,13,8,Pasó un instante en la caja
+34,G1,1,Car,V49,2,10,10,Espera en posición: 1
+34,G1,2,Car,V54,2,7,12,Espera en posición: 2
+34,G1,3,Car,V59,2,4,14,Espera en posición: 3
+34,G1,4,Car,V64,2,1,15,Espera en posición: 4
+34,G3,0,Car,V47,2,13,8,Pasó un instante en la caja
+34,G3,1,Car,V51,2,10,10,Espera en posición: 1
+34,G3,2,Car,V56,2,7,12,Espera en posición: 2
+34,G3,3,Car,V61,2,4,12,Espera en posición: 3
+34,G3,4,Car,V66,2,1,14,Espera en posición: 4
+34,G2,0,Car,V46,2,13,8,Pasó un instante en la caja
+34,G2,1,Car,V50,2,10,10,Espera en posición: 1
+34,G2,2,Car,V55,2,7,12,Espera en posición: 2
+34,G2,3,Car,V60,2,4,14,Espera en posición: 3
+34,G2,4,Car,V65,2,1,14,Espera en posición: 4
+34,G4,0,Car,V48,2,13,8,Pasó un instante en la caja
+34,G4,1,Car,V52,2,10,10,Espera en posición: 1
+34,G4,2,Car,V57,2,7,11,Espera en posición: 2
+34,G4,3,Car,V62,2,4,12,Espera en posición: 3
+34,G4,4,Car,V67,2,1,14,Espera en posición: 4
+35,G0,0,Car,V44,2,14,10,Pasó un instante en la caja
+35,G0,1,Ambulance,V100,1,11,1,Espera en posición: 1
+35,G0,2,Car,V53,2,8,12,Espera en posición: 2
+35,G0,3,Car,V58,2,5,14,Espera en posición: 3
+35,G0,4,Car,V63,2,2,15,Espera en posición: 4
+35,G1,0,Car,V45,2,14,8,Pasó un instante en la caja
+35,G1,1,Car,V49,2,11,10,Espera en posición: 1
+35,G1,2,Car,V54,2,8,12,Espera en posición: 2
+35,G1,3,Car,V59,2,5,14,Espera en posición: 3
+35,G1,4,Car,V64,2,2,15,Espera en posición: 4
+35,G2,0,Car,V46,2,14,8,Pasó un instante en la caja
+35,G2,1,Car,V50,2,11,10,Espera en posición: 1
+35,G2,2,Car,V55,2,8,12,Espera en posición: 2
+35,G2,3,Car,V60,2,5,14,Espera en posición: 3
+35,G2,4,Car,V65,2,2,14,Espera en posición: 4
+35,G3,0,Car,V47,2,14,8,Pasó un instante en la caja
+35,G3,1,Car,V51,2,11,10,Espera en posición: 1
+35,G3,2,Car,V56,2,8,12,Espera en posición: 2
+35,G3,3,Car,V61,2,5,12,Espera en posición: 3
+35,G3,4,Car,V66,2,2,14,Espera en posición: 4
+35,G4,0,Car,V48,2,14,8,Pasó un instante en la caja
+35,G4,1,Car,V52,2,11,10,Espera en posición: 1
+35,G4,2,Car,V57,2,8,11,Espera en posición: 2
+35,G4,3,Car,V62,2,5,12,Espera en posición: 3
+35,G4,4,Car,V67,2,2,14,Espera en posición: 4
+36,G0,0,Car,V44,2,15,10,Se le cobró lo correspondiente
+36,G0,1,Ambulance,V100,1,12,1,Se movio de pos: 1 a pos: 0
+36,G0,2,Car,V53,2,9,12,Se movio de pos: 2 a pos: 1
+36,G0,3,Car,V58,2,6,14,Se movio de pos: 3 a pos: 2
+36,G0,4,Car,V63,2,3,15,Se movio de pos: 4 a pos: 3
+36,G1,0,Car,V45,2,15,8,Se le cobró lo correspondiente
+36,G1,1,Car,V49,2,12,10,Se movio de pos: 1 a pos: 0
+36,G1,2,Car,V54,2,9,12,Se movio de pos: 2 a pos: 1
+36,G1,3,Car,V59,2,6,14,Se movio de pos: 3 a pos: 2
+36,G1,4,Car,V64,2,3,15,Se movio de pos: 4 a pos: 3
+36,G2,0,Car,V46,2,15,8,Se le cobró lo correspondiente
+36,G2,1,Car,V50,2,12,10,Se movio de pos: 1 a pos: 0
+36,G2,2,Car,V55,2,9,12,Se movio de pos: 2 a pos: 1
+36,G2,3,Car,V60,2,6,14,Se movio de pos: 3 a pos: 2
+36,G2,4,Car,V65,2,3,14,Se movio de pos: 4 a pos: 3
+36,G3,0,Car,V47,2,15,8,Se le cobró lo correspondiente
+36,G3,1,Car,V51,2,12,10,Se movio de pos: 1 a pos: 0
+36,G3,2,Car,V56,2,9,12,Se movio de pos: 2 a pos: 1
+36,G3,3,Car,V61,2,6,12,Se movio de pos: 3 a pos: 2
+36,G3,4,Car,V66,2,3,14,Se movio de pos: 4 a pos: 3
+36,G4,0,Car,V48,2,15,8,Se le cobró lo correspondiente
+36,G4,1,Car,V52,2,12,10,Se movio de pos: 1 a pos: 0
+36,G4,2,Car,V57,2,9,11,Se movio de pos: 2 a pos: 1
+36,G4,3,Car,V62,2,6,12,Se movio de pos: 3 a pos: 2
+36,G4,4,Car,V67,2,3,14,Se movio de pos: 4 a pos: 3
+37,G0,0,Ambulance,V100,1,13,1,Pasó un instante en la caja
+37,G0,1,Car,V53,2,10,12,Espera en posición: 1
+37,G0,2,Car,V58,2,7,14,Espera en posición: 2
+37,G0,3,Car,V63,2,4,15,Espera en posición: 3
+37,G0,4,Car,V68,2,1,17,Espera en posición: 4
+37,G1,0,Car,V49,2,13,10,Pasó un instante en la caja
+37,G1,1,Car,V54,2,10,12,Espera en posición: 1
+37,G1,2,Car,V59,2,7,14,Espera en posición: 2
+37,G1,3,Car,V64,2,4,15,Espera en posición: 3
+37,G1,4,Car,V69,2,1,16,Espera en posición: 4
+37,G2,0,Car,V50,2,13,10,Pasó un instante en la caja
+37,G2,1,Car,V55,2,10,12,Espera en posición: 1
+37,G2,2,Car,V60,2,7,14,Espera en posición: 2
+37,G2,3,Car,V65,2,4,14,Espera en posición: 3
+37,G2,4,Car,V70,2,1,16,Espera en posición: 4
+37,G3,0,Car,V51,2,13,10,Pasó un instante en la caja
+37,G3,1,Car,V56,2,10,12,Espera en posición: 1
+37,G3,2,Car,V61,2,7,12,Espera en posición: 2
+37,G3,3,Car,V66,2,4,14,Espera en posición: 3
+37,G3,4,Car,V71,2,1,16,Espera en posición: 4
+37,G4,0,Car,V52,2,13,10,Pasó un instante en la caja
+37,G4,1,Car,V57,2,10,11,Espera en posición: 1
+37,G4,2,Car,V62,2,7,12,Espera en posición: 2
+37,G4,3,Car,V67,2,4,14,Espera en posición: 3
+37,G4,4,Car,V72,2,1,16,Espera en posición: 4
+38,G0,0,Ambulance,V100,1,14,1,Pasó un instante en la caja
+38,G0,1,Car,V53,2,11,12,Espera en posición: 1
+38,G0,2,Car,V58,2,8,14,Espera en posición: 2
+38,G0,3,Car,V63,2,5,15,Espera en posición: 3
+38,G0,4,Car,V68,2,2,17,Espera en posición: 4
+38,G1,0,Car,V49,2,14,10,Pasó un instante en la caja
+38,G1,1,Car,V54,2,11,12,Espera en posición: 1
+38,G1,2,Car,V59,2,8,14,Espera en posición: 2
+38,G1,3,Car,V64,2,5,15,Espera en posición: 3
+38,G1,4,Car,V69,2,2,16,Espera en posición: 4
+38,G2,0,Car,V50,2,14,10,Pasó un instante en la caja
+38,G2,1,Car,V55,2,11,12,Espera en posición: 1
+38,G2,2,Car,V60,2,8,14,Espera en posición: 2
+38,G2,3,Car,V65,2,5,14,Espera en posición: 3
+38,G2,4,Car,V70,2,2,16,Espera en posición: 4
+38,G3,0,Car,V51,2,14,10,Pasó un instante en la caja
+38,G3,1,Car,V56,2,11,12,Espera en posición: 1
+38,G3,2,Car,V61,2,8,12,Espera en posición: 2
+38,G3,3,Car,V66,2,5,14,Espera en posición: 3
+38,G3,4,Car,V71,2,2,16,Espera en posición: 4
+38,G4,0,Car,V52,2,14,10,Pasó un instante en la caja
+38,G4,1,Car,V57,2,11,11,Espera en posición: 1
+38,G4,2,Car,V62,2,8,12,Espera en posición: 2
+38,G4,3,Car,V67,2,5,14,Espera en posición: 3
+38,G4,4,Car,V72,2,2,16,Espera en posición: 4
+39,G0,0,Ambulance,V100,1,15,1,Se le cobró lo correspondiente
+39,G0,1,Car,V53,2,12,12,Se movio de pos: 1 a pos: 0
+39,G0,2,Car,V58,2,9,14,Se movio de pos: 2 a pos: 1
+39,G0,3,Car,V63,2,6,15,Se movio de pos: 3 a pos: 2
+39,G0,4,Car,V68,2,3,17,Se movio de pos: 4 a pos: 3
+39,G1,0,Car,V49,2,15,10,Se le cobró lo correspondiente
+39,G1,1,Car,V54,2,12,12,Se movio de pos: 1 a pos: 0
+39,G1,2,Car,V59,2,9,14,Se movio de pos: 2 a pos: 1
+39,G1,3,Car,V64,2,6,15,Se movio de pos: 3 a pos: 2
+39,G1,4,Car,V69,2,3,16,Se movio de pos: 4 a pos: 3
+39,G2,0,Car,V50,2,15,10,Se le cobró lo correspondiente
+39,G2,1,Car,V55,2,12,12,Se movio de pos: 1 a pos: 0
+39,G2,2,Car,V60,2,9,14,Se movio de pos: 2 a pos: 1
+39,G2,3,Car,V65,2,6,14,Se movio de pos: 3 a pos: 2
+39,G2,4,Car,V70,2,3,16,Se movio de pos: 4 a pos: 3
+39,G3,0,Car,V51,2,15,10,Se le cobró lo correspondiente
+39,G3,1,Car,V56,2,12,12,Se movio de pos: 1 a pos: 0
+39,G3,2,Car,V61,2,9,12,Se movio de pos: 2 a pos: 1
+39,G3,3,Car,V66,2,6,14,Se movio de pos: 3 a pos: 2
+39,G3,4,Car,V71,2,3,16,Se movio de pos: 4 a pos: 3
+39,G4,0,Car,V52,2,15,10,Se le cobró lo correspondiente
+39,G4,1,Car,V57,2,12,11,Se movio de pos: 1 a pos: 0
+39,G4,2,Car,V62,2,9,12,Se movio de pos: 2 a pos: 1
+39,G4,3,Car,V67,2,6,14,Se movio de pos: 3 a pos: 2
+39,G4,4,Car,V72,2,3,16,Se movio de pos: 4 a pos: 3
+40,G0,0,Car,V53,2,13,12,Pasó un instante en la caja
+40,G0,1,Car,V58,2,10,14,Espera en posición: 1
+40,G0,2,Car,V63,2,7,15,Espera en posición: 2
+40,G0,3,Car,V68,2,4,17,Espera en posición: 3
+40,G0,4,Car,V73,2,1,18,Espera en posición: 4
+40,G1,0,Car,V54,2,13,12,Pasó un instante en la caja
+40,G1,1,Car,V59,2,10,14,Espera en posición: 1
+40,G1,2,Car,V64,2,7,15,Espera en posición: 2
+40,G1,3,Car,V69,2,4,16,Espera en posición: 3
+40,G1,4,Car,V74,2,1,18,Espera en posición: 4
+40,G2,0,Car,V55,2,13,12,Pasó un instante en la caja
+40,G2,1,Car,V60,2,10,14,Espera en posición: 1
+40,G2,2,Car,V65,2,7,14,Espera en posición: 2
+40,G2,3,Car,V70,2,4,16,Espera en posición: 3
+40,G2,4,Car,V75,2,1,18,Espera en posición: 4
+40,G3,0,Car,V56,2,13,12,Pasó un instante en la caja
+40,G3,1,Car,V61,2,10,12,Espera en posición: 1
+40,G3,2,Car,V66,2,7,14,Espera en posición: 2
+40,G3,3,Car,V71,2,4,16,Espera en posición: 3
+40,G3,4,Car,V76,2,1,18,Espera en posición: 4
+40,G4,0,Car,V57,2,13,11,Pasó un instante en la caja
+40,G4,1,Car,V62,2,10,12,Espera en posición: 1
+40,G4,2,Car,V67,2,7,14,Espera en posición: 2
+40,G4,3,Car,V72,2,4,16,Espera en posición: 3
+40,G4,4,Car,V77,2,1,16,Espera en posición: 4
+41,G0,0,Car,V53,2,14,12,Pasó un instante en la caja
+41,G0,1,Car,V58,2,11,14,Espera en posición: 1
+41,G0,2,Car,V63,2,8,15,Espera en posición: 2
+41,G0,3,Car,V68,2,5,17,Espera en posición: 3
+41,G0,4,Car,V73,2,2,18,Espera en posición: 4
+41,G1,0,Car,V54,2,14,12,Pasó un instante en la caja
+41,G1,1,Car,V59,2,11,14,Espera en posición: 1
+41,G1,2,Car,V64,2,8,15,Espera en posición: 2
+41,G1,3,Car,V69,2,5,16,Espera en posición: 3
+41,G1,4,Car,V74,2,2,18,Espera en posición: 4
+41,G2,0,Car,V55,2,14,12,Pasó un instante en la caja
+41,G2,1,Car,V60,2,11,14,Espera en posición: 1
+41,G2,2,Car,V65,2,8,14,Espera en posición: 2
+41,G2,3,Car,V70,2,5,16,Espera en posición: 3
+41,G2,4,Car,V75,2,2,18,Espera en posición: 4
+41,G3,0,Car,V56,2,14,12,Pasó un instante en la caja
+41,G3,1,Car,V61,2,11,12,Espera en posición: 1
+41,G3,2,Car,V66,2,8,14,Espera en posición: 2
+41,G3,3,Car,V71,2,5,16,Espera en posición: 3
+41,G3,4,Car,V76,2,2,18,Espera en posición: 4
+41,G4,0,Car,V57,2,14,11,Pasó un instante en la caja
+41,G4,1,Car,V62,2,11,12,Espera en posición: 1
+41,G4,2,Car,V67,2,8,14,Espera en posición: 2
+41,G4,3,Car,V72,2,5,16,Espera en posición: 3
+41,G4,4,Car,V77,2,2,16,Espera en posición: 4
+42,G0,0,Car,V53,2,15,12,Se le cobró lo correspondiente
+42,G0,1,Car,V58,2,12,14,Se movio de pos: 1 a pos: 0
+42,G0,2,Car,V63,2,9,15,Se movio de pos: 2 a pos: 1
+42,G0,3,Car,V68,2,6,17,Se movio de pos: 3 a pos: 2
+42,G0,4,Car,V73,2,3,18,Se movio de pos: 4 a pos: 3
+42,G1,0,Car,V54,2,15,12,Se le cobró lo correspondiente
+42,G1,1,Car,V59,2,12,14,Se movio de pos: 1 a pos: 0
+42,G1,2,Car,V64,2,9,15,Se movio de pos: 2 a pos: 1
+42,G1,3,Car,V69,2,6,16,Se movio de pos: 3 a pos: 2
+42,G1,4,Car,V74,2,3,18,Se movio de pos: 4 a pos: 3
+42,G2,0,Car,V55,2,15,12,Se le cobró lo correspondiente
+42,G2,1,Car,V60,2,12,14,Se movio de pos: 1 a pos: 0
+42,G2,2,Car,V65,2,9,14,Se movio de pos: 2 a pos: 1
+42,G2,3,Car,V70,2,6,16,Se movio de pos: 3 a pos: 2
+42,G2,4,Car,V75,2,3,18,Se movio de pos: 4 a pos: 3
+42,G3,0,Car,V56,2,15,12,Se le cobró lo correspondiente
+42,G3,1,Car,V61,2,12,12,Se movio de pos: 1 a pos: 0
+42,G3,2,Car,V66,2,9,14,Se movio de pos: 2 a pos: 1
+42,G3,3,Car,V71,2,6,16,Se movio de pos: 3 a pos: 2
+42,G3,4,Car,V76,2,3,18,Se movio de pos: 4 a pos: 3
+42,G4,0,Car,V57,2,15,11,Se le cobró lo correspondiente
+42,G4,1,Car,V62,2,12,12,Se movio de pos: 1 a pos: 0
+42,G4,2,Car,V67,2,9,14,Se movio de pos: 2 a pos: 1
+42,G4,3,Car,V72,2,6,16,Se movio de pos: 3 a pos: 2
+42,G4,4,Car,V77,2,3,16,Se movio de pos: 4 a pos: 3
+43,G0,0,Car,V58,2,13,14,Pasó un instante en la caja
+43,G0,1,Car,V63,2,10,15,Espera en posición: 1
+43,G0,2,Car,V68,2,7,17,Espera en posición: 2
+43,G0,3,Car,V73,2,4,18,Espera en posición: 3
+43,G0,4,Car,V78,2,1,19,Espera en posición: 4
+43,G1,0,Car,V59,2,13,14,Pasó un instante en la caja
+43,G1,1,Car,V64,2,10,15,Espera en posición: 1
+43,G1,2,Car,V69,2,7,16,Espera en posición: 2
+43,G1,3,Car,V74,2,4,18,Espera en posición: 3
+43,G1,4,Car,V79,2,1,19,Espera en posición: 4
+43,G2,0,Car,V60,2,13,14,Pasó un instante en la caja
+43,G2,1,Car,V65,2,10,14,Espera en posición: 1
+43,G2,2,Car,V70,2,7,16,Espera en posición: 2
+43,G2,3,Car,V75,2,4,18,Espera en posición: 3
+43,G2,4,Car,V80,2,1,19,Espera en posición: 4
+43,G3,0,Car,V61,2,13,12,Pasó un instante en la caja
+43,G3,1,Car,V66,2,10,14,Espera en posición: 1
+43,G3,2,Car,V71,2,7,16,Espera en posición: 2
+43,G3,3,Car,V76,2,4,18,Espera en posición: 3
+43,G3,4,Commercial Truck,V84,3,1,36,Espera en posición: 4
+43,G4,0,Car,V62,2,13,12,Pasó un instante en la caja
+43,G4,1,Car,V67,2,10,14,Espera en posición: 1
+43,G4,2,Car,V72,2,7,16,Espera en posición: 2
+43,G4,3,Car,V77,2,4,16,Espera en posición: 3
+43,G4,4,Commercial Truck,V85,3,1,36,Espera en posición: 4
+44,G0,0,Car,V58,2,14,14,Pasó un instante en la caja
+44,G0,1,Car,V63,2,11,15,Espera en posición: 1
+44,G0,2,Car,V68,2,8,17,Espera en posición: 2
+44,G0,3,Car,V73,2,5,18,Espera en posición: 3
+44,G0,4,Car,V78,2,2,19,Espera en posición: 4
+44,G1,0,Car,V59,2,14,14,Pasó un instante en la caja
+44,G1,1,Car,V64,2,11,15,Espera en posición: 1
+44,G1,2,Car,V69,2,8,16,Espera en posición: 2
+44,G1,3,Car,V74,2,5,18,Espera en posición: 3
+44,G1,4,Car,V79,2,2,19,Espera en posición: 4
+44,G2,0,Car,V60,2,14,14,Pasó un instante en la caja
+44,G2,1,Car,V65,2,11,14,Espera en posición: 1
+44,G2,2,Car,V70,2,8,16,Espera en posición: 2
+44,G2,3,Car,V75,2,5,18,Espera en posición: 3
+44,G2,4,Car,V80,2,2,19,Espera en posición: 4
+44,G3,0,Car,V61,2,14,12,Pasó un instante en la caja
+44,G3,1,Car,V66,2,11,14,Espera en posición: 1
+44,G3,2,Car,V71,2,8,16,Espera en posición: 2
+44,G3,3,Car,V76,2,5,18,Espera en posición: 3
+44,G3,4,Commercial Truck,V84,3,2,36,Espera en posición: 4
+44,G4,0,Car,V62,2,14,12,Pasó un instante en la caja
+44,G4,1,Car,V67,2,11,14,Espera en posición: 1
+44,G4,2,Car,V72,2,8,16,Espera en posición: 2
+44,G4,3,Car,V77,2,5,16,Espera en posición: 3
+44,G4,4,Commercial Truck,V85,3,2,36,Espera en posición: 4
+45,G0,0,Car,V58,2,15,14,Se le cobró lo correspondiente
+45,G0,1,Car,V63,2,12,15,Se movio de pos: 1 a pos: 0
+45,G0,2,Car,V68,2,9,17,Se movio de pos: 2 a pos: 1
+45,G0,3,Car,V73,2,6,18,Se movio de pos: 3 a pos: 2
+45,G0,4,Car,V78,2,3,19,Se movio de pos: 4 a pos: 3
+45,G1,0,Car,V59,2,15,14,Se le cobró lo correspondiente
+45,G1,1,Car,V64,2,12,15,Se movio de pos: 1 a pos: 0
+45,G1,2,Car,V69,2,9,16,Se movio de pos: 2 a pos: 1
+45,G1,3,Car,V74,2,6,18,Se movio de pos: 3 a pos: 2
+45,G1,4,Car,V79,2,3,19,Se movio de pos: 4 a pos: 3
+45,G2,0,Car,V60,2,15,14,Se le cobró lo correspondiente
+45,G2,1,Car,V65,2,12,14,Se movio de pos: 1 a pos: 0
+45,G2,2,Car,V70,2,9,16,Se movio de pos: 2 a pos: 1
+45,G2,3,Car,V75,2,6,18,Se movio de pos: 3 a pos: 2
+45,G2,4,Car,V80,2,3,19,Se movio de pos: 4 a pos: 3
+45,G3,0,Car,V61,2,15,12,Se le cobró lo correspondiente
+45,G3,1,Car,V66,2,12,14,Se movio de pos: 1 a pos: 0
+45,G3,2,Car,V71,2,9,16,Se movio de pos: 2 a pos: 1
+45,G3,3,Car,V76,2,6,18,Se movio de pos: 3 a pos: 2
+45,G3,4,Commercial Truck,V84,3,3,36,Se movio de pos: 4 a pos: 3
+45,G4,0,Car,V62,2,15,12,Se le cobró lo correspondiente
+45,G4,1,Car,V67,2,12,14,Se movio de pos: 1 a pos: 0
+45,G4,2,Car,V72,2,9,16,Se movio de pos: 2 a pos: 1
+45,G4,3,Car,V77,2,6,16,Se movio de pos: 3 a pos: 2
+45,G4,4,Commercial Truck,V85,3,3,36,Se movio de pos: 4 a pos: 3
+46,G0,0,Car,V63,2,13,15,Pasó un instante en la caja
+46,G0,1,Car,V68,2,10,17,Espera en posición: 1
+46,G0,2,Car,V73,2,7,18,Espera en posición: 2
+46,G0,3,Car,V78,2,4,19,Espera en posición: 3
+46,G0,4,Commercial Truck,V86,3,1,36,Espera en posición: 4
+46,G1,0,Car,V64,2,13,15,Pasó un instante en la caja
+46,G1,1,Car,V69,2,10,16,Espera en posición: 1
+46,G1,2,Car,V74,2,7,18,Espera en posición: 2
+46,G1,3,Car,V79,2,4,19,Espera en posición: 3
+46,G1,4,Commercial Truck,V87,3,1,36,Espera en posición: 4
+46,G2,0,Car,V65,2,13,14,Pasó un instante en la caja
+46,G2,1,Car,V70,2,10,16,Espera en posición: 1
+46,G2,2,Car,V75,2,7,18,Espera en posición: 2
+46,G2,3,Car,V80,2,4,19,Espera en posición: 3
+46,G2,4,Commercial Truck,V88,3,1,32,Espera en posición: 4
+46,G3,0,Car,V66,2,13,14,Pasó un instante en la caja
+46,G3,1,Car,V71,2,10,16,Espera en posición: 1
+46,G3,2,Car,V76,2,7,18,Espera en posición: 2
+46,G3,3,Commercial Truck,V84,3,4,36,Espera en posición: 3
+46,G3,4,Commercial Truck,V89,3,1,32,Espera en posición: 4
+46,G4,0,Car,V67,2,13,14,Pasó un instante en la caja
+46,G4,1,Car,V72,2,10,16,Espera en posición: 1
+46,G4,2,Car,V77,2,7,16,Espera en posición: 2
+46,G4,3,Commercial Truck,V85,3,4,36,Espera en posición: 3
+46,G4,4,Commercial Truck,V90,3,1,29,Espera en posición: 4
+47,G0,0,Car,V63,2,14,15,Pasó un instante en la caja
+47,G0,1,Car,V68,2,11,17,Espera en posición: 1
+47,G0,2,Car,V73,2,8,18,Espera en posición: 2
+47,G0,3,Car,V78,2,5,19,Espera en posición: 3
+47,G0,4,Commercial Truck,V86,3,2,36,Espera en posición: 4
+47,G1,0,Car,V64,2,14,15,Pasó un instante en la caja
+47,G1,1,Car,V69,2,11,16,Espera en posición: 1
+47,G1,2,Car,V74,2,8,18,Espera en posición: 2
+47,G1,3,Car,V79,2,5,19,Espera en posición: 3
+47,G1,4,Commercial Truck,V87,3,2,36,Espera en posición: 4
+47,G2,0,Car,V65,2,14,14,Pasó un instante en la caja
+47,G2,1,Car,V70,2,11,16,Espera en posición: 1
+47,G2,2,Car,V75,2,8,18,Espera en posición: 2
+47,G2,3,Car,V80,2,5,19,Espera en posición: 3
+47,G2,4,Commercial Truck,V88,3,2,32,Espera en posición: 4
+47,G4,0,Car,V67,2,14,14,Pasó un instante en la caja
+47,G4,1,Car,V72,2,11,16,Espera en posición: 1
+47,G4,2,Car,V77,2,8,16,Espera en posición: 2
+47,G4,3,Commercial Truck,V85,3,5,36,Espera en posición: 3
+47,G4,4,Commercial Truck,V90,3,2,29,Espera en posición: 4
+47,G3,0,Car,V66,2,14,14,Pasó un instante en la caja
+47,G3,1,Car,V71,2,11,16,Espera en posición: 1
+47,G3,2,Car,V76,2,8,18,Espera en posición: 2
+47,G3,3,Commercial Truck,V84,3,5,36,Espera en posición: 3
+47,G3,4,Commercial Truck,V89,3,2,32,Espera en posición: 4
+48,G1,0,Car,V64,2,15,15,Se le cobró lo correspondiente
+48,G1,1,Car,V69,2,12,16,Se movio de pos: 1 a pos: 0
+48,G1,2,Car,V74,2,9,18,Se movio de pos: 2 a pos: 1
+48,G1,3,Car,V79,2,6,19,Se movio de pos: 3 a pos: 2
+48,G1,4,Commercial Truck,V87,3,3,36,Se movio de pos: 4 a pos: 3
+48,G0,0,Car,V63,2,15,15,Se le cobró lo correspondiente
+48,G0,1,Car,V68,2,12,17,Se movio de pos: 1 a pos: 0
+48,G0,2,Car,V73,2,9,18,Se movio de pos: 2 a pos: 1
+48,G0,3,Car,V78,2,6,19,Se movio de pos: 3 a pos: 2
+48,G0,4,Commercial Truck,V86,3,3,36,Se movio de pos: 4 a pos: 3
+48,G4,0,Car,V67,2,15,14,Se le cobró lo correspondiente
+48,G4,1,Car,V72,2,12,16,Se movio de pos: 1 a pos: 0
+48,G4,2,Car,V77,2,9,16,Se movio de pos: 2 a pos: 1
+48,G4,3,Commercial Truck,V85,3,6,36,Se movio de pos: 3 a pos: 2
+48,G4,4,Commercial Truck,V90,3,3,29,Se movio de pos: 4 a pos: 3
+48,G2,0,Car,V65,2,15,14,Se le cobró lo correspondiente
+48,G2,1,Car,V70,2,12,16,Se movio de pos: 1 a pos: 0
+48,G2,2,Car,V75,2,9,18,Se movio de pos: 2 a pos: 1
+48,G2,3,Car,V80,2,6,19,Se movio de pos: 3 a pos: 2
+48,G2,4,Commercial Truck,V88,3,3,32,Se movio de pos: 4 a pos: 3
+48,G3,0,Car,V66,2,15,14,Se le cobró lo correspondiente
+48,G3,1,Car,V71,2,12,16,Se movio de pos: 1 a pos: 0
+48,G3,2,Car,V76,2,9,18,Se movio de pos: 2 a pos: 1
+48,G3,3,Commercial Truck,V84,3,6,36,Se movio de pos: 3 a pos: 2
+48,G3,4,Commercial Truck,V89,3,3,32,Se movio de pos: 4 a pos: 3
+49,G1,0,Car,V69,2,13,16,Pasó un instante en la caja
+49,G1,1,Car,V74,2,10,18,Espera en posición: 1
+49,G1,2,Car,V79,2,7,19,Espera en posición: 2
+49,G1,3,Commercial Truck,V87,3,4,36,Espera en posición: 3
+49,G1,4,Commercial Truck,V92,3,1,28,Espera en posición: 4
+49,G3,0,Car,V71,2,13,16,Pasó un instante en la caja
+49,G3,1,Car,V76,2,10,18,Espera en posición: 1
+49,G3,2,Commercial Truck,V84,3,7,36,Espera en posición: 2
+49,G3,3,Commercial Truck,V89,3,4,32,Espera en posición: 3
+49,G3,4,Commercial Truck,V94,3,1,25,Espera en posición: 4
+49,G0,0,Car,V68,2,13,17,Pasó un instante en la caja
+49,G0,1,Car,V73,2,10,18,Espera en posición: 1
+49,G0,2,Car,V78,2,7,19,Espera en posición: 2
+49,G0,3,Commercial Truck,V86,3,4,36,Espera en posición: 3
+49,G0,4,Commercial Truck,V91,3,1,32,Espera en posición: 4
+49,G4,0,Car,V72,2,13,16,Pasó un instante en la caja
+49,G4,1,Car,V77,2,10,16,Espera en posición: 1
+49,G4,2,Commercial Truck,V85,3,7,36,Espera en posición: 2
+49,G4,3,Commercial Truck,V90,3,4,29,Espera en posición: 3
+49,G4,4,Commercial Truck,V95,3,1,25,Espera en posición: 4
+49,G2,0,Car,V70,2,13,16,Pasó un instante en la caja
+49,G2,1,Car,V75,2,10,18,Espera en posición: 1
+49,G2,2,Car,V80,2,7,19,Espera en posición: 2
+49,G2,3,Commercial Truck,V88,3,4,32,Espera en posición: 3
+49,G2,4,Commercial Truck,V93,3,1,28,Espera en posición: 4
+50,G0,0,Car,V68,2,14,17,Pasó un instante en la caja
+50,G0,1,Car,V73,2,11,18,Espera en posición: 1
+50,G0,2,Car,V78,2,8,19,Espera en posición: 2
+50,G0,3,Commercial Truck,V86,3,5,36,Espera en posición: 3
+50,G0,4,Commercial Truck,V91,3,2,32,Espera en posición: 4
+50,G1,0,Car,V69,2,14,16,Pasó un instante en la caja
+50,G1,1,Car,V74,2,11,18,Espera en posición: 1
+50,G1,2,Car,V79,2,8,19,Espera en posición: 2
+50,G1,3,Commercial Truck,V87,3,5,36,Espera en posición: 3
+50,G1,4,Commercial Truck,V92,3,2,28,Espera en posición: 4
+50,G3,0,Car,V71,2,14,16,Pasó un instante en la caja
+50,G3,1,Car,V76,2,11,18,Espera en posición: 1
+50,G3,2,Commercial Truck,V84,3,8,36,Espera en posición: 2
+50,G3,3,Commercial Truck,V89,3,5,32,Espera en posición: 3
+50,G3,4,Commercial Truck,V94,3,2,25,Espera en posición: 4
+50,G2,0,Car,V70,2,14,16,Pasó un instante en la caja
+50,G2,1,Car,V75,2,11,18,Espera en posición: 1
+50,G2,2,Car,V80,2,8,19,Espera en posición: 2
+50,G2,3,Commercial Truck,V88,3,5,32,Espera en posición: 3
+50,G2,4,Commercial Truck,V93,3,2,28,Espera en posición: 4
+50,G4,0,Car,V72,2,14,16,Pasó un instante en la caja
+50,G4,1,Car,V77,2,11,16,Espera en posición: 1
+50,G4,2,Commercial Truck,V85,3,8,36,Espera en posición: 2
+50,G4,3,Commercial Truck,V90,3,5,29,Espera en posición: 3
+50,G4,4,Commercial Truck,V95,3,2,25,Espera en posición: 4
+51,G0,0,Car,V68,2,15,17,Se le cobró lo correspondiente
+51,G0,1,Car,V73,2,12,18,Se movio de pos: 1 a pos: 0
+51,G0,2,Car,V78,2,9,19,Se movio de pos: 2 a pos: 1
+51,G0,3,Commercial Truck,V86,3,6,36,Se movio de pos: 3 a pos: 2
+51,G0,4,Commercial Truck,V91,3,3,32,Se movio de pos: 4 a pos: 3
+51,G1,0,Car,V69,2,15,16,Se le cobró lo correspondiente
+51,G1,1,Car,V74,2,12,18,Se movio de pos: 1 a pos: 0
+51,G1,2,Car,V79,2,9,19,Se movio de pos: 2 a pos: 1
+51,G1,3,Commercial Truck,V87,3,6,36,Se movio de pos: 3 a pos: 2
+51,G1,4,Commercial Truck,V92,3,3,28,Se movio de pos: 4 a pos: 3
+51,G2,0,Car,V70,2,15,16,Se le cobró lo correspondiente
+51,G2,1,Car,V75,2,12,18,Se movio de pos: 1 a pos: 0
+51,G2,2,Car,V80,2,9,19,Se movio de pos: 2 a pos: 1
+51,G2,3,Commercial Truck,V88,3,6,32,Se movio de pos: 3 a pos: 2
+51,G2,4,Commercial Truck,V93,3,3,28,Se movio de pos: 4 a pos: 3
+51,G3,0,Car,V71,2,15,16,Se le cobró lo correspondiente
+51,G3,1,Car,V76,2,12,18,Se movio de pos: 1 a pos: 0
+51,G3,2,Commercial Truck,V84,3,9,36,Se movio de pos: 2 a pos: 1
+51,G3,3,Commercial Truck,V89,3,6,32,Se movio de pos: 3 a pos: 2
+51,G3,4,Commercial Truck,V94,3,3,25,Se movio de pos: 4 a pos: 3
+51,G4,0,Car,V72,2,15,16,Se le cobró lo correspondiente
+51,G4,1,Car,V77,2,12,16,Se movio de pos: 1 a pos: 0
+51,G4,2,Commercial Truck,V85,3,9,36,Se movio de pos: 2 a pos: 1
+51,G4,3,Commercial Truck,V90,3,6,29,Se movio de pos: 3 a pos: 2
+51,G4,4,Commercial Truck,V95,3,3,25,Se movio de pos: 4 a pos: 3
+52,G0,0,Car,V73,2,13,18,Pasó un instante en la caja
+52,G0,1,Car,V78,2,10,19,Espera en posición: 1
+52,G0,2,Commercial Truck,V86,3,7,36,Espera en posición: 2
+52,G0,3,Commercial Truck,V91,3,4,32,Espera en posición: 3
+52,G1,0,Car,V74,2,13,18,Pasó un instante en la caja
+52,G1,1,Car,V79,2,10,19,Espera en posición: 1
+52,G1,2,Commercial Truck,V87,3,7,36,Espera en posición: 2
+52,G1,3,Commercial Truck,V92,3,4,28,Espera en posición: 3
+52,G2,0,Car,V75,2,13,18,Pasó un instante en la caja
+52,G2,1,Car,V80,2,10,19,Espera en posición: 1
+52,G2,2,Commercial Truck,V88,3,7,32,Espera en posición: 2
+52,G2,3,Commercial Truck,V93,3,4,28,Espera en posición: 3
+52,G3,0,Car,V76,2,13,18,Pasó un instante en la caja
+52,G3,1,Commercial Truck,V84,3,10,36,Espera en posición: 1
+52,G3,2,Commercial Truck,V89,3,7,32,Espera en posición: 2
+52,G3,3,Commercial Truck,V94,3,4,25,Espera en posición: 3
+52,G4,0,Car,V77,2,13,16,Pasó un instante en la caja
+52,G4,1,Commercial Truck,V85,3,10,36,Espera en posición: 1
+52,G4,2,Commercial Truck,V90,3,7,29,Espera en posición: 2
+52,G4,3,Commercial Truck,V95,3,4,25,Espera en posición: 3
+53,G0,0,Car,V73,2,14,18,Pasó un instante en la caja
+53,G0,1,Car,V78,2,11,19,Espera en posición: 1
+53,G0,2,Commercial Truck,V86,3,8,36,Espera en posición: 2
+53,G0,3,Commercial Truck,V91,3,5,32,Espera en posición: 3
+53,G1,0,Car,V74,2,14,18,Pasó un instante en la caja
+53,G1,1,Car,V79,2,11,19,Espera en posición: 1
+53,G1,2,Commercial Truck,V87,3,8,36,Espera en posición: 2
+53,G1,3,Commercial Truck,V92,3,5,28,Espera en posición: 3
+53,G2,0,Car,V75,2,14,18,Pasó un instante en la caja
+53,G2,1,Car,V80,2,11,19,Espera en posición: 1
+53,G2,2,Commercial Truck,V88,3,8,32,Espera en posición: 2
+53,G2,3,Commercial Truck,V93,3,5,28,Espera en posición: 3
+53,G3,0,Car,V76,2,14,18,Pasó un instante en la caja
+53,G3,1,Commercial Truck,V84,3,11,36,Espera en posición: 1
+53,G3,2,Commercial Truck,V89,3,8,32,Espera en posición: 2
+53,G3,3,Commercial Truck,V94,3,5,25,Espera en posición: 3
+53,G4,0,Car,V77,2,14,16,Pasó un instante en la caja
+53,G4,1,Commercial Truck,V85,3,11,36,Espera en posición: 1
+53,G4,2,Commercial Truck,V90,3,8,29,Espera en posición: 2
+53,G4,3,Commercial Truck,V95,3,5,25,Espera en posición: 3
+54,G0,0,Car,V73,2,15,18,Se le cobró lo correspondiente
+54,G0,1,Car,V78,2,12,19,Se movio de pos: 1 a pos: 0
+54,G0,2,Commercial Truck,V86,3,9,36,Se movio de pos: 2 a pos: 1
+54,G0,3,Commercial Truck,V91,3,6,32,Se movio de pos: 3 a pos: 2
+54,G1,0,Car,V74,2,15,18,Se le cobró lo correspondiente
+54,G1,1,Car,V79,2,12,19,Se movio de pos: 1 a pos: 0
+54,G1,2,Commercial Truck,V87,3,9,36,Se movio de pos: 2 a pos: 1
+54,G1,3,Commercial Truck,V92,3,6,28,Se movio de pos: 3 a pos: 2
+54,G3,0,Car,V76,2,15,18,Se le cobró lo correspondiente
+54,G3,1,Commercial Truck,V84,3,12,36,Se movio de pos: 1 a pos: 0
+54,G3,2,Commercial Truck,V89,3,9,32,Se movio de pos: 2 a pos: 1
+54,G3,3,Commercial Truck,V94,3,6,25,Se movio de pos: 3 a pos: 2
+54,G2,0,Car,V75,2,15,18,Se le cobró lo correspondiente
+54,G2,1,Car,V80,2,12,19,Se movio de pos: 1 a pos: 0
+54,G2,2,Commercial Truck,V88,3,9,32,Se movio de pos: 2 a pos: 1
+54,G2,3,Commercial Truck,V93,3,6,28,Se movio de pos: 3 a pos: 2
+54,G4,0,Car,V77,2,15,16,Se le cobró lo correspondiente
+54,G4,1,Commercial Truck,V85,3,12,36,Se movio de pos: 1 a pos: 0
+54,G4,2,Commercial Truck,V90,3,9,29,Se movio de pos: 2 a pos: 1
+54,G4,3,Commercial Truck,V95,3,6,25,Se movio de pos: 3 a pos: 2
+55,G0,0,Car,V78,2,13,19,Pasó un instante en la caja
+55,G0,1,Commercial Truck,V86,3,10,36,Espera en posición: 1
+55,G0,2,Commercial Truck,V91,3,7,32,Espera en posición: 2
+55,G1,0,Car,V79,2,13,19,Pasó un instante en la caja
+55,G1,1,Commercial Truck,V87,3,10,36,Espera en posición: 1
+55,G1,2,Commercial Truck,V92,3,7,28,Espera en posición: 2
+55,G3,0,Commercial Truck,V84,3,13,36,Pasó un instante en la caja
+55,G3,1,Commercial Truck,V89,3,10,32,Espera en posición: 1
+55,G3,2,Commercial Truck,V94,3,7,25,Espera en posición: 2
+55,G2,0,Car,V80,2,13,19,Pasó un instante en la caja
+55,G2,1,Commercial Truck,V88,3,10,32,Espera en posición: 1
+55,G2,2,Commercial Truck,V93,3,7,28,Espera en posición: 2
+55,G4,0,Commercial Truck,V85,3,13,36,Pasó un instante en la caja
+55,G4,1,Commercial Truck,V90,3,10,29,Espera en posición: 1
+55,G4,2,Commercial Truck,V95,3,7,25,Espera en posición: 2
+56,G0,0,Car,V78,2,14,19,Pasó un instante en la caja
+56,G0,1,Commercial Truck,V86,3,11,36,Espera en posición: 1
+56,G0,2,Commercial Truck,V91,3,8,32,Espera en posición: 2
+56,G1,0,Car,V79,2,14,19,Pasó un instante en la caja
+56,G1,1,Commercial Truck,V87,3,11,36,Espera en posición: 1
+56,G1,2,Commercial Truck,V92,3,8,28,Espera en posición: 2
+56,G2,0,Car,V80,2,14,19,Pasó un instante en la caja
+56,G2,1,Commercial Truck,V88,3,11,32,Espera en posición: 1
+56,G2,2,Commercial Truck,V93,3,8,28,Espera en posición: 2
+56,G3,0,Commercial Truck,V84,3,14,36,Pasó un instante en la caja
+56,G3,1,Commercial Truck,V89,3,11,32,Espera en posición: 1
+56,G3,2,Commercial Truck,V94,3,8,25,Espera en posición: 2
+56,G4,0,Commercial Truck,V85,3,14,36,Pasó un instante en la caja
+56,G4,1,Commercial Truck,V90,3,11,29,Espera en posición: 1
+56,G4,2,Commercial Truck,V95,3,8,25,Espera en posición: 2
+57,G0,0,Car,V78,2,15,19,Se le cobró lo correspondiente
+57,G0,1,Commercial Truck,V86,3,12,36,Se movio de pos: 1 a pos: 0
+57,G0,2,Commercial Truck,V91,3,9,32,Se movio de pos: 2 a pos: 1
+57,G1,0,Car,V79,2,15,19,Se le cobró lo correspondiente
+57,G1,1,Commercial Truck,V87,3,12,36,Se movio de pos: 1 a pos: 0
+57,G1,2,Commercial Truck,V92,3,9,28,Se movio de pos: 2 a pos: 1
+57,G2,0,Car,V80,2,15,19,Se le cobró lo correspondiente
+57,G2,1,Commercial Truck,V88,3,12,32,Se movio de pos: 1 a pos: 0
+57,G2,2,Commercial Truck,V93,3,9,28,Se movio de pos: 2 a pos: 1
+57,G3,0,Commercial Truck,V84,3,15,36,Se le cobró lo correspondiente
+57,G3,1,Commercial Truck,V89,3,12,32,Se movio de pos: 1 a pos: 0
+57,G3,2,Commercial Truck,V94,3,9,25,Se movio de pos: 2 a pos: 1
+57,G4,0,Commercial Truck,V85,3,15,36,Se le cobró lo correspondiente
+57,G4,1,Commercial Truck,V90,3,12,29,Se movio de pos: 1 a pos: 0
+57,G4,2,Commercial Truck,V95,3,9,25,Se movio de pos: 2 a pos: 1
+58,G0,0,Commercial Truck,V86,3,13,36,Pasó un instante en la caja
+58,G0,1,Commercial Truck,V91,3,10,32,Espera en posición: 1
+58,G2,0,Commercial Truck,V88,3,13,32,Pasó un instante en la caja
+58,G2,1,Commercial Truck,V93,3,10,28,Espera en posición: 1
+58,G3,0,Commercial Truck,V89,3,13,32,Pasó un instante en la caja
+58,G3,1,Commercial Truck,V94,3,10,25,Espera en posición: 1
+58,G4,0,Commercial Truck,V90,3,13,29,Pasó un instante en la caja
+58,G4,1,Commercial Truck,V95,3,10,25,Espera en posición: 1
+58,G1,0,Commercial Truck,V87,3,13,36,Pasó un instante en la caja
+58,G1,1,Commercial Truck,V92,3,10,28,Espera en posición: 1
+59,G0,0,Commercial Truck,V86,3,14,36,Pasó un instante en la caja
+59,G0,1,Commercial Truck,V91,3,11,32,Espera en posición: 1
+59,G1,0,Commercial Truck,V87,3,14,36,Pasó un instante en la caja
+59,G1,1,Commercial Truck,V92,3,11,28,Espera en posición: 1
+59,G2,0,Commercial Truck,V88,3,14,32,Pasó un instante en la caja
+59,G2,1,Commercial Truck,V93,3,11,28,Espera en posición: 1
+59,G3,0,Commercial Truck,V89,3,14,32,Pasó un instante en la caja
+59,G3,1,Commercial Truck,V94,3,11,25,Espera en posición: 1
+59,G4,0,Commercial Truck,V90,3,14,29,Pasó un instante en la caja
+59,G4,1,Commercial Truck,V95,3,11,25,Espera en posición: 1
+60,G0,0,Commercial Truck,V86,3,15,36,Se le cobró lo correspondiente
+60,G0,1,Commercial Truck,V91,3,12,32,Se movio de pos: 1 a pos: 0
+60,G1,0,Commercial Truck,V87,3,15,36,Se le cobró lo correspondiente
+60,G1,1,Commercial Truck,V92,3,12,28,Se movio de pos: 1 a pos: 0
+60,G3,0,Commercial Truck,V89,3,15,32,Se le cobró lo correspondiente
+60,G3,1,Commercial Truck,V94,3,12,25,Se movio de pos: 1 a pos: 0
+60,G4,0,Commercial Truck,V90,3,15,29,Se le cobró lo correspondiente
+60,G4,1,Commercial Truck,V95,3,12,25,Se movio de pos: 1 a pos: 0
+60,G2,0,Commercial Truck,V88,3,15,32,Se le cobró lo correspondiente
+60,G2,1,Commercial Truck,V93,3,12,28,Se movio de pos: 1 a pos: 0
+61,G0,0,Commercial Truck,V91,3,13,32,Pasó un instante en la caja
+61,G1,0,Commercial Truck,V92,3,13,28,Pasó un instante en la caja
+61,G3,0,Commercial Truck,V94,3,13,25,Pasó un instante en la caja
+61,G2,0,Commercial Truck,V93,3,13,28,Pasó un instante en la caja
+61,G4,0,Commercial Truck,V95,3,13,25,Pasó un instante en la caja
+62,G0,0,Commercial Truck,V91,3,14,32,Pasó un instante en la caja
+62,G3,0,Commercial Truck,V94,3,14,25,Pasó un instante en la caja
+62,G1,0,Commercial Truck,V92,3,14,28,Pasó un instante en la caja
+62,G4,0,Commercial Truck,V95,3,14,25,Pasó un instante en la caja
+62,G2,0,Commercial Truck,V93,3,14,28,Pasó un instante en la caja
+63,G0,0,Commercial Truck,V91,3,15,32,Se le cobró lo correspondiente
+63,G2,0,Commercial Truck,V93,3,15,28,Se le cobró lo correspondiente
+63,G1,0,Commercial Truck,V92,3,15,28,Se le cobró lo correspondiente
+63,G3,0,Commercial Truck,V94,3,15,25,Se le cobró lo correspondiente
+63,G4,0,Commercial Truck,V95,3,15,25,Se le cobró lo correspondiente

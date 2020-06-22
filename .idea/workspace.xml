@@ -20,13 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8fcdd77-7939-4294-ab70-cf920c116420" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/data/input/Escenario1VariaCarril.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/input/Escenario3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/input/EscenarioVariaCarril.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/input/EscenariorRoto.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario1AutoRoto10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario1AutoRoto2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario1AutoRoto5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario1VariaCarril.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario3erTest.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario3ercaso.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_EscenarioVariaCarril10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_EscenarioVariaCarril20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_EscenarioVariaCarril5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_EscenarioVariaCasilla10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_EscenarioVariaCasilla20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_EscenarioVariaCasilla5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/output/Output_EscenariorRoto.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/config/INIT_CONFIG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/config/INIT_CONFIG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/input/Escenario1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/input/Escenario1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/input/Escenario2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/input/Escenario2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/input/events.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/input/events.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_Escenario2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_Escenario2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_vehicles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SO2020_Obligatorio/data/output/Output_vehicles.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/INIT_CONFIG.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/INIT_CONFIG.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/input/Escenario1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/Escenario1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/input/Escenario2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/Escenario2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/input/events.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/events.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/input/vehicles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/vehicles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/output/Output_Escenario2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/output/Output_Escenario2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/output/Output_vehicles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/output/Output_vehicles.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/Planner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/ucu/fit/so/TollGate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +84,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data/input" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\Desktop\UCU TOMÁS\Sistemas Operativos\Obligatorio SO\Obligatorio Sistemas Operativos\ObligatorioSO_2020\src\data\input" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -131,26 +160,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589677761216" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1592776277419">
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1592789054779">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1592776277419">
+    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592789054779" />
+    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1592789054779">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1592776277419">
+    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592789054779" />
+    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1592789054779">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1592776277419">
+    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592789054779" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1592789054779">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1323" height="527" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592772329552" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592776277419" />
+    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592789054779" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1592752988584">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -187,10 +216,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1592762365297" />
-    <state x="346" y="50" width="672" height="688" key="search.everywhere.popup" timestamp="1592722275719">
+    <state x="346" y="50" width="672" height="688" key="search.everywhere.popup" timestamp="1592788887646">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589592891540" />
-    <state x="346" y="50" width="672" height="688" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1592722275719" />
+    <state x="346" y="50" width="672" height="688" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1592788887646" />
   </component>
 </project>
